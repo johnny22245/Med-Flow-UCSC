@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/landing.css";
 
 export default function LandingPage() {
+  const navigate = useNavigate();
   return (
     <div className="mf">
       <header className="mf-header">
@@ -37,7 +39,7 @@ export default function LandingPage() {
               <div className="mf-hero-cta" id="demo">
                 <button
                   className="mf-btn mf-btn-primary"
-                  onClick={() => alert("Next: route to /app (Doctor Cockpit)")}
+                  onClick={() => navigate("/app")}
                 >
                   Start diagnosis
                 </button>

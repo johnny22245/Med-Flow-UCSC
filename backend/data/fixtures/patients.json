@@ -1,0 +1,26 @@
+{
+  "patients": [
+    {
+      "id": "P-0007",
+      "name": "John Doe",
+      "age": 55,
+      "sex": "M",
+      "allergies": ["Aspirin"],
+      "meds": ["Valproic Acid"],
+      "intake": {
+        "chief_complaint": "Chest discomfort and shortness of breath",
+        "symptoms_text": "Chest discomfort\nShortness of breath on exertion",
+        "duration": "2 days",
+        "severity_0_10": 6,
+        "vitals": {
+          "temp_c": 37.0,
+          "hr_bpm": 84,
+          "bp_sys": 128,
+          "bp_dia": 78,
+          "spo2_pct": 98
+        },
+        "consent": true
+      }
+    }
+  ]
+}
