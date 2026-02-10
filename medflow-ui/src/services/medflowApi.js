@@ -38,3 +38,17 @@ export async function listPatients() {
   const res = await fetch(`${API_BASE}/api/patients`);
   return parseJsonOrThrow(res);
 }
+
+// investigation API code
+export async function getInvestigationByPatientId(patientId) {
+  const res = await fetch(`${API_BASE}/api/investigation/${patientId}`, {
+    method: "GET",
+    headers: { "Content-Type": "application/json" }
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Investigation API failed (${res.status}): ${text}`);
+  }
+  return res.json();
+}

@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.routers.patients import router as patients_router
+from app.routers.investigation import router as investigation_router
 
 app = FastAPI(
     title="Med-Flow API (Dummy)",
@@ -22,6 +24,10 @@ app.add_middleware(
 )
 
 app.include_router(patients_router, prefix="/api")
+app.include_router(investigation_router)
+
+# Serve images locally (privacy-preserving, no external URLs)
+app.mount("/static", StaticFiles(directory="data/static"), name="static")
 
 @app.get("/health")
 def health():

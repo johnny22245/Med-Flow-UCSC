@@ -16,6 +16,8 @@ Create new environment: `conda create -n med-flow python=3.12 -y`
 <br> Activate environment: `conda activate med-flow`
 <br> Install dependencies: `pip install -r requirements.txt`
 
+<br> Run front end on local servers (go to folder `medflow-ui`): `npm run dev`
+
 # Backend setup
 Go to the `backend` folder via a new terminal window.
 Run this commands on a new terminal.
@@ -27,4 +29,4 @@ Create new environment: `conda create -n med-flow_backend python=3.12 -y`
 <br> Install dependencies: `pip install -r requirements.txt`
 
 ## Run Backend API services
-Command: `uvicorn app.main:app --reload --port 8000`
+Command (make sure in folder `backend`): `uvicorn app.main:app --reload --port 8000`

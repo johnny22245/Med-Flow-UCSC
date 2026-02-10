@@ -10,8 +10,17 @@ import "../styles/appShell.css";
 import IntakeStage from "../pages/stages/IntakeStage";
 import "../styles/intakeStage.css";
 
+// Ordering Tests
+import TestOrderingStage from "./stages/TestOrderingStage";
+import "../styles/testOrderingStage.css";
+
+// Adding 5. Investigation stage
+import InvestigationStage from "./stages/InvestigationStage";
+import "../styles/investigationStage.css";
+
 const STAGES = [
   { key: "intake", label: "Intake & Triage", hint: "Symptoms → SOAP + suggested tests → doctor approves" },
+  { key: "tests", label: "Test Ordering", hint: "AI suggests labs/imaging → doctor overrides → confirms" },
   { key: "investigation", label: "Investigation", hint: "Labs + imaging → findings → doctor approves" },
   { key: "treatment", label: "Treatment Planning", hint: "Dx + plan → doctor edits" },
   { key: "safety", label: "Safety Guardrail", hint: "Interactions + contraindications → alert → override note" },
@@ -208,21 +217,36 @@ export default function AppShell() {
             </div>
 
             <div className="mf-mt12">
-            {stageKey === "intake" ? (
+              {stageKey === "intake" ? (
                 <IntakeStage
-                activePatient={activePatient}
-                onPatientCreated={(p) => setActivePatient(p)}
-                onRequestNext={() => setStageKey("investigation")}
+                  activePatient={activePatient}
+                  onPatientCreated={(p) => setActivePatient(p)}
+                  onRequestNext={() => setStageKey("tests")}
                 />
-            ) : (
+              ) : stageKey === "tests" ? (
+                <TestOrderingStage
+                  activePatient={activePatient}
+                  intakeContext={{
+                    chiefComplaint: activePatient?.chiefComplaint || "",
+                  }}
+                  onBack={() => setStageKey("intake")}
+                  onApproveNext={() => setStageKey("investigation")}
+                />
+              ) : stageKey === "investigation" ? (
+                <InvestigationStage
+                  activePatient={activePatient}
+                  onApproveNext={() => setStageKey("treatment")}
+                />
+              ) : (
                 <div className="mf-placeholder">
-                <div className="mf-placeholder-title">Coming next</div>
-                <div className="mf-placeholder-text">
+                  <div className="mf-placeholder-title">Coming next</div>
+                  <div className="mf-placeholder-text">
                     We’ll implement <b>{STAGES[stageIdx].label}</b> as the next topic page.
+                  </div>
                 </div>
-                </div>
-            )}
+              )}
             </div>
+
         </div>
         </section>
 

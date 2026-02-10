@@ -1,0 +1,57 @@
+{
+  "P-0007": {
+    "patient_id": "P-0007",
+    "labs": [
+      {
+        "panel": "CBC (Complete Blood Count)",
+        "collected_at": "2026-02-09T09:12:00",
+        "results": [
+          { "name": "WBC", "value": 11.8, "unit": "x10^3/µL", "ref_range": "4.0–11.0", "flag": "H" },
+          { "name": "Hemoglobin", "value": 13.6, "unit": "g/dL", "ref_range": "13.0–17.0", "flag": "N" },
+          { "name": "Platelets", "value": 265, "unit": "x10^3/µL", "ref_range": "150–450", "flag": "N" }
+        ]
+      },
+      {
+        "panel": "BMP (Basic Metabolic Panel)",
+        "collected_at": "2026-02-09T09:12:00",
+        "results": [
+          { "name": "Sodium", "value": 138, "unit": "mmol/L", "ref_range": "135–145", "flag": "N" },
+          { "name": "Potassium", "value": 3.4, "unit": "mmol/L", "ref_range": "3.5–5.1", "flag": "L" },
+          { "name": "Creatinine", "value": 1.0, "unit": "mg/dL", "ref_range": "0.7–1.3", "flag": "N" },
+          { "name": "Glucose", "value": 112, "unit": "mg/dL", "ref_range": "70–99", "flag": "H" }
+        ]
+      }
+    ],
+    "imaging": [
+      {
+        "study_id": "img_1001",
+        "modality": "MRI",
+        "body_part": "Brain",
+        "acquired_at": "2026-02-09T10:05:00",
+        "summary": "MRI Brain w/ contrast",
+        "radiology_impression": "Small focus of abnormal signal in left frontal region. Correlate clinically.",
+        "ai_findings": {
+          "summary": "Possible focal lesion in left frontal lobe; recommend neuroradiology review.",
+          "boxes": [
+            { "label": "suspected lesion", "x": 0.58, "y": 0.42, "w": 0.18, "h": 0.14, "confidence": 0.71 }
+          ]
+        },
+        "image_url": "/static/imaging/mri_brain_placeholder.png"
+      },
+      {
+        "study_id": "img_1002",
+        "modality": "CT",
+        "body_part": "Head",
+        "acquired_at": "2026-02-09T10:40:00",
+        "summary": "CT Head (non-contrast)",
+        "radiology_impression": "No acute hemorrhage. Mild chronic changes.",
+        "ai_findings": {
+          "summary": "No acute intracranial bleed detected; mild nonspecific changes.",
+          "boxes": []
+        },
+        "image_url": "/static/imaging/ct_head_placeholder.png"
+      }
+    ],
+    "status": "pending_review"
+  }
+}
