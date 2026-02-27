@@ -1,0 +1,58 @@
+{
+  "P-0007": {
+    "patientId": "P-0007",
+    "createdAt": "2026-02-27T00:24:47.463535Z",
+    "patient": {
+      "id": "P-0007",
+      "name": "John Doe",
+      "age": 55,
+      "sex": "M",
+      "allergies": [
+        "Aspirin"
+      ],
+      "meds": [
+        "Valproic Acid"
+      ]
+    },
+    "diagnosis": {
+      "primary": "Suspected intracranial mass (likely glioma)",
+      "differential": [
+        "Meningioma",
+        "Metastasis"
+      ],
+      "confidence": "medium",
+      "rationale": [
+        "Headache + visual symptoms from intake",
+        "MRI impression suggests focal lesion"
+      ],
+      "clinicianNote": "Looks Brain cancer.",
+      "confirmed": true
+    },
+    "order": {
+      "meds": [
+        {
+          "drug": "Temozolomide",
+          "dose": "50 mg",
+          "route": "PO",
+          "frequency": "Daily",
+          "duration": "42 days"
+        },
+        {
+          "drug": "Ondansetron",
+          "dose": "8 mg",
+          "route": "PO",
+          "frequency": "q8h PRN",
+          "duration": "14 days"
+        }
+      ],
+      "notes": "Adjust dose per weight and labs\nConsider antiemetic prophylaxis"
+    },
+    "safety": {
+      "decision": "override",
+      "overrideNote": "Ok for now, as patient will be on observation for 1 week.",
+      "selectedSuggestion": ""
+    },
+    "finalClinicianNote": "",
+    "status": "finalized"
+  }
+}

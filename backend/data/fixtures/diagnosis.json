@@ -1,0 +1,18 @@
+{
+  "P-0007": {
+    "suggestion": {
+      "primary": "Suspected intracranial mass (likely glioma)",
+      "differential": [
+        "Meningioma",
+        "Metastasis",
+        "Abscess"
+      ],
+      "confidence": "medium",
+      "rationale": [
+        "Headache + visual symptoms from intake",
+        "MRI impression suggests focal lesion",
+        "AI findings flagged a suspicious region"
+      ]
+    }
+  }
+}

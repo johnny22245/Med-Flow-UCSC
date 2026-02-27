@@ -1,0 +1,140 @@
+/* src/styles/safetyStage.css */
+
+.mf-safety-wrap {
+  display: grid;
+  gap: 14px;
+}
+
+.mf-order-box {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.7);
+}
+
+.mf-ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.mf-ok-box {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  background: rgba(46, 204, 113, 0.10);
+}
+
+.mf-alert-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mf-alert-item {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.9);
+}
+
+.mf-alert-title {
+  font-weight: 800;
+}
+
+.mf-sev-low {
+  border-color: rgba(52, 152, 219, 0.30);
+  background: rgba(52, 152, 219, 0.07);
+}
+
+.mf-sev-medium {
+  border-color: rgba(255, 193, 7, 0.35);
+  background: rgba(255, 193, 7, 0.12);
+}
+
+.mf-sev-high {
+  border-color: rgba(231, 76, 60, 0.35);
+  background: rgba(231, 76, 60, 0.10);
+}
+
+/* Badges */
+.mf-badge-danger {
+  background: rgba(231, 76, 60, 0.14);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+}
+
+/* Alerts */
+.mf-alert {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mf-alert-danger {
+  background: rgba(231, 76, 60, 0.14);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+}
+
+/* Modal */
+.mf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 999;
+}
+
+.mf-modal {
+  width: min(920px, 100%);
+  border-radius: 16px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+}
+
+.mf-modal-title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.mf-modal-body {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 12px;
+}
+
+.mf-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mf-field { display: block; }
+.mf-label { font-size: 12px; opacity: 0.75; margin-bottom: 6px; }
+
+.mf-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: white;
+}
+
+.mf-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: white;
+  resize: vertical;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .mf-modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

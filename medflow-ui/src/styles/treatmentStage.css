@@ -1,0 +1,121 @@
+/* src/styles/treatmentStage.css */
+
+.mf-tx-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 14px;
+}
+
+.mf-plan-title {
+  font-weight: 700;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.mf-ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.mf-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.6);
+}
+
+.mf-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.mf-table thead th {
+  text-align: left;
+  font-size: 12px;
+  opacity: 0.75;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.9);
+}
+
+.mf-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  vertical-align: top;
+}
+
+.mf-td-center {
+  text-align: center;
+  padding: 18px !important;
+}
+
+.mf-td-actions {
+  width: 42px;
+  text-align: right;
+}
+
+.mf-btn-x {
+  font-size: 18px;
+  line-height: 1;
+  padding: 6px 10px;
+}
+
+.mf-field {
+  display: block;
+}
+
+.mf-label {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.mf-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: white;
+}
+
+.mf-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  resize: vertical;
+  background: white;
+}
+
+.mf-alert {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.mf-alert-warn {
+  background: rgba(255, 193, 7, 0.15);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+}
+
+.mf-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.mf-badge-ok {
+  background: rgba(46, 204, 113, 0.16);
+  border-color: rgba(46, 204, 113, 0.35);
+}
+
+@media (max-width: 980px) {
+  .mf-tx-grid {
+    grid-template-columns: 1fr;
+  }
+  .mf-table {
+    min-width: 680px;
+  }
+}

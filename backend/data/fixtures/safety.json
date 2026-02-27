@@ -1,0 +1,36 @@
+{
+  "P-0007": {
+    "rules": {
+      "block_on_high_severity": true,
+      "require_override_note": true
+    },
+    "interactions": [
+      {
+        "type": "DDI",
+        "drugA": "Valproic Acid",
+        "drugB": "Temozolomide",
+        "severity": "high",
+        "message": "Potential interaction: Valproic Acid may increase risk of toxicity / adverse effects when combined with Temozolomide (demo rule). Consider alternative anticonvulsant or enhanced monitoring.",
+        "suggestions": [
+          "Switch anticonvulsant (demo): consider Levetiracetam instead of Valproic Acid",
+          "Lower Temozolomide dose and add monitoring",
+          "Proceed only with explicit override note"
+        ]
+      },
+      {
+        "type": "ALLERGY",
+        "drugA": "Aspirin",
+        "drugB": "Aspirin",
+        "severity": "high",
+        "message": "Allergy conflict: patient has documented Aspirin allergy (demo). Remove Aspirin from order.",
+        "suggestions": [
+          "Remove Aspirin",
+          "Choose alternative analgesic"
+        ]
+      }
+    ],
+    "safe_alternatives": [
+      { "drug": "Levetiracetam", "reason": "Often used as alternative anticonvulsant (demo)" }
+    ]
+  }
+}

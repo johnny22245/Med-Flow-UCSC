@@ -18,12 +18,30 @@ import "../styles/testOrderingStage.css";
 import InvestigationStage from "./stages/InvestigationStage";
 import "../styles/investigationStage.css";
 
+// Phase 6: Diagnosis
+import DiagnosisStage from "./stages/DiagnosisStage";
+import "../styles/diagnosisStage.css";
+
+// Phase 7: Treatment / Prescription Builder
+import TreatmentStage from "./stages/TreatmentStage";
+import "../styles/treatmentStage.css";
+
+// Phase 8: Safety Guardrail
+import SafetyStage from "./stages/SafetyStage";
+import "../styles/safetyStage.css";
+
+// Case Summary
+import CaseSummaryStage from "./stages/CaseSummaryStage";
+import "../styles/caseSummaryStage.css";
+
 const STAGES = [
   { key: "intake", label: "Intake & Triage", hint: "Symptoms → SOAP + suggested tests → doctor approves" },
   { key: "tests", label: "Test Ordering", hint: "AI suggests labs/imaging → doctor overrides → confirms" },
   { key: "investigation", label: "Investigation", hint: "Labs + imaging → findings → doctor approves" },
+  { key: "diagnosis", label: "Diagnosis", hint: "AI suggests Dx → clinician edits → confirms" },
   { key: "treatment", label: "Treatment Planning", hint: "Dx + plan → doctor edits" },
   { key: "safety", label: "Safety Guardrail", hint: "Interactions + contraindications → alert → override note" },
+  { key: "case_summary", label: "Case Summary", hint: "Final Rx + safety disposition → export" },
 ];
 
 export default function AppShell() {
@@ -170,8 +188,8 @@ export default function AppShell() {
             <span className={`mf-pill ${activePatient ? "mf-pill-ok" : "mf-pill-muted"}`}>
               {activePatient ? "Patient Loaded" : "No Patient"}
             </span>
-            <span className="mf-pill mf-pill-muted">
-              Backend: not connected
+            <span className="mf-pill mf-pill-ok">
+              Backend: Connected (dummy)
             </span>
           </div>
         </header>
@@ -235,7 +253,30 @@ export default function AppShell() {
               ) : stageKey === "investigation" ? (
                 <InvestigationStage
                   activePatient={activePatient}
-                  onApproveNext={() => setStageKey("treatment")}
+                  onApproveNext={() => setStageKey("diagnosis")}
+                />
+                ) : stageKey === "diagnosis" ? (
+                  <DiagnosisStage
+                    activePatient={activePatient}
+                    onApproveNext={() => setStageKey("treatment")}
+                  />
+              ) : stageKey === "treatment" ? (
+                <TreatmentStage
+                  activePatient={activePatient}
+                  onApproveNext={() => setStageKey("safety")}
+                  onBack={() => setStageKey("diagnosis")}
+                />
+              ) : stageKey === "safety" ? (
+                <SafetyStage
+                  activePatient={activePatient}
+                  onBack={() => setStageKey("treatment")}
+                  onComplete={() => setStageKey("case_summary")} // or a "Case Summary" later
+                />
+              ) : stageKey === "case_summary" ? (
+                <CaseSummaryStage
+                  activePatient={activePatient}
+                  onBack={() => setStageKey("safety")}
+                  onStartNewCase={() => setStageKey("intake")}
                 />
               ) : (
                 <div className="mf-placeholder">

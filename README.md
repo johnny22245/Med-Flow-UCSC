@@ -25,7 +25,7 @@ Run this commands on a new terminal.
 ## Environment setup
 Create new environment: `conda create -n med-flow_backend python=3.12 -y`
 <br> Activate environment: `conda activate med-flow_backend`
-<br> Make sure you are inside the backend folder.
+<br> Make sure you are inside the `backend` folder.
 <br> Install dependencies: `pip install -r requirements.txt`
 
 ## Run Backend API services

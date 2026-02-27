@@ -1,0 +1,15 @@
+{
+  "P-0007": {
+    "suggestedPlan": {
+      "title": "Initial chemo + supportive care (demo)",
+      "meds": [
+        { "drug": "Temozolomide", "dose": "75 mg", "route": "PO", "frequency": "Daily", "duration": "42 days" },
+        { "drug": "Ondansetron", "dose": "8 mg", "route": "PO", "frequency": "q8h PRN", "duration": "14 days" }
+      ],
+      "notes": [
+        "Adjust dose per weight and labs",
+        "Consider antiemetic prophylaxis"
+      ]
+    }
+  }
+}
