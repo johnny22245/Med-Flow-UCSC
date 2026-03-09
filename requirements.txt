@@ -142,7 +142,6 @@ pure-eval==0.2.2
 py4j==0.10.9.7
 pyarrow==21.0.0
 pyasn1==0.6.0
-PyAudio==0.2.14
 pyautogen==0.5.3
 pycparser==2.21
 pydantic==2.10.3
@@ -171,7 +170,6 @@ scikit-learn==1.8.0
 scipy==1.13.0
 seaborn==0.13.2
 Send2Trash==1.8.2
-sentencepiece==0.1.99
 six==1.16.0
 sklearn-compat==0.1.5
 smart_open==7.5.0
@@ -215,5 +213,4 @@ widgetsnbextension==4.0.10
 wrapt==2.0.1
 xxhash==3.6.0
 yarl==1.22.0
-yfinance==0.2.50
 zipp==3.23.0

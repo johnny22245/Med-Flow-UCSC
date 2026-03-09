@@ -29,17 +29,31 @@ Create new environment: `conda create -n med-flow_backend python=3.12 -y`
 <br> Install dependencies: `pip install -r requirements.txt`
 
 ## Run Backend API services
-Command (make sure in folder `backend`): `uvicorn app.main:app --reload --port 8000`
+Command (make sure in folder `backend`): `uvicorn app.main:app --reload --port 24400 --host 0.0.0.0`
 
 ## DB setup
 Create new environment: `conda create -n medflow_DB python=3.12 -y`
 <br> Activate environment: `conda activate medflow_DB`
 <br> Make sure to be on the root folder which contains: `docker-compose.yml`
 <br> Install dependencies: `pip install -r requirements_DB.txt`
-<br>
-<br> Install docker over mac/linux. Check if the same is present: `docker --version`. If not present, follow the installation steps: 
+
+### For Mac UI testing only:
+Install docker over mac/linux. Check if the same is present: `docker --version`. If not present, follow the installation steps: 
 <br> 1. `brew install --cask docker` -- Post this use Applications to open and start docker app.
 <br> Sanity commands: A) `docker run hello-world` , B) `docker compose version`
-
 <br> Next steps:
 <br> Run from folder which contains: `docker-compose.yml` -- `docker compose up -d`
+
+### For Linux run via GPU for models:
+Install postgres into your existing environment
+`conda install -c conda-forge postgresql -y`
+
+Initialize a data folder in your home directory (where you have permission)
+`initdb -D ~/medflow_db_data`
+
+Start the server on a custom port (5433) so it doesn't clash
+`pg_ctl -D ~/medflow_db_data -l logfile -o "-p 5433" start`
+
+Create your database
+`createdb -p 5433 medflow_db`
+

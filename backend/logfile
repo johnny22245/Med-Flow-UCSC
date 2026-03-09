@@ -1,0 +1,7 @@
+2026-03-09 02:22:20.993 PDT [2577872] LOG:  starting PostgreSQL 18.3 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 14.3.0-18) 14.3.0, 64-bit
+2026-03-09 02:22:20.993 PDT [2577872] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-03-09 02:22:21.009 PDT [2577872] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2026-03-09 02:22:21.016 PDT [2577878] LOG:  database system was shut down at 2026-03-09 02:21:50 PDT
+2026-03-09 02:22:21.020 PDT [2577872] LOG:  database system is ready to accept connections
+2026-03-09 02:27:21.032 PDT [2577876] LOG:  checkpoint starting: time
+2026-03-09 02:29:03.066 PDT [2577876] LOG:  checkpoint complete: wrote 1018 buffers (6.2%), wrote 3 SLRU buffers; 1 WAL file(s) added, 0 removed, 0 recycled; write=102.007 s, sync=0.013 s, total=102.035 s; sync files=356, longest=0.001 s, average=0.001 s; distance=4965 kB, estimate=4965 kB; lsn=0/1C3E4D0, redo lsn=0/1C3D828
