@@ -1,0 +1,1557 @@
+[
+    {
+        "case_id": "triage_case_1101",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 27-year-old male basketball player presents to his primary care physician for a normal check-up. He has not been seen by a physician in ten years. He reports that he feels well and has no complaints. His temperature is 98.6°F (37°C), blood pressure is 110/70 mmHg, pulse is 85/min, and respirations are 16/min. On examination, the patient's height is 76 in (193 cm) with an arm span of 78 in (198 cm). His BMI is 19 kg/m^2. His fingers and toes are long and tapered and his sternum appears sunken into his chest. The patient also has moderate scoliosis. Upon further questioning, the patient reports that his father had a similar physique but passed away in his 40s. Which of the following complications is this patient at greatest risk for?",
+        "gold_answer_text": "Aortic aneurysm",
+        "raw_output": " This patient is at greatest risk for Marfan syndrome.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1102",
+        "source_dataset": "medmcqa",
+        "initial_case": "Blood culture of a patient shows growth of gram positive cocci which are catalase positive and coagulase negative. The patient was on a CVP line last week. The most likely etiological agent is?",
+        "gold_answer_text": "Staphylococcus epidermidis",
+        "raw_output": " The most likely etiological agent is Staphylococcus epidermidis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1103",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 50-year-old man working in a coal mining factory for 16 years develops symptoms of progressively worsening breathlessness and cough with expectoration. A spirometry was performed and his values were: FEV1 - 1.4 L/min, FVC 2.8L/min . What could be the cause?",
+        "gold_answer_text": "COPD",
+        "raw_output": " The patient's symptoms and spirometry results are consistent with a diagnosis of coal workers' pneumoconiosis (CWP), also known as black lung disease. CWP is a type of lung disease caused by inhaling coal dust over a long period of time. The symptoms of CWP typically include progressive breathlessness, cough, and chest tightness. The spirometry results show a restrictive pattern, with a low FEV1/FVC ratio and reduced FEV1 and FVC values. Other possible causes of the patient's symptoms include chronic obstructive pulmonary disease (COPD), asthma, and lung cancer. However, the patient's history of working in a coal mining factory and the spirometry results make CWP the most likely diagnosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1104",
+        "source_dataset": "medmcqa",
+        "initial_case": "The GFR of a 26-year-old man with glomerulonephritis decreases by 50% and remains at that level. For which substance would you expect to find the greatest increase in plasma concentration?",
+        "gold_answer_text": "Creatinine",
+        "raw_output": " The GFR of a 26-year-old man with glomerulonephritis decreases by 50% and remains at that level. For which substance would you expect to find the greatest increase in plasma concentration?",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1105",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 40-year-old man is found to have severe metabolic acidosis with a high anion gap. What is the most likely cause?",
+        "gold_answer_text": "Methanol ingestion",
+        "raw_output": " The most likely cause of severe metabolic acidosis with a high anion gap in a 40-year-old man is diabetic ketoacidosis (DKA). However, other possible causes include alcoholic ketoacidosis, starvation ketoacidosis, and renal tubular acidosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1106",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 4-month-old infant is brought to the office by his parents due to sudden nose bleeding without trauma of any kind. He has a 1-month history of multiple bruising that measures 1 cm in diameter each in the hands and feet, and tiny red spots that appeared in the upper and lower extremities without any trauma either. He has no prior bleeding history nor any relevant family history. The vital signs include: heart rate 190/min, respiratory rate 40/min, blood pressure 99/42 mm Hg, and temperature 36.6 °C (97.9 °F). His physical exam shows pale skin color, petechiae in the soft palate and in the upper and lower extremities as well as ecchymosis in the back of the hands and feet. The complete blood count results are as follows: Hemoglobin 8.9 g/dL Hematocrit 41% Leukocyte count 10,500/mm3 Neutrophils 53% Bands 2% Eosinophils 1% Basophils 0% Lymphocytes 33% Monocytes 2% Platelet count 450,000/mm3 The coagulation test results are as follows: Partial thromboplastin time (activated) 30.0 sec Prothrombin time 13.6 sec International normalized ratio 0.99 Fibrinogen 364.9 mg/dL The blood smear shows hypochromia, poikilocytosis, and large platelets, while a platelet aggregation test with ristocetin is normal. The overall bleeding time is increased. What is the most likely cause of this patient’s condition?",
+        "gold_answer_text": "Glanzmann’s thrombasthenia",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient taking any medications?\",\n\"Is the patient taking any supplements?\",\n\"Is the patient taking any herbal remedies?\",\n\"Is the patient taking any blood thinners?\",\n\"Is the patient taking any anticoagulants?\"\n],\n\"summary\": {\n\"patient_info\": \"4-month-old infant\",\n\"presenting_symptoms\": [\"nose bleeding\", \"multiple bruising\", \"petechiae\", \"ecchymosis\"],\n\"known_history\": [],\n\"possible_concerns\": [\"von Willebrand disease\", \"hemophilia A\", \"hemophilia B\", \"disseminated intravascular coagulation\", \"thrombocytopenia\", \"thrombocytopenic purpura\", \"thrombotic thrombocytopenic purpura\"],\n\"missing_info\": [\"family history of bleeding disorders\", \"previous episodes of bleeding\", \"previous surgeries\", \"previous hospitalizations\", \"previous blood transfusions\"],\n\"urgency\": \"high\"\n},\n\"suggested_tests\": [\"von Willebrand factor antigen and activity\", \"factor VIII assay\", \"factor IX assay\", \"platelet count\", \"platelet function tests\", \"complete blood count with differential\", \"prothrombin time\", \"partial thromboplastin time\", \"fibrinogen\", \"D-dimer\", \"blood smear\", \"platelet aggregation test with ristocetin\", \"genetic testing for bleeding disorders\", \"disseminated intravascular coagulation panel\", \"thrombocytopenia workup\", \"thrombotic thrombocytopenic purpura panel\"],\n\"doctor_approval_required\": true",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient taking any medications?",
+                "Is the patient taking any supplements?",
+                "Is the patient taking any herbal remedies?",
+                "Is the patient taking any blood thinners?",
+                "Is the patient taking any anticoagulants?"
+            ],
+            "summary": {
+                "patient_info": "4-month-old infant",
+                "presenting_symptoms": [
+                    "nose bleeding",
+                    "multiple bruising",
+                    "petechiae",
+                    "ecchymosis"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "von Willebrand disease",
+                    "hemophilia A",
+                    "hemophilia B",
+                    "disseminated intravascular coagulation",
+                    "thrombocytopenia",
+                    "thrombocytopenic purpura",
+                    "thrombotic thrombocytopenic purpura"
+                ],
+                "missing_info": [
+                    "family history of bleeding disorders",
+                    "previous episodes of bleeding",
+                    "previous surgeries",
+                    "previous hospitalizations",
+                    "previous blood transfusions"
+                ],
+                "urgency": "high"
+            },
+            "suggested_tests": [
+                "von Willebrand factor antigen and activity",
+                "factor VIII assay",
+                "factor IX assay",
+                "platelet count",
+                "platelet function tests",
+                "complete blood count with differential",
+                "prothrombin time",
+                "partial thromboplastin time",
+                "fibrinogen",
+                "D-dimer",
+                "blood smear",
+                "platelet aggregation test with ristocetin",
+                "genetic testing for bleeding disorders",
+                "disseminated intravascular coagulation panel",
+                "thrombocytopenia workup",
+                "thrombotic thrombocytopenic purpura panel"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1107",
+        "source_dataset": "medmcqa",
+        "initial_case": "A patient has been advised a lateral cephalogram before beginning orthodontic treatment. Which of the following could be used to establish the physiologic “true horizontal” orientation of the patient’s head during this radiograph?",
+        "gold_answer_text": "Natural head position",
+        "raw_output": " The patient's head can be positioned using a headrest or a bite block to ensure a true horizontal orientation during the lateral cephalogram.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1108",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 24-year-old primigravida presents at 36 weeks gestation with vaginal bleeding, mild abdominal pain, and uterine contractions that appeared after bumping into a handrail. The vital signs are as follows: blood pressure 130/80 mm Hg, heart rate 79/min, respiratory rate 12/min, and temperature 36.5℃ (97.7℉). The fetal heart rate was 145/min. Uterine fundus is at the level of the xiphoid process. Slight uterine tenderness and contractions are noted on palpation. The perineum is bloody. The gynecologic examination shows no vaginal or cervical lesions. The cervix is long and closed. Streaks of bright red blood are passing through the cervix. A transabdominal ultrasound shows the placenta to be attached to the lateral uterine wall with a marginal retroplacental hematoma (an approximate volume of 150 ml). The maternal hematocrit is 36%. What is the next best step in the management of this patient?",
+        "gold_answer_text": "Admit for maternal and fetal monitoring and observation",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient in labor?\",\n\"Is there any vaginal discharge?\",\n\"Has the patient had any previous pregnancies or deliveries?\"\n],\n\"summary\": {\n\"patient_info\": \"24-year-old primigravida at 36 weeks gestation\",\n\"presenting_symptoms\": [\"vaginal bleeding\", \"mild abdominal pain\", \"uterine contractions\"],\n\"known_history\": [],\n\"possible_concerns\": [\"preterm labor\", \"placental abruption\", \"postpartum hemorrhage\"],\n\"missing_info\": [\"fetal heart rate\", \"fetal position\", \"amniotic fluid index\"],\n\"urgency\": \"high\"\n},\n\"suggested_tests\": [\"fetal heart rate monitoring\", \"amniotic fluid index\", \"ultrasound\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient in labor?",
+                "Is there any vaginal discharge?",
+                "Has the patient had any previous pregnancies or deliveries?"
+            ],
+            "summary": {
+                "patient_info": "24-year-old primigravida at 36 weeks gestation",
+                "presenting_symptoms": [
+                    "vaginal bleeding",
+                    "mild abdominal pain",
+                    "uterine contractions"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "preterm labor",
+                    "placental abruption",
+                    "postpartum hemorrhage"
+                ],
+                "missing_info": [
+                    "fetal heart rate",
+                    "fetal position",
+                    "amniotic fluid index"
+                ],
+                "urgency": "high"
+            },
+            "suggested_tests": [
+                "fetal heart rate monitoring",
+                "amniotic fluid index",
+                "ultrasound"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1109",
+        "source_dataset": "medmcqa",
+        "initial_case": "A diabetic patient developed cellulitis due to S. Aureus, which was found to be methicillin-resistant on the antibiotic sensitivity testing. All of the following antibiotics will be appropriate except -",
+        "gold_answer_text": "Imipenem",
+        "raw_output": " Clinical context:\nA diabetic patient developed cellulitis due to S. Aureus, which was found to be methicillin-resistant on the antibiotic sensitivity testing. All of the following antibiotics will be appropriate except - [ ]",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1110",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 57-year-old man, with a history of chronic alcohol ingestion, is admitted to the hospital with acute alcoholic intoxication and lobar pneumonia. Physical examination reveals pallor; a large, tender liver; and consolidation of the right lower lobe. Laboratory data include hemoglobin of 7 g/dL, WBC of 4000/mL, and platelet count of 85,000/mL. Which of the following is the most likely factor for the anemia?",
+        "gold_answer_text": "toxic marrow suppression",
+        "raw_output": " The most likely factor for the anemia in this case is alcohol-induced anemia. Chronic alcohol ingestion can lead to anemia due to several mechanisms, including direct toxicity to the bone marrow, malnutrition, and increased iron loss. Other possible causes of anemia in this case, such as chronic illness, chronic kidney disease, or chronic liver disease, are less likely given the patient's history of alcohol abuse and the presence of lobar pneumonia.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1111",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 76-year-old woman is brought to the physician because of lesions on her left arm. She first noticed them 3 months ago and they have grown larger since that time. She has not had any pain or pruritus in the area. She has a history of invasive ductal carcinoma of the left breast, which was treated with mastectomy and radiation therapy 27 years ago. Since that time, she has had lymphedema of the left arm. Physical examination shows extensive edema of the left arm. There are four coalescing, firm, purple-blue nodules on the left lateral axillary region and swelling of the surrounding skin. Which of the following is the most likely diagnosis?",
+        "gold_answer_text": "Angiosarcoma",
+        "raw_output": " The most likely diagnosis is lymphadenopathy.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1112",
+        "source_dataset": "medmcqa",
+        "initial_case": "Fever, leukopenia, DIC, and hypotension caused by members of the Enterobacteriaceae family are most strongly associated with which of the following structures?",
+        "gold_answer_text": "Lipid A",
+        "raw_output": " The clinical context provided is not directly related to the triage task. It appears to be a question about the etiology of fever, leukopenia, DIC, and hypotension. The answer to this question is that these symptoms are most strongly associated with sepsis caused by members of the Enterobacteriaceae family.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1113",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "Twelve days after undergoing a cadaveric renal transplant for adult polycystic kidney disease, a 23-year-old man has pain in the right lower abdomen and generalized fatigue. During the past 4 days, he has had decreasing urinary output. Creatinine concentration was 2.3 mg/dL on the second postoperative day. Current medications include prednisone, cyclosporine, azathioprine, and enalapril. His temperature is 38°C (100.4°F), pulse is 103/min, and blood pressure is 168/98 mm Hg. Examination reveals tenderness to palpation on the graft site. Creatinine concentration is 4.3 mg/dL. A biopsy of the transplanted kidney shows tubulitis. C4d staining is negative. Which of the following is the most likely cause of this patient's findings?",
+        "gold_answer_text": "Allorecognition with T cell activation",
+        "raw_output": " The most likely cause of this patient's findings is acute rejection of the transplanted kidney.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1114",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A three-day-old, full-term infant born by uncomplicated vaginal delivery is brought to a pediatrician by his mother, who notes that her son's skin appears yellow. She reports that the child cries several times per day, but sleeps 7-8 hours at night, uninterrupted. She has been breastfeeding the infant but feels the latch has been poor and is unsure how much milk he has been consuming but feels it is not enough. A lactation consult was called for the patient and it was noted that despite proper instruction the observed latch was still poor. When asked the mother stated that the baby is currently making stools 2 times per day. Which of the following is the most likely etiology of the patient's presentation?",
+        "gold_answer_text": "Breastfeeding jaundice",
+        "raw_output": " The most likely etiology of the patient's presentation is jaundice due to breastfeeding.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1115",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 20 year old man is hit on the eye with a ball. On examination there is restriction of lateral and upward gaze and diplopia. There is no obvious visible sign of injury to the eye ball, but there is some enophthalmos, the likely diagonosis is -",
+        "gold_answer_text": "Blow out fracture of the orbit",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is there any history of previous eye injury?\",\n\"Is there any history of eye surgery?\",\n\"Is there any history of trauma to the head or neck?\"\n],\n\"summary\": {\n\"patient\\_info\": \"20-year-old man\",\n\"presenting\\_symptoms\": [\"restriction of lateral and upward gaze\", \"diplopia\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"orbital fracture\", \"ophthalmoplegia\"],\n\"missing\\_info\": [\"history of previous eye injury\", \"history of eye surgery\", \"history of trauma to the head or neck\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"ophthalmologic examination\", \"CT scan of the orbit\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1116",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 60-year-old male is on aspirin, ACE inhibitor, nitrates and beta blocker for chronic stable angina. Since the new-year pay, he is having long-lasting angina pain every day for past 3 days. ECG was normal and Troponin I levels are normal. Which is the best management of this patient?",
+        "gold_answer_text": "Admit and sta heparin",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"60-year-old male\",\n\"presenting_symptoms\": [\"long-lasting angina pain\"],\n\"known_history\": [\"aspirin\", \"ACE inhibitor\", \"nitrates\", \"beta blocker\"],\n\"possible_concerns\": [\"acute coronary syndrome\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "60-year-old male",
+                "presenting_symptoms": [
+                    "long-lasting angina pain"
+                ],
+                "known_history": [
+                    "aspirin",
+                    "ACE inhibitor",
+                    "nitrates",
+                    "beta blocker"
+                ],
+                "possible_concerns": [
+                    "acute coronary syndrome"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1117",
+        "source_dataset": "medmcqa",
+        "initial_case": "Dr. Jones prescribes albuterol sulfate (Proventil) for a patient with newly diagnose asthma. When teaching the patient about this drug, the nurse should explain that it may cause:",
+        "gold_answer_text": "Nervousness",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"Patient with newly diagnosed asthma\",\n\"presenting_symptoms\": [],\n\"known_history\": [\"newly diagnosed asthma\"],\n\"possible_concerns\": [],\n\"missing_info\": [],\n\"urgency\": \"low\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "Patient with newly diagnosed asthma",
+                "presenting_symptoms": [],
+                "known_history": [
+                    "newly diagnosed asthma"
+                ],
+                "possible_concerns": [],
+                "missing_info": [],
+                "urgency": "low"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1118",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 16-year-old male is found to have a mental age of 9 years on I.Q. testing. He has",
+        "gold_answer_text": "Mild mental Retardation",
+        "raw_output": " been experiencing difficulty in school and has been acting out at home. He has no history of head trauma or seizures.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1119",
+        "source_dataset": "medmcqa",
+        "initial_case": "Which is the Valvular lesion being repaired in this 20-year-old man with the malar flush?",
+        "gold_answer_text": "Mitral stenosis",
+        "raw_output": " {\n\"clarifying\\_questions\": [],\n\"summary\": {\n\"patient\\_info\": \"20-year-old man\",\n\"presenting\\_symptoms\": [\"malar flush\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"valvular lesion\"],\n\"missing\\_info\": [],\n\"urgency\": \"low\"\n},\n\"suggested\\_tests\": [],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1120",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45 years old male presents with complain of black spots on his tooth surface. He gives a history of multiple gold restorations and insists on getting the same for this tooth.The intraoral examination reveals pit and fissure caries in relation to 16. During the condensation of the restorative material, the compacted surface should be",
+        "gold_answer_text": "Saucer shaped, with the compaction on the external walls slightly ahead of the center",
+        "raw_output": " {\n\"clarifying\\_questions\": [],\n\"summary\": {\n\"patient\\_info\": \"45-year-old male\",\n\"presenting\\_symptoms\": [\"black spots on tooth surface\"],\n\"known\\_history\": [\"multiple gold restorations\"],\n\"possible\\_concerns\": [\"dental caries\"],\n\"missing\\_info\": [],\n\"urgency\": \"low\"\n},\n\"suggested\\_tests\": [],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1121",
+        "source_dataset": "medmcqa",
+        "initial_case": "A patient comes to you with history of frequent cycles with heavy bleeding. This condition is called:",
+        "gold_answer_text": "Polymenorrhagia",
+        "raw_output": " The patient's condition is called menorrhagia. Menorrhagia is a medical condition characterized by heavy menstrual bleeding. It is a common gynecological problem that can be caused by various factors, including hormonal imbalances, uterine fibroids, polyps, endometriosis, and certain medications. It is important to consult a healthcare professional for proper diagnosis and treatment.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1122",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 29-year-old man presents to an STD clinic complaining of a painful lesion at the end of his penis. The patient says it started as a tiny red bump and grew over several days. He has no history of a serious illness and takes no medications. He has had several sexual partners in the past few months. At the clinic, his temperature is 38.2℃ (100.8℉), the blood pressure is 115/70 mm Hg, the pulse is 84/min, and the respirations are 14/min. Examination of the inguinal area shows enlarged and tender lymph nodes, some of which are fluctuant. There is an ulcerated and weeping sore with an erythematous base and ragged edges on the end of his penis. The remainder of the physical examination shows no abnormalities. The result of the Venereal Disease Research Laboratory (VDRL) is negative. Which of the following diagnoses best explains these findings?",
+        "gold_answer_text": "Chancroid",
+        "raw_output": " The most likely diagnosis is syphilis. The patient's symptoms, history of multiple sexual partners, and physical examination findings are consistent with syphilis. The presence of enlarged and tender lymph nodes, especially in the inguinal area, is a common finding in syphilis. The ulcerated and weeping sore with an erythematous base and ragged edges is also consistent with syphilis. The negative VDRL result is not reliable, as it may be false negative in the early stages of syphilis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1123",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 10-year-old girl has exhibited muscular weakness since early childhood that has not worsened. She can ambulate unassisted but does not participate in strenuous physical activities. On examination, she has 4/5 motor strength in proximal muscles and 5/5 in distal muscles. There is no muscle pain on palpation. A biopsy of the deltoid muscle is obtained, and with Gomori trichrome stain, microscopic analysis shows subsarcolemmal aggregates of rod-shaped intracytoplasmic inclusions. Laboratory studies show a normal serum creatine kinase. Which of the following is the most likely form of muscle disease she has?",
+        "gold_answer_text": "Congenital myopathy",
+        "raw_output": " Based on the provided information, the most likely form of muscle disease the 10-year-old girl has is myotonic dystrophy.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1124",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 19-year-old college student develops a severe sore throat, cervical lymphadenopathy, and atypical lymphocytes on blood film. A heterophil antibody test is positive.For the above patient with a hematologic abnormality, select the most likely diagnosis.",
+        "gold_answer_text": "infectious mononucleosis",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"19-year-old college student\",\n\"presenting_symptoms\": [\"severe sore throat\", \"cervical lymphadenopathy\"],\n\"known_history\": [],\n\"possible_concerns\": [\"infectious mononucleosis\", \"lymphoma\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"blood culture\", \"hepatitis B surface antigen\", \"human immunodeficiency virus (HIV) antibody test\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "19-year-old college student",
+                "presenting_symptoms": [
+                    "severe sore throat",
+                    "cervical lymphadenopathy"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "infectious mononucleosis",
+                    "lymphoma"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "blood culture",
+                "hepatitis B surface antigen",
+                "human immunodeficiency virus (HIV) antibody test"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1125",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 33 year old suffers from blunt trauma to the eye. Fundoscopy shows cherry red spot, the probable diagnosis is -",
+        "gold_answer_text": "Commotio Retinae",
+        "raw_output": " Retinal hemorrhage.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1126",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 55-year-old woman has been steadily gaining weight for the past 30 years. She underwent cholecystectomy for cholelithiasis 5 years ago. She does not smoke. She is now 164 cm (5 ft 4 in) tall and weighs 126 kg (BMI 47). On physical examination, she has a decreased range of motion with pain on movement of the knees. Laboratory studies show a serum glucose level of 176 mg/dL. This patient is at greatest risk of developing which of the following neoplasms?",
+        "gold_answer_text": "Endometrial carcinoma",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"55-year-old woman\",\n\"presenting_symptoms\": [],\n\"known_history\": [\"cholecystectomy\", \"cholelithiasis\", \"weight gain\", \"type 2 diabetes\"],\n\"possible_concerns\": [\"endometrial cancer\", \"colorectal cancer\", \"breast cancer\", \"thyroid cancer\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "55-year-old woman",
+                "presenting_symptoms": [],
+                "known_history": [
+                    "cholecystectomy",
+                    "cholelithiasis",
+                    "weight gain",
+                    "type 2 diabetes"
+                ],
+                "possible_concerns": [
+                    "endometrial cancer",
+                    "colorectal cancer",
+                    "breast cancer",
+                    "thyroid cancer"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1127",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 70 year old patient with benign prostatic hyperplasia underwent transuretheral resection of prostate under spinal anaesthesia. One hour later, he developed vomiting and altered sensorium. The most probable cause is -",
+        "gold_answer_text": "Water intoxication",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient still under spinal anesthesia?\",\n\"Is the patient's blood pressure and heart rate stable?\",\n\"Is the patient's oxygen saturation normal?\",\n\"Is there any history of allergies or adverse reactions to anesthesia?\"\n],\n\"summary\": {\n\"patient\\_info\": \"70-year-old male patient with benign prostatic hyperplasia\",\n\"presenting\\_symptoms\": [\"vomiting\", \"altered sensorium\"],\n\"known\\_history\": [\"benign prostatic hyperplasia\", \"transuretheral resection of prostate\"],\n\"possible\\_concerns\": [\"postoperative complication\", \"anesthesia-related adverse event\"],\n\"missing\\_info\": [\"blood pressure\", \"heart rate\", \"oxygen saturation\", \"allergy history\"],\n\"urgency\": \"high\"\n},\n\"suggested\\_tests\": [\"complete blood count\", \"electrolytes\", \"liver function tests\", \"renal function tests\", \"blood culture\", \"spinal fluid analysis\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1128",
+        "source_dataset": "medmcqa",
+        "initial_case": "Kallu, a 22 year old male had an outing with his friends and developed fever of 38.50C, diarrhoea, and vomiting following eating chicken salad, 24 hours back. Two of his friends developed the same symptoms. The diagnosis is -",
+        "gold_answer_text": "Salmonella enteritis",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient currently experiencing fever, diarrhea, or vomiting?\",\n\"Has the patient had any recent travel or contact with someone who has been to a foreign country?\"\n],\n\"summary\": {\n\"patient\\_info\": \"Kallu, 22-year-old male\",\n\"presenting\\_symptoms\": [\"fever\", \"diarrhea\", \"vomiting\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"foodborne illness\"],\n\"missing\\_info\": [\"duration of symptoms\", \"travel history\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"stool culture\", \"blood culture\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1129",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 60 year old male presented to the emergency with breathlessness, facial swelling and dilated veins on the chest wall. Which of the following is the most common cause?",
+        "gold_answer_text": "Superior vena caval obstruction",
+        "raw_output": " The most common cause of breathlessness, facial swelling, and dilated veins on the chest wall in a 60-year-old male is heart failure.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1130",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 45-year-old woman comes to the physician because of a 1-week history of fatigue and bruises on her elbows. Examination shows a soft, nontender abdomen with no organomegaly. Laboratory studies show a hemoglobin concentration of 7 g/dL, a leukocyte count of 2,000/mm3, a platelet count of 40,000/mm3, and a reticulocyte count of 0.2%. Serum electrolyte concentrations are within normal limits. A bone marrow biopsy is most likely to show which of the following findings?",
+        "gold_answer_text": "Hyperplasia of adipocytes",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient taking any medications?\",\n\"Is the patient pregnant or possibly pregnant?\",\n\"Is there a history of blood transfusions?\"\n],\n\"summary\": {\n\"patient_info\": \"45-year-old woman\",\n\"presenting_symptoms\": [\"fatigue\", \"bruises\"],\n\"known_history\": [],\n\"possible_concerns\": [\"anemia\"],\n\"missing_info\": [\"medication history\", \"pregnancy status\", \"blood transfusion history\"],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"complete blood count\", \"bone marrow biopsy\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient taking any medications?",
+                "Is the patient pregnant or possibly pregnant?",
+                "Is there a history of blood transfusions?"
+            ],
+            "summary": {
+                "patient_info": "45-year-old woman",
+                "presenting_symptoms": [
+                    "fatigue",
+                    "bruises"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "anemia"
+                ],
+                "missing_info": [
+                    "medication history",
+                    "pregnancy status",
+                    "blood transfusion history"
+                ],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "complete blood count",
+                "bone marrow biopsy"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1131",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 25-year-old woman, gravida 2, para 1, at 25 weeks' gestation comes to the emergency department because of a 1-day history of fever and right-sided flank pain. During this period, she also had chills, nausea, vomiting, and burning on urination. Her last prenatal visit was 10 weeks ago. Pregnancy and delivery of her first child were uncomplicated. Her temperature is 39°C (102.2°F), pulse is 110/min, respirations are 20/min, and blood pressure is 110/70 mm Hg. Physical examination shows costovertebral angle tenderness on the right. The abdomen is soft and nontender, and no contractions are felt. Pelvic examination shows a uterus consistent in size with a 25-week gestation. Fetal heart rate is 170/min. Laboratory studies show: Leukocyte count 15,000/mm3 Urine Nitrite 2+ Protein 1+ Blood 1+ RBC 5/hpf WBC 500/hpf Blood and urine samples are obtained for culture and drug sensitivity. Which of the following is the most appropriate next step in management?\"",
+        "gold_answer_text": "Inpatient treatment with intravenous ceftriaxone",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient allergic to any antibiotics?\"\n],\n\"summary\": {\n\"patient_info\": \"25-year-old woman, gravida 2, para 1, at 25 weeks' gestation\",\n\"presenting_symptoms\": [\"fever\", \"right-sided flank pain\", \"chills\", \"nausea\", \"vomiting\", \"burning on urination\"],\n\"known_history\": [\"pregnancy and delivery of her first child were uncomplicated\"],\n\"possible_concerns\": [\"pyelonephritis\", \"urinary tract infection\"],\n\"missing_info\": [\"costovertebral angle tenderness\", \"fetal heart rate\", \"blood and urine samples for culture and drug sensitivity\"],\n\"urgency\": \"emergent\"\n},\n\"suggested_tests\": [\"blood and urine samples for culture and drug sensitivity\", \"fetal heart rate\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient allergic to any antibiotics?"
+            ],
+            "summary": {
+                "patient_info": "25-year-old woman, gravida 2, para 1, at 25 weeks' gestation",
+                "presenting_symptoms": [
+                    "fever",
+                    "right-sided flank pain",
+                    "chills",
+                    "nausea",
+                    "vomiting",
+                    "burning on urination"
+                ],
+                "known_history": [
+                    "pregnancy and delivery of her first child were uncomplicated"
+                ],
+                "possible_concerns": [
+                    "pyelonephritis",
+                    "urinary tract infection"
+                ],
+                "missing_info": [
+                    "costovertebral angle tenderness",
+                    "fetal heart rate",
+                    "blood and urine samples for culture and drug sensitivity"
+                ],
+                "urgency": "emergent"
+            },
+            "suggested_tests": [
+                "blood and urine samples for culture and drug sensitivity",
+                "fetal heart rate"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1132",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 23 Year old female presents with anemia and jaundice for 2 years. Peripheral smear shows spherocytes. The best investigation to be done is :",
+        "gold_answer_text": "Coombs Test",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient pregnant or possibly pregnant?\",\n\"Is there a history of blood transfusions or foreign travel?\",\n\"Is there a history of liver disease or family history of liver disease?\"\n],\n\"summary\": {\n\"patient\\_info\": \"23-year-old female\",\n\"presenting\\_symptoms\": [\"anemia\", \"jaundice\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"hereditary spherocytosis\"],\n\"missing\\_info\": [\"pregnancy status\", \"history of blood transfusions or foreign travel\", \"history of liver disease or family history of liver disease\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"complete blood count\", \"peripheral smear\", \"reticulocyte count\", \"direct antiglobulin test\", \"liver function tests\", \"abdominal ultrasound\"],\n\"doctor\\_approval\\_required\": true",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1133",
+        "source_dataset": "medmcqa",
+        "initial_case": "A man who had suffered from displaced fracture of mandible complains of pain in-old fracture site near mental foramen. There is a movable tender mass on palpation in the area. The best preoperative diagnosis is:",
+        "gold_answer_text": "Traumatic neuroma",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient able to open his mouth fully?\",\n\"Is there any swelling or deformity in the area of the fracture?\",\n\"Has the patient had any previous surgeries on the mandible?\"\n],\n\"summary\": {\n\"patient_info\": \"man with history of displaced mandible fracture\",\n\"presenting_symptoms\": [\"pain in old fracture site\"],\n\"known_history\": [\"displaced mandible fracture\"],\n\"possible_concerns\": [\"mandibular fracture\"],\n\"missing_info\": [\"swelling or deformity\", \"previous surgeries on mandible\"],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient able to open his mouth fully?",
+                "Is there any swelling or deformity in the area of the fracture?",
+                "Has the patient had any previous surgeries on the mandible?"
+            ],
+            "summary": {
+                "patient_info": "man with history of displaced mandible fracture",
+                "presenting_symptoms": [
+                    "pain in old fracture site"
+                ],
+                "known_history": [
+                    "displaced mandible fracture"
+                ],
+                "possible_concerns": [
+                    "mandibular fracture"
+                ],
+                "missing_info": [
+                    "swelling or deformity",
+                    "previous surgeries on mandible"
+                ],
+                "urgency": "medium"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1134",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 35-year-old male is found to be infected with an HIV strain resistant to saquinavir and zidovudine. Which of the following best explains the drug resistance observed in this patient?",
+        "gold_answer_text": "pol mutation",
+        "raw_output": " The best explanation for the drug resistance observed in this patient is the development of HIV mutations that confer resistance to saquinavir and zidovudine. HIV is a rapidly mutating virus, and the emergence of drug resistance is a common problem in HIV treatment. The development of drug resistance can be caused by several factors, including the use of ineffective doses, poor adherence to treatment, and the presence of multiple viral strains within the body. In this case, the patient's HIV strain was resistant to both saquinavir and zidovudine, which suggests that the patient may have had a history of non-adherence to treatment or the use of ineffective doses. It is important for HIV patients to adhere to their treatment regimens and to work closely with their healthcare providers to monitor for the development of drug resistance.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1135",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 1 year old child presenting with abdominal mass and calcification on X – rays is suggestive of :",
+        "gold_answer_text": "Neuroblastoma",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the child experiencing any abdominal pain or discomfort?\",\n\"Has the child had any recent trauma or injury to the abdomen?\",\n\"Is the child up to date on vaccinations?\"\n],\n\"summary\": {\n\"patient\\_info\": \"1-year-old child\",\n\"presenting\\_symptoms\": [\"abdominal mass\", \"calcification on X-rays\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"neoplasm\", \"infection\", \"trauma\"],\n\"missing\\_info\": [\"abdominal pain or discomfort\", \"recent trauma or injury\", \"vaccination status\"],\n\"urgency\": \"high\"\n},\n\"suggested\\_tests\": [\"abdominal ultrasound\", \"CT scan\", \"biopsy\"],\n\"doctor\\_approval\\_required\": true",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1136",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 18-month old baby presents with recurrent episodes of excessive crying followed by cyanosis, unconsciousness and occassional seizures since 9 months of age. The most likely diagnosis is -",
+        "gold_answer_text": "Breath holding spells",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the baby up to date on vaccinations?\",\n\"Is there a family history of seizures?\",\n\"Has the baby had any recent infections?\"\n],\n\"summary\": {\n\"patient\\_info\": \"18-month-old baby\",\n\"presenting\\_symptoms\": [\"recurrent episodes of excessive crying\", \"cyanosis\", \"unconsciousness\", \"seizures\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"epilepsy\", \"metabolic disorder\", \"infection\"],\n\"missing\\_info\": [\"vaccination status\", \"family history of seizures\", \"recent infections\"],\n\"urgency\": \"emergent\"\n},\n\"suggested\\_tests\": [\"complete blood count\", \"electrolytes\", \"blood culture\", \"seizure workup\", \"metabolic panel\", \"brain imaging\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1137",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 27-year-old female presents to her primary care physician with a chief complaint of pain in her lower extremity. The patient states that the pain has gradually worsened over the past month. The patient states that her pain is worsened when she is training. The patient is a business student who does not have a significant past medical history and is currently not on any medications. She admits to having unprotected sex with multiple partners and can not recall her last menses. She drinks 7 to 10 shots of liquor on the weekends and smokes marijuana occasionally. She recently joined the cross country team and has been training for an upcoming meet. Her temperature is 99.5°F (37.5°C), pulse is 88/min, blood pressure is 100/70 mmHg, respirations are 10/min, and oxygen saturation is 97% on room air. On physical exam you note a very pale young woman in no current distress. Pain is localized to the lateral aspect of the knee and is reproduced upon palpation. Physical exam of the knee, hip, and ankle is otherwise within normal limits. The patient has 1+ reflexes and 2+ strength in all extremities. A test for STI's performed one week ago came back negative for infection. Which of the following is the most likely explanation for this patient's presentation?",
+        "gold_answer_text": "Friction with the lateral femoral epicondyle",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient currently menstruating?\",\n\"Has the patient had any recent injuries or trauma to the knee?\",\n\"Has the patient had any recent changes in her training regimen?\"\n],\n\"summary\": {\n\"patient_info\": \"27-year-old female\",\n\"presenting_symptoms\": [\"pain in lower extremity\"],\n\"known_history\": [],\n\"possible_concerns\": [\"osteonecrosis\", \"osteomyelitis\", \"deep vein thrombosis\"],\n\"missing_info\": [\"menstrual status\", \"recent injuries or trauma\", \"recent changes in training regimen\"],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"X-ray of the knee\", \"MRI of the knee\", \"blood cultures\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient currently menstruating?",
+                "Has the patient had any recent injuries or trauma to the knee?",
+                "Has the patient had any recent changes in her training regimen?"
+            ],
+            "summary": {
+                "patient_info": "27-year-old female",
+                "presenting_symptoms": [
+                    "pain in lower extremity"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "osteonecrosis",
+                    "osteomyelitis",
+                    "deep vein thrombosis"
+                ],
+                "missing_info": [
+                    "menstrual status",
+                    "recent injuries or trauma",
+                    "recent changes in training regimen"
+                ],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "X-ray of the knee",
+                "MRI of the knee",
+                "blood cultures"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1138",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 37-year-old man is brought to the emergency department after being attacked with a knife. Physical examination shows a 4-cm laceration in the midline of the right forearm. An MRI of the right arm shows damage to a nerve that runs between the superficial and deep flexor digitorum muscles. Loss of sensation over which of the following areas is most likely in this patient?",
+        "gold_answer_text": "Fingertip of the index finger",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"37-year-old man\",\n\"presenting_symptoms\": [],\n\"known_history\": [],\n\"possible_concerns\": [],\n\"missing_info\": [],\n\"urgency\": \"emergent\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "37-year-old man",
+                "presenting_symptoms": [],
+                "known_history": [],
+                "possible_concerns": [],
+                "missing_info": [],
+                "urgency": "emergent"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1139",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 64-year-old man complains of abdominal pain, pruritus, 4-lb weight loss, and anorexia. There are multiple scratch marks on the skin of the extremities and flank. The bilirubin is 1.0 mg/dL. To determine if the condition is due to cholestasis, blood should be tested for which of the following?",
+        "gold_answer_text": "Alkaline phosphatase",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"64-year-old man\",\n\"presenting_symptoms\": [\"abdominal pain\", \"pruritus\", \"weight loss\", \"anorexia\"],\n\"known_history\": [],\n\"possible_concerns\": [\"cholestasis\"],\n\"missing_info\": [\"jaundice\", \"hepatomegaly\", \"spleenomegaly\"],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"liver function tests\", \"complete blood count\", \"abdominal ultrasound\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "64-year-old man",
+                "presenting_symptoms": [
+                    "abdominal pain",
+                    "pruritus",
+                    "weight loss",
+                    "anorexia"
+                ],
+                "known_history": [],
+                "possible_concerns": [
+                    "cholestasis"
+                ],
+                "missing_info": [
+                    "jaundice",
+                    "hepatomegaly",
+                    "spleenomegaly"
+                ],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "liver function tests",
+                "complete blood count",
+                "abdominal ultrasound"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1140",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 55-year-old man presents to a rheumatologist with bilateral wrist and knee pain that has been present for the last 10 years. The patient was a professional athlete who retired at age 50. He also notes morning stiffness in his joints that lasts approx. 50 minutes. He denies joint swelling, color changes in his digits, dryness of mucous membranes, and constitutional symptoms such as fever and chills. On physical exam, the physician notes several non-tender nodules on the left 1st, 3rd, and 4th distal interphalangeal joints. There is also tenderness with palpation at the base of both thumbs. The patient’s knees are enlarged, bilaterally, and he has pain and crepitus on passive range of motion. Which of the following is the most likely diagnosis?",
+        "gold_answer_text": "Osteoarthritis",
+        "raw_output": " The most likely diagnosis is rheumatoid arthritis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1141",
+        "source_dataset": "medmcqa",
+        "initial_case": "A farmer presents with multiple dicharging sinuses in the leg not responding to antibiotics. Most likely diagnosis is -",
+        "gold_answer_text": "Madurella",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is there any history of trauma or injury to the leg?\",\n\"Has the farmer been exposed to any animals or animal waste recently?\",\n\"Has the farmer been experiencing any other symptoms such as fever or chills?\"\n],\n\"summary\": {\n\"patient\\_info\": \"farmer\",\n\"presenting\\_symptoms\": [\"dicharging sinuses in leg\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"infectious disease\", \"animal-related injury\"],\n\"missing\\_info\": [\"history of trauma or injury\", \"exposure to animals or animal waste\", \"other symptoms\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"culture of the sinus discharge\", \"blood culture\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1142",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45 year old female presents with symptoms of acute cholecystitis. On USG there is a solitary gallstone of size 1.5 cm. Symptoms are controlled with medical management. Which of the following is the most appropriate step in the management of this patient",
+        "gold_answer_text": "Laparoscopic cholecystectomy immediately",
+        "raw_output": " {\n\"clarifying\\_questions\": [],\n\"summary\": {\n\"patient\\_info\": \"45-year-old female\",\n\"presenting\\_symptoms\": [\"acute cholecystitis\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"gallstone disease\"],\n\"missing\\_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"USG\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1143",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 25-year-old female presents to the emergency room with a heart rate of 32 BPM and a blood pressure of 80/40. She was found by emergency medical services with an empty bottle of propanolol that was taken from her grandmother. Her vital signs do not improve despite IV fluids and oxygen. Which of the following is a first line treatment for overdose?",
+        "gold_answer_text": "Glucagon",
+        "raw_output": " The first line treatment for overdose is to remove the ingested substance from the body. In this case, the patient should undergo gastric lavage to remove the ingested propanolol. Additionally, the patient should be closely monitored for any signs of cardiac arrhythmias and receive appropriate treatment if necessary.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1144",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 60-year-old man presents to the office for shortness of breath. The shortness of breath started a year ago and is exacerbated by physical activity. He has been working in the glass manufacturing industry for 20 years. His vital signs include: heart rate 72/min, respiratory rate 30/min, and blood pressure 130/80 mm Hg. On physical exam, there are diminished respiratory sounds on both sides. On the chest radiograph, interstitial fibrosis with reticulonodular infiltrate is found on both sides, and there is also an eggshell calcification of multiple adenopathies. What is the most likely diagnosis?",
+        "gold_answer_text": "Silicosis",
+        "raw_output": " The most likely diagnosis is pulmonary fibrosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1145",
+        "source_dataset": "medmcqa",
+        "initial_case": "A young patient's blood investigations shows evidence of Burkitt's lymphoma. Which of the following agent is associated with Burkitt's lymphoma?",
+        "gold_answer_text": "EBV",
+        "raw_output": " The following agent is associated with Burkitt's lymphoma: Epstein-Barr virus (EBV).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1146",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 12 year old girl child presents with head ache, unsteadiness and poor hearing which has worsened over the past 5 years. His father has a history of brain surgery and he is deaf since his 35 years. Most likely diagnosis in the child",
+        "gold_answer_text": "Neurofibromatosis 2",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the child experiencing any other neurological symptoms such as seizures, numbness, or tingling?\"\n],\n\"summary\": {\n\"patient\\_info\": \"12-year-old girl child\",\n\"presenting\\_symptoms\": [\"headache\", \"unsteadiness\", \"poor hearing\"],\n\"known\\_history\": [\"brain surgery\", \"deafness\"],\n\"possible\\_concerns\": [\"meningitis\", \"brain tumor\", \"inner ear disease\"],\n\"missing\\_info\": [\"seizures\", \"numbness\", \"tingling\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"MRI\", \"audiometry\", \"blood tests for meningitis\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1147",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 5 year old child presents with history of fever off- and-on for past 2 weeks and petechial spots all over the body and increasing pallor for the past 1 month. Examination reveals splenomegaly of 2 cms below costal margin. The most likely diagnosis is:",
+        "gold_answer_text": "Acute leukemia",
+        "raw_output": " The most likely diagnosis is leukemia.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1148",
+        "source_dataset": "medmcqa",
+        "initial_case": "A patient is found to be positive only for Anti HBsAg. All other viral markers are negative.The likely diagnosis is :",
+        "gold_answer_text": "Vaccination",
+        "raw_output": " The likely diagnosis is immunization-induced hepatitis B.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1149",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 52-year-old man comes to the physician because of a 5-month history of progressive lethargy, shortness of breath, and difficulty concentrating. His friends have told him that he appears pale. He has smoked half a pack of cigarettes daily for the past 20 years. Neurological examination shows reduced sensation to light touch and pinprick in the toes bilaterally. Laboratory studies show: Hemoglobin 8.2 g/dL Mean corpuscular volume 108 μm3 Serum Vitamin B12 (cyanocobalamin) 51 ng/L (N = 170–900) Folic acid 13 ng/mL (N = 5.4–18) An oral dose of radiolabeled vitamin B12 is administered, followed by an intramuscular injection of nonradioactive vitamin B12. A 24-hour urine sample is collected and urine vitamin B12 levels are unchanged. The procedure is repeated with the addition of oral intrinsic factor, and 24-hour urine vitamin B12 levels increase. This patient's findings indicate an increased risk for which of the following conditions?\"",
+        "gold_answer_text": "Gastric carcinoma",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"52-year-old man\",\n\"presenting_symptoms\": [\"progressive lethargy\", \"shortness of breath\", \"difficulty concentrating\", \"pale appearance\"],\n\"known_history\": [\"smoking half a pack of cigarettes daily for the past 20 years\"],\n\"possible_concerns\": [\"anemia\", \"neurological deficits\", \"vitamin B12 deficiency\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"hemoglobin\", \"mean corpuscular volume\", \"serum vitamin B12\", \"folic acid\", \"oral dose of radiolabeled vitamin B12\", \"intramuscular injection of nonradioactive vitamin B12\", \"24-hour urine sample\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "52-year-old man",
+                "presenting_symptoms": [
+                    "progressive lethargy",
+                    "shortness of breath",
+                    "difficulty concentrating",
+                    "pale appearance"
+                ],
+                "known_history": [
+                    "smoking half a pack of cigarettes daily for the past 20 years"
+                ],
+                "possible_concerns": [
+                    "anemia",
+                    "neurological deficits",
+                    "vitamin B12 deficiency"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "hemoglobin",
+                "mean corpuscular volume",
+                "serum vitamin B12",
+                "folic acid",
+                "oral dose of radiolabeled vitamin B12",
+                "intramuscular injection of nonradioactive vitamin B12",
+                "24-hour urine sample"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1150",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 62-year-old man presents with dark tarry stools and light-headedness. Upper endoscopy finds an ulcerating lesion in his stomach and biopsies confirm gastric cancer. Which of the following is a risk factor for carcinoma of the stomach?",
+        "gold_answer_text": "Helicobacter pylori infection",
+        "raw_output": " The patient's age (62 years old) is a risk factor for carcinoma of the stomach. Other risk factors include smoking, family history of gastric cancer, Helicobacter pylori infection, and a history of atrophic gastritis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1151",
+        "source_dataset": "medmcqa",
+        "initial_case": "In a patient presenting with headache and eye complaints, Examination of rigt eye reveals: Right eye superotemporal quadrotpsia. Left eye reveals : Left eye superotemporal quadrotopsia Left eye reveals : Left eye controcecal scotoma. Likely site of lesion is:",
+        "gold_answer_text": "Left optic nerve + chiasma",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient experiencing any other neurological symptoms?\",\n\"Is the patient experiencing any visual disturbances in the left eye?\",\n\"Is the patient experiencing any other symptoms, such as nausea, vomiting, or dizziness?\"\n],\n\"summary\": {\n\"patient\\_info\": \"Patient with headache and eye complaints\",\n\"presenting\\_symptoms\": [\"headache\", \"eye complaints\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"brain tumor\", \"stroke\", \"transient ischemic attack\"],\n\"missing\\_info\": [\"neurological symptoms\", \"visual disturbances in the left eye\", \"other symptoms\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"MRI\", \"CT scan\", \"blood tests\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1152",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45 year old female patient returns to your clinic with complaint of food lodgement in interproximal area of 47. On intraoral examination, 47 is restored with disto-occlusal amalgam restoration. What can be the most probable reason for this patient's problem?",
+        "gold_answer_text": "Contact area placed more occlusally",
+        "raw_output": " The most probable reason for this patient's problem could be a food impaction in the interproximal area of 47. This is a common dental problem that occurs when food particles become trapped between the teeth and cannot be easily removed by brushing or flossing. In this case, the disto-occlusal amalgam restoration on tooth 47 may have created a space for food to become trapped, leading to the patient's complaint.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1153",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 24 year old male patient complains of yellowish discoloration of the teeth. Intra-oral examination reveals generalized grade 1 tetracycline stains and proximal caries was present with 22. Composite restoration in this patient is delayed for atleast _____ after bleaching.",
+        "gold_answer_text": "1 week",
+        "raw_output": " Clinical context:\nA 24 year old male patient complains of yellowish discoloration of the teeth. Intra-oral examination reveals generalized grade 1 tetracycline stains and proximal caries was present with 22. Composite restoration in this patient is delayed for atleast _____ after bleaching.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1154",
+        "source_dataset": "medmcqa",
+        "initial_case": "New born male baby presented with congestive heart failure. On examination enlarged fontanelles, a loud cranial bruit and following radiological finding was noted-the most likely diagnosis:",
+        "gold_answer_text": "Vein of Galen malformation",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the baby born prematurely?\",\n\"Is there any history of maternal hypertension or diabetes during pregnancy?\",\n\"Is there any history of congenital heart disease in the family?\"\n],\n\"summary\": {\n\"patient\\_info\": \"New born male baby\",\n\"presenting\\_symptoms\": [],\n\"known\\_history\": [\"congestive heart failure\"],\n\"possible\\_concerns\": [\"congenital heart disease\"],\n\"missing\\_info\": [\"prematurity\", \"maternal hypertension or diabetes during pregnancy\", \"family history of congenital heart disease\"],\n\"urgency\": \"emergent\"\n},\n\"suggested\\_tests\": [\"echocardiogram\", \"chest X-ray\", \"electrocardiogram\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1155",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 45-year-old man presents to his primary care physician complaining of increasingly frequent headaches. He also reports that his hats and wedding ring do not fit anymore. His temperature is 99°F (37.2°C), blood pressure is 145/80 mmHg, pulse is 85/min, and respirations are 16/min. Physical examination is notable for frontal bossing, a prominent jaw, and an enlarged tongue. A chest radiograph reveals mild cardiomegaly. Serum insulin-like growth factor 1 levels are significantly elevated. Which of the following conditions is this patient at greatest risk for?",
+        "gold_answer_text": "Carpal tunnel syndrome",
+        "raw_output": " The patient is at greatest risk for acromegaly.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1156",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45 years old female patient presented painless supraclavicular lymphadenopathy. Biopsy revealed binucleated acidophilic owl eye appearance with floating lymphocytes in empty space, which were CD 15, CD 30 positive. What is the most probable diagnosis?",
+        "gold_answer_text": "Nodular sclerosis Hodgkin lymphoma",
+        "raw_output": " The most probable diagnosis is Hodgkin lymphoma.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1157",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 32-year-old previously healthy female presents to her primary care physician with double vision. She first noted the double vision yesterday and saw no improvement this morning. She does not think it is worsening. She has not had any changes in her normal routine though she recalls one episode of right arm weakness 2 months ago. She did not seek treatment and the weakness subsided after several days. She does not have a history of head trauma. She denies headache, fever, chills, nausea, vomiting, paresthesias, extremity pain, or weakness. On exam she has right adduction palsy on leftward gaze. She has no focal weakness. Which of the following additional physical exam findings is associated with the lesion responsible for her ocular findings?",
+        "gold_answer_text": "Horizontal nystagmus in the left eye on leftward gaze",
+        "raw_output": " The additional physical exam findings that are associated with the lesion responsible for her ocular findings are:",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1158",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 3 year old boy is brought with normal developmental milestones but has delayed speech difficulty in communication and concentration. He is not making friends. What is the MOST probable diagnosis in this child?",
+        "gold_answer_text": "Autism",
+        "raw_output": " The most probable diagnosis in this child is autism spectrum disorder (ASD).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1159",
+        "source_dataset": "medmcqa",
+        "initial_case": "Features seen in a patient with chronic vomiting include -",
+        "gold_answer_text": "All of the above",
+        "raw_output": " 1. History of chronic vomiting: This is a key piece of information that should be obtained from the patient. It is important to determine if the vomiting is projectile or non-projectile, if it is associated with abdominal pain, if it is associated with eating, if it is associated with positional changes, if it is associated with other symptoms such as fever or weight loss, and if it is associated with any other medical conditions.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1160",
+        "source_dataset": "medmcqa",
+        "initial_case": "A patient presenting with history of diarrhoea for several years with recent onset pruritus and raised alkaline phosphatase, normal SGOT/PT and USG shows no gallstones and biliary tract abnormality, the diagnosis is",
+        "gold_answer_text": "Sclerosing cholangitis",
+        "raw_output": " unclear.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1161",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 62-year-old man comes to the physician because of a growth on his penis that has been gradually increasing in size over the last year. He was diagnosed with HIV 10 years ago. He has been divorced for 25 years and has had “at least 30 sexual partners” since. Physical examination shows a nontender 2.5-cm ulcerated lesion with an erythematous base on the dorsum of the glans. There is firm left inguinal lymphadenopathy. A biopsy of the lesion shows small uniform basophilic cells with central necrosis that invade into the corpus cavernosum. This patient's condition is most likely associated with which of the following pathogens?",
+        "gold_answer_text": "Human papillomavirus",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"62-year-old man with HIV\",\n\"presenting_symptoms\": [\"penile growth\", \"ulcerated lesion\"],\n\"known_history\": [\"HIV diagnosis 10 years ago\", \"divorced for 25 years\", \"at least 30 sexual partners\"],\n\"possible_concerns\": [\"penile cancer\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "62-year-old man with HIV",
+                "presenting_symptoms": [
+                    "penile growth",
+                    "ulcerated lesion"
+                ],
+                "known_history": [
+                    "HIV diagnosis 10 years ago",
+                    "divorced for 25 years",
+                    "at least 30 sexual partners"
+                ],
+                "possible_concerns": [
+                    "penile cancer"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1162",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 32-week, 1400 g neonate is born to a primigravida. The baby did not require resuscitation and showed stable vitals. The baby was transferred to the NICU. How will you manage the feeding of the patient?",
+        "gold_answer_text": "Start total enteral feeding and IV feeding not required",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"32-week, 1400 g neonate\",\n\"presenting_symptoms\": [],\n\"known_history\": [],\n\"possible_concerns\": [],\n\"missing_info\": [],\n\"urgency\": \"low\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "32-week, 1400 g neonate",
+                "presenting_symptoms": [],
+                "known_history": [],
+                "possible_concerns": [],
+                "missing_info": [],
+                "urgency": "low"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1163",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 60 year old male was diagnosed as carcinoma right lung. On CECT chest there was a tumor of 5x5 cm in upper lobe and another 2x2 cm size tumor nodule in middle lobe. The primary modality of treatment is :",
+        "gold_answer_text": "Surgery",
+        "raw_output": " {\n\"clarifying\\_questions\": [],\n\"summary\": {\n\"patient\\_info\": \"60-year-old male\",\n\"presenting\\_symptoms\": [],\n\"known\\_history\": [\"carcinoma right lung\"],\n\"possible\\_concerns\": [\"lung cancer\"],\n\"missing\\_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1164",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 38-year-old man comes to the physician because of persistent sadness and difficulty concentrating for the past 6 weeks. During this period, he has also had difficulty sleeping. He adds that he has been “feeling down” most of the time since his girlfriend broke up with him 4 years ago. Since then, he has only had a few periods of time when he did not feel that way, but none of these lasted for more than a month. He reports having no problems with appetite, weight, or energy. He does not use illicit drugs or alcohol. Mental status examination shows a depressed mood and constricted affect. Which of the following is the most likely diagnosis?",
+        "gold_answer_text": "Persistent depressive disorder",
+        "raw_output": " The most likely diagnosis is Major Depressive Disorder (MDD).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1165",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 60-year-old man comes to the physician for the evaluation of nausea over the past week. During this period, he has also had several episodes of non-bloody vomiting. Last month, he was diagnosed with stage II Hodgkin lymphoma and was started on adriamycin, bleomycin, vinblastine, and dacarbazine. His temperature is 37°C (98.6°F), pulse is 95/min, and blood pressure is 105/70 mm Hg. Physical examination shows cervical lymphadenopathy. The liver is palpated 1 to 2 cm below the right costal margin, and the spleen is palpated 2 to 3 cm below the left costal margin. The remainder of the examination shows no abnormalities. The patient is started on an appropriate medication. Two weeks later, he develops headaches and states that his last bowel movement was 4 days ago. The patient was most likely treated with which of the following medications?",
+        "gold_answer_text": "5-HT3 antagonist",
+        "raw_output": " The patient was most likely treated with adriamycin, bleomycin, vinblastine, and dacarbazine.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1166",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 25 year old infeile male underwent semen analysis. Results show : sperm count - 15 million/ml ; pH - 7.5 ; volume - 2 ml ; no agglutination is seen. Morphology shows 60% normal and 60% motile sperms. Most likely diagnosis is :",
+        "gold_answer_text": "Oligospermia",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient taking any medications?\",\n\"Is the patient experiencing any other symptoms?\",\n\"Is the patient experiencing any pain or discomfort?\"\n],\n\"summary\": {\n\"patient\\_info\": \"25-year-old male\",\n\"presenting\\_symptoms\": [],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"azoospermia\"],\n\"missing\\_info\": [\"medication history\", \"other symptoms\", \"pain or discomfort\"],\n\"urgency\": \"low\"\n},\n\"suggested\\_tests\": [],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1167",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 48-year-old man comes to the physician because of increasing generalized fatigue for 1 month. He has been unable to do normal household duties or go for his evening walks during this period. He has hypertension, hyperlipidemia, and type 2 diabetes mellitus. His father died of liver cancer at the age of 60 years. He does not smoke. He drinks one alcoholic beverage daily. Current medications include atorvastatin, enalapril, metformin, and insulin glargine. He is 170 cm (5 ft 7 in) tall and weighs 100 kg (220 lb); BMI is 34.6 kg/m2. His temperature is 36.6°C (97.9°F), pulse is 116/min, and blood pressure is 140/90 mm Hg. Examination shows hyperpigmented skin over the nape of the neck and extremities. The liver is palpated 4 cm below the right costal margin. Laboratory studies show: Hemoglobin 10.6 g/dL Mean corpuscular volume 87 μm3 Leukocyte count 9,700/mm3 Platelet count 182,000/mm3 Serum Glucose 213 mg/dL Creatinine 1.4 mg/dL Albumin 4.1 mg/dL Total bilirubin 1.1 mg/dL Alkaline phosphatase 66 U/L AST 100 U/L ALT 69 U/L γ-glutamyl transferase 28 U/L (N=5–50) Hepatitis B surface antigen negative Hepatitis C antibody negative Iron studies Iron 261 μg/dL Ferritin 558 ng/dL Transferrin saturation 83% Anti-nuclear antibody negative Which of the following is the most appropriate next step to confirm the diagnosis?\"",
+        "gold_answer_text": "Genetic testing",
+        "raw_output": " {\n  \"clarifying_questions\": [\n\"Is the patient currently taking any medications for liver disease?\"\n],\n\"summary\": {\n\"patient_info\": \"48-year-old man with generalized fatigue for 1 month\",\n\"presenting_symptoms\": [],\n\"known_history\": [\"hypertension\", \"hyperlipidemia\", \"type 2 diabetes mellitus\", \"father died of liver cancer\"],\n\"possible_concerns\": [\"non-alcoholic fatty liver disease\", \"hepatitis C\"],\n\"missing_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"liver function tests\", \"iron studies\", \"ultrasound of the liver\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient currently taking any medications for liver disease?"
+            ],
+            "summary": {
+                "patient_info": "48-year-old man with generalized fatigue for 1 month",
+                "presenting_symptoms": [],
+                "known_history": [
+                    "hypertension",
+                    "hyperlipidemia",
+                    "type 2 diabetes mellitus",
+                    "father died of liver cancer"
+                ],
+                "possible_concerns": [
+                    "non-alcoholic fatty liver disease",
+                    "hepatitis C"
+                ],
+                "missing_info": [],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "liver function tests",
+                "iron studies",
+                "ultrasound of the liver"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1168",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45-year-old male presented with low grade fever, malaise, shoness of breath and a growing skin lesions for 1 month. The cough had worsened over the past 1 month. Skin lesions are given below. O/E, Bronchial breath sounds in right lower lobe Egophony Chest x ray and biopsy of the skin lesion were done. What type of spores can be seen in the old cultures of the above organism: -",
+        "gold_answer_text": "Chlamydospore",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"What is the location of the skin lesions?\",\n\"Is there any history of travel to tropical or subtropical regions?\"\n],\n\"summary\": {\n\"patient\\_info\": \"45-year-old male\",\n\"presenting\\_symptoms\": [\"low grade fever\", \"malaise\", \"shortness of breath\", \"growing skin lesions\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"infectious disease\", \"malignancy\"],\n\"missing\\_info\": [\"location of skin lesions\", \"travel history\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"chest X-ray\", \"biopsy of skin lesion\", \"culture of skin lesion\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1169",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 60 year old male a sudden fall in toilet. His BP was 90/50 mm Hg and pulse was 100/min. His relatives repoed that his stool was black/dark in colour. Fuher careful history revealed that he is a known case of hypeension and coronary aery disease and was regularly taking aspirin, atenolol and sorbitrate. The most likely diagnosis is-",
+        "gold_answer_text": "Gastric ulcer with bleeding",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient conscious and alert?\",\n\"Is there any history of trauma or injury?\",\n\"Is there any history of recent surgery or hospitalization?\",\n\"Is there any history of bleeding disorders or taking blood-thinning medications?\",\n\"Is there any history of recent travel or exposure to infectious diseases?\"\n],\n\"summary\": {\n\"patient\\_info\": \"60-year-old male\",\n\"presenting\\_symptoms\": [\"fall\", \"black/dark stool\"],\n\"known\\_history\": [\"hypertension\", \"coronary artery disease\", \"regularly taking aspirin, atenolol and sorbitrate\"],\n\"possible\\_concerns\": [\"gastrointestinal bleeding\", \"infection\", \"trauma\"],\n\"missing\\_info\": [],\n\"urgency\": \"emergent\"\n},\n\"suggested\\_tests\": [\"complete blood count\", \"coagulation profile\", \"stool culture\", \"blood culture\", \"chest X-ray\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1170",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 20-year-old woman has mild pulmonary stenosis. Which of the following statements regarding this situation is true?",
+        "gold_answer_text": "Compared to other valvular defects, the risk of endocarditis is relatively low",
+        "raw_output": " The patient has a congenital heart defect known as pulmonary stenosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1171",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 27-year-old male had burning micturition and urethral discharge. After 4 weeks he developed joint pains involving both the knees and ankles, redness of the eye and skin lesion. The most probable clinical dignosis is",
+        "gold_answer_text": "Reiter's syndrome",
+        "raw_output": " Relevant clarifying questions:\n\n* Is the patient currently taking any medications?\n* Does the patient have any allergies?\n* Does the patient have any history of joint pain or inflammation?\n* Does the patient have any history of skin rash or lesions?\n* Does the patient have any history of eye inflammation or discharge?\n* Does the patient have any history of recent travel or exposure to animals?\n* Does the patient have any history of recent trauma or injury?\n* Does the patient have any history of recent stress or anxiety?\n* Does the patient have any history of recent changes in diet or lifestyle?\n* Does the patient have any history of recent changes in weight or body mass index?",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1172",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 10-month-old boy is brought to the emergency department by his parents because he has a high fever and severe cough. His fever started 2 days ago and his parents are concerned as he is now listless and fatigued. He had a similar presentation 5 months ago and was diagnosed with pneumonia caused by Staphyloccocus aureus. He has been experiencing intermittent diarrhea and skin abscesses since birth. The child had an uneventful birth and the child is otherwise developmentally normal. Analysis of this patient's sputum reveals acute angle branching fungi and a throat swab reveals a white plaque with germ tube forming yeast. Which of the following is most likely to be abnormal in this patient?",
+        "gold_answer_text": "NADPH oxidase activity",
+        "raw_output": " The most likely abnormal finding in this patient is a fungal infection. The patient's symptoms of fever, cough, diarrhea, and skin abscesses, along with the presence of acute angle branching fungi in his sputum and a white plaque with germ tube forming yeast on his throat swab, are consistent with a fungal infection. The patient's history of a similar presentation 5 months ago and a diagnosis of pneumonia caused by Staphylococcus aureus also supports this possibility.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1173",
+        "source_dataset": "medmcqa",
+        "initial_case": "A young patient presents with significant loss of central vision and a normal ERG. There is no obvious family history of similar presentation. The most likely diagnosis:",
+        "gold_answer_text": "Stargardt's disease",
+        "raw_output": " The most likely diagnosis is Leber congenital amaurosis (LCA). LCA is a rare, inherited retinal disease that typically presents in infancy or early childhood with severe vision loss. It is caused by mutations in genes that are important for the development and function of the retina. The ERG is a test that measures the electrical activity of the retina in response to light, and a normal ERG result rules out many other causes of vision loss. However, in the case of LCA, the ERG may appear normal because the affected cells are not functioning properly, but there is still some residual function. Other diagnostic tests, such as fundus examination and genetic testing, can help confirm the diagnosis of LCA.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1174",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 5-year-old boy from upper socioeconomic back- ground presents with bowing of legs. On work up serum calcium was 9 mg% with serum phosphate of 1 mg% with normal SAP and normal Serum PTH. X-ray Wrist joint is given. Comment on the diagnosis?",
+        "gold_answer_text": "Hypophosphatemic rickets",
+        "raw_output": " Based on the information provided, the patient may be diagnosed with hypophosphatasia. Hypophosphatasia is a rare genetic disorder that affects the body's ability to properly use phosphate, a mineral that is essential for the development and maintenance of bones and teeth. The symptoms of hypophosphatasia can vary widely, but may include rickets in children, osteomalacia in adults, and dental abnormalities. The low levels of phosphate in the blood and urine, as well as the normal levels of SAP and PTH, are consistent with the diagnosis of hypophosphatasia. The X-ray of the wrist joint may show characteristic signs of rickets, such as widening of the metaphyses and cupping of the epiphyses. Further testing, such as genetic testing, may be necessary to confirm the diagnosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1175",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 22 year old male with fatigue, recurrent fever, and enlarged cervical lymph nodes has numerous atypical lymphocytes in his peripheral blood smear. A biopsy from the patient's enlarged node shows expansion of lymphoid follicles with preservation of the underlying architecture. Numerous atypical lymphocytes are present in the paracoical areas. This patient most likely has ?",
+        "gold_answer_text": "Mononucleosis",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient currently taking any medications?\",\n\"Has the patient had any recent travel or exposure to infectious diseases?\",\n\"Has the patient had any recent injuries or surgeries?\"\n],\n\"summary\": {\n\"patient\\_info\": \"22-year-old male\",\n\"presenting\\_symptoms\": [\"fatigue\", \"recurrent fever\", \"enlarged cervical lymph nodes\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"infectious disease\", \"malignancy\", \"autoimmune disorder\"],\n\"missing\\_info\": [\"medication history\", \"travel history\", \"injury or surgery history\"],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"complete blood count\", \"peripheral blood smear\", \"lymph node biopsy\", \"infectious disease testing\", \"autoimmune testing\", \"malignancy testing\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1176",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 56 year old male patient presents to the clinic for a routine dental appointment. During intra-oral examination, multiple restorations were noted as follows; pure gold restoration with 16, class V GIC restoration with 13, silver amalgam restoration with 26 and composite restoration with 46. Which of the following tooth is the most likely to feel sensitive during consumption of very hot or cold food by the patient?",
+        "gold_answer_text": "16",
+        "raw_output": " The most likely tooth to feel sensitive during consumption of very hot or cold food by the patient is the tooth with the silver amalgam restoration (tooth number 26).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1177",
+        "source_dataset": "medmcqa",
+        "initial_case": "In a patient pO2 is 85 mmHg, pCO2 is 50 mmHg, pH is 7.2, and HCO3- is 36mmol/L. The condition is",
+        "gold_answer_text": "Respiratory acidosis with compensatory metabolic alkalosis",
+        "raw_output": " not specified.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1178",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 28-year-old woman comes to the physician because of increasingly frequent episodes of double vision for 2 days. She was seen in the emergency department for an episode of imbalance and decreased sensation in her right arm 3 months ago. Examination shows impaired adduction of the right eye with left lateral gaze but normal convergence of both eyes. Deep tendon reflexes are 4+ in all extremities. The Romberg test is positive. An MRI of the brain shows hyperintense oval plaques in the periventricular region and a plaque in the midbrain on T2-weighted images. Microscopic examination of material from the midbrain plaque would most likely show which of the following?",
+        "gold_answer_text": "Demyelination with partial preservation of axons \"",
+        "raw_output": " The most likely finding on microscopic examination of material from the midbrain plaque would be demyelination.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1179",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A newborn presents with central cyanosis, nasal flaring, and subcostal retractions following a scheduled cesarean delivery. He was born to a healthy 29-year-old G-1-P-1 mother due to cervical incompetence at 34 weeks gestation; the pregnancy was otherwise uneventful. Appearance, Pulse, Grimace, Activity, and Respiration (APGAR) scores were 6 and 8 at 1 and 5 minutes, respectively and his birth weight was 3,200 g. The umbilical cord had 3 vessels and the placenta was tan-red with all cotyledons intact. Fetal membranes were tan-white and semi-translucent. Currently, the vital signs include: temperature 36.9°C (98.4°F), blood pressure 70/40 mm Hg, pulse 190/min, and respiratory rate 68/min. On auscultation, breath sounds are decreased. Diffuse ground-glass opacifications are identified on chest X-ray. Which of the factors listed below most likely contributed to this infant’s current condition?",
+        "gold_answer_text": "Gestational diabetes",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"Newborn male\",\n\"presenting_symptoms\": [\"central cyanosis\", \"nasal flaring\", \"subcostal retractions\"],\n\"known_history\": [\"34 weeks gestation\", \"cervical incompetence\", \"cesarean delivery\", \"G-1-P-1 mother\"],\n\"possible_concerns\": [\"pneumonia\", \"meconium aspiration\", \"congenital diaphragmatic hernia\", \"sepsis\"],\n\"missing_info\": [],\n\"urgency\": \"emergent\"\n},\n\"suggested_tests\": [\"blood culture\", \"chest X-ray\", \"arterial blood gas\", \"amniotic fluid culture\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "Newborn male",
+                "presenting_symptoms": [
+                    "central cyanosis",
+                    "nasal flaring",
+                    "subcostal retractions"
+                ],
+                "known_history": [
+                    "34 weeks gestation",
+                    "cervical incompetence",
+                    "cesarean delivery",
+                    "G-1-P-1 mother"
+                ],
+                "possible_concerns": [
+                    "pneumonia",
+                    "meconium aspiration",
+                    "congenital diaphragmatic hernia",
+                    "sepsis"
+                ],
+                "missing_info": [],
+                "urgency": "emergent"
+            },
+            "suggested_tests": [
+                "blood culture",
+                "chest X-ray",
+                "arterial blood gas",
+                "amniotic fluid culture"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1180",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 45-year-old female presents to the outpatient clinic with symptoms of pain, fatigue, and weakness in both lower limbs. She gives a history of paralysis affecting both lower limbs in childhood from which she made a good functional recovery. Which of the following is the most likely suspected diagnosis -",
+        "gold_answer_text": "Post Polio Syndrome",
+        "raw_output": " The most likely suspected diagnosis is multiple sclerosis (MS).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1181",
+        "source_dataset": "medmcqa",
+        "initial_case": "A female patient Chandani develops chest pain which is not associated with exercise and chest auscultation shows multiple non ejection clicks. The investigation which is used to diagnose the disease is -",
+        "gold_answer_text": "Echocardiography",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the pain radiating to the arm, jaw, or back?\",\n\"Does the patient have shortness of breath?\",\n\"Any history of heart disease, hypertension, or diabetes?\"\n],\n\"summary\": {\n\"patient\\_info\": \"Chandani\",\n\"presenting\\_symptoms\": [\"chest pain\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"acute coronary syndrome\"],\n\"missing\\_info\": [\"radiation of pain\", \"shortness of breath\", \"cardiac risk history\"],\n\"urgency\": \"emergent\"\n},\n\"suggested\\_tests\": [\"ECG\", \"troponin\", \"chest X-ray\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1182",
+        "source_dataset": "medmcqa",
+        "initial_case": "An 81-year-old female falls and presents to the emergency department. What injury to this tissue or structure causes lower leg extremities to be externally rotated?",
+        "gold_answer_text": "Lateral meniscus",
+        "raw_output": " The most likely cause of external rotation of the lower leg extremities in an 81-year-old female who falls is a hip fracture.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1183",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 34-year-old man comes to the physician for a follow-up examination. He has a 3-month history of a nonproductive cough. He has been treated with diphenhydramine since his last visit 2 weeks ago, but his symptoms have persisted. He does not smoke. He drinks 3 beers on the weekends. He is 177 cm (5 ft 10 in) tall and weighs 100 kg (220.46 lbs); BMI is 35.1 kg/m2. His temperature is 37.1°C (98.8°F), pulse is 78/min, respirations are 14/min, and blood pressure is 130/80 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 97%. Physical examination and an x-ray of the chest show no abnormalities. Which of the following is the most appropriate next step in management?",
+        "gold_answer_text": "Pulmonary function testing",
+        "raw_output": " {\n\"clarifying_questions\": [],\n\"summary\": {\n\"patient_info\": \"34-year-old man\",\n\"presenting_symptoms\": [\"nonproductive cough\"],\n\"known_history\": [\"3-month history of cough\", \"treated with diphenhydramine\"],\n\"possible_concerns\": [\"asthma\", \"chronic obstructive pulmonary disease (COPD)\"],\n\"missing_info\": [],\n\"urgency\": \"low\"\n},\n\"suggested_tests\": [],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [],
+            "summary": {
+                "patient_info": "34-year-old man",
+                "presenting_symptoms": [
+                    "nonproductive cough"
+                ],
+                "known_history": [
+                    "3-month history of cough",
+                    "treated with diphenhydramine"
+                ],
+                "possible_concerns": [
+                    "asthma",
+                    "chronic obstructive pulmonary disease (COPD)"
+                ],
+                "missing_info": [],
+                "urgency": "low"
+            },
+            "suggested_tests": [],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1184",
+        "source_dataset": "medmcqa",
+        "initial_case": "A primigravida at 37 week of gestation reported to labor room with central placenta previa with heavy bleeding per vaginum. The fetal heart rate was normal at the time of examination. The best management option for her is:",
+        "gold_answer_text": "Cesarean section",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient's bleeding continuous or intermittent?\",\n\"Is the patient's cervix dilated?\",\n\"Is the patient's membrane intact?\"\n],\n\"summary\": {\n\"patient_info\": \"Primigravida at 37 weeks of gestation\",\n\"presenting_symptoms\": [\"central placenta previa\", \"heavy bleeding per vaginum\"],\n\"known_history\": [\"primigravida\"],\n\"possible_concerns\": [\"placental abruption\", \"postpartum hemorrhage\"],\n\"missing_info\": [\"fetal heart rate\", \"cervical dilation\", \"membrane status\"],\n\"urgency\": \"emergent\"\n},\n\"suggested_tests\": [\"fetal heart rate monitoring\", \"ultrasound\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient's bleeding continuous or intermittent?",
+                "Is the patient's cervix dilated?",
+                "Is the patient's membrane intact?"
+            ],
+            "summary": {
+                "patient_info": "Primigravida at 37 weeks of gestation",
+                "presenting_symptoms": [
+                    "central placenta previa",
+                    "heavy bleeding per vaginum"
+                ],
+                "known_history": [
+                    "primigravida"
+                ],
+                "possible_concerns": [
+                    "placental abruption",
+                    "postpartum hemorrhage"
+                ],
+                "missing_info": [
+                    "fetal heart rate",
+                    "cervical dilation",
+                    "membrane status"
+                ],
+                "urgency": "emergent"
+            },
+            "suggested_tests": [
+                "fetal heart rate monitoring",
+                "ultrasound"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1185",
+        "source_dataset": "medmcqa",
+        "initial_case": "The reason why most patients suffering from recurrent herpes labialis rarely give a history of having acute form of the herpetic gingivastomatitis is because:",
+        "gold_answer_text": "The primary infection was subctinical",
+        "raw_output": " The reason why most patients suffering from recurrent herpes labialis rarely give a history of having acute form of the herpetic gingivostomatitis is because it is a self-limiting disease that resolves within a week or two without any specific treatment. Patients may not remember the initial symptoms or may not associate them with the recurrent episodes. Additionally, the symptoms of herpes labialis and herpetic gingivostomatitis can be similar, such as fever, sore throat, and painful blisters. Therefore, it is important for healthcare providers to have a high index of suspicion and perform a thorough physical examination to make a diagnosis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1186",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 14-year-old boy who has been otherwise healthy presents to his doctor complaining of feeling easily winded and light-headed at basketball practice. He has never felt this way before and is frustrated because he is good enough to make varsity this year. He denies smoking, alcohol, or recreational drug use. His mother is very worried because her oldest son and brother had both died suddenly while playing sports despite being otherwise healthy. The transthoracic echocardiogram confirms the suspected diagnosis, which demonstrates a preserved ejection fraction and systolic anterior motion of the mitral valve. The patient is advised that he will need to stay hydrated and avoid intense exercise, and he will likely need an ICD due to his family history. Which of the following physical exam findings is consistent with this patient’s most likely diagnosis?",
+        "gold_answer_text": "Mitral regurgitation",
+        "raw_output": " The physical exam finding that is consistent with this patient's most likely diagnosis is a systolic murmur.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1187",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 25-year-old man presents to the physician with 2 days of profuse, watery diarrhea. He denies seeing blood or mucus in the stools. On further questioning, he reveals that he eats a well-balanced diet and generally prepares his meals at home. He remembers having some shellfish from a street vendor 3 days ago. He takes no medications. His past medical history is unremarkable. Which of the following mechanisms most likely accounts for this patient’s illness?",
+        "gold_answer_text": "ADP-ribosylation of Gs protein",
+        "raw_output": " The most likely mechanism for this patient's illness is foodborne illness, specifically from consuming contaminated seafood. The patient's symptoms of watery diarrhea and recent consumption of shellfish from a street vendor are consistent with a foodborne illness. Other possible causes of diarrhea, such as viral or bacterial infections, should also be considered.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1188",
+        "source_dataset": "medmcqa",
+        "initial_case": "Borchardt's triad of acute epigastric pain, violent retching and inability to pass a nsogastric tube is seen in patients with",
+        "gold_answer_text": "Acute gastric volvulus",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient vomiting?\",\n\"Is the patient able to pass a nasogastric tube?\",\n\"Is there any history of abdominal surgery or trauma?\"\n],\n\"summary\": {\n\"patient\\_info\": \"Patient with Borchardt's triad\",\n\"presenting\\_symptoms\": [\"acute epigastric pain\", \"violent retching\", \"inability to pass a nasogastric tube\"],\n\"known\\_history\": [],\n\"possible\\_concerns\": [\"gastric perforation\"],\n\"missing\\_info\": [\"vomiting\", \"ability to pass a nasogastric tube\", \"abdominal surgery or trauma history\"],\n\"urgency\": \"emergent\"\n},\n\"suggested\\_tests\": [\"abdominal X-ray\", \"upper gastrointestinal series\", \"esophagogastroduodenoscopy\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1189",
+        "source_dataset": "medmcqa",
+        "initial_case": "You have been referred a middle-aged patient to rule out open angle glaucoma. Which of the following findings will help in the diagnosis:",
+        "gold_answer_text": "Cupping of the disc",
+        "raw_output": " To rule out open angle glaucoma, the following findings will help in the diagnosis:\n\n1. Visual field defects: These are areas of vision loss that are not caused by eye diseases other than glaucoma. Visual field tests can detect these defects and help diagnose glaucoma.\n2. Optic nerve damage: Glaucoma can cause damage to the optic nerve, which is the nerve that transmits visual information from the eye to the brain. Optic nerve damage can be detected by examining the optic nerve head and measuring the thickness of the nerve fiber layer.\n3. Increased intraocular pressure (IOP): Glaucoma is often associated with elevated IOP, which can be measured using a tonometry device. However, not all cases of glaucoma have elevated IOP, so this finding alone is not sufficient for diagnosis.\n4. Corneal thickness: Glaucoma can cause changes in corneal thickness, which can affect IOP measurements. Measuring corneal thickness can help adjust IOP readings and improve the accuracy of diagnosis.\n5. Family history: Glaucoma can run in families, so having a family history of the condition can increase the risk of developing it.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1190",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 20-year-old woman comes to the physician for the evaluation of fatigue and low energy levels for 2 months. She has not had fever or weight changes. She has no history of serious illness except for an episode of infectious mononucleosis 4 weeks ago. Menses occur at regular 28-day intervals and last 5 days with moderate flow. Her last menstrual period was 3 weeks ago. Her mother has Hashimoto's thyroiditis. Vital signs are within normal limits. Examination shows pale conjunctivae, inflammation of the corners of the mouth, and brittle nails. The remainder of the examination shows no abnormalities. Laboratory studies show: Hemoglobin 10.3 g/dL Mean corpuscular volume 74 μm3 Platelet count 280,000/mm3 Leukocyte count 6,000/mm3 Which of the following is the most appropriate initial step in management?\"",
+        "gold_answer_text": "Iron studies",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient menstruating currently?\"\n],\n\"summary\": {\n\"patient_info\": \"20-year-old woman\",\n\"presenting_symptoms\": [\"fatigue\", \"low energy levels\"],\n\"known_history\": [\"infectious mononucleosis 4 weeks ago\", \"mother with Hashimoto's thyroiditis\"],\n\"possible_concerns\": [\"anemia\", \"infection\", \"thyroid disorder\"],\n\"missing_info\": [\"menstrual status\"],\n\"urgency\": \"medium\"\n},\n\"suggested_tests\": [\"complete blood count\", \"thyroid function tests\", \"infection workup\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient menstruating currently?"
+            ],
+            "summary": {
+                "patient_info": "20-year-old woman",
+                "presenting_symptoms": [
+                    "fatigue",
+                    "low energy levels"
+                ],
+                "known_history": [
+                    "infectious mononucleosis 4 weeks ago",
+                    "mother with Hashimoto's thyroiditis"
+                ],
+                "possible_concerns": [
+                    "anemia",
+                    "infection",
+                    "thyroid disorder"
+                ],
+                "missing_info": [
+                    "menstrual status"
+                ],
+                "urgency": "medium"
+            },
+            "suggested_tests": [
+                "complete blood count",
+                "thyroid function tests",
+                "infection workup"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1191",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 67-year male smoker presents with hemoptysis and cough. Bronchoscopic biopsy revealed an undifferentiated tumor. The immunohistochemical marker that can be most helpful is-",
+        "gold_answer_text": "Cytokeratin",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient currently taking any medications?\",\n\"Has the patient had any recent travel or exposure to infectious diseases?\"\n],\n\"summary\": {\n\"patient\\_info\": \"67-year-old male smoker\",\n\"presenting\\_symptoms\": [\"hemoptysis\", \"cough\"],\n\"known\\_history\": [\"smoking\"],\n\"possible\\_concerns\": [\"lung cancer\"],\n\"missing\\_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [\"bronchoscopy\", \"immunohistochemical staining\"],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1192",
+        "source_dataset": "medmcqa",
+        "initial_case": "A body builder taking steroids and creatinine presented with hip pain and unable to squat. On MRI, femoral aicular surface is disrupted and there is cresent sign seen on radiograph. What is the diagnosis?",
+        "gold_answer_text": "AVN",
+        "raw_output": " The diagnosis is likely to be avascular necrosis of the femoral head.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1193",
+        "source_dataset": "medmcqa",
+        "initial_case": "In a case of chest pain with pericarditis and pericardial effussion, pain is referred by",
+        "gold_answer_text": "Phrenic nerve",
+        "raw_output": " the heart muscle and is usually described as sharp, stabbing, or tearing. It may be constant or intermittent and may worsen with deep breathing, coughing, or lying down. The pain may radiate to the neck, jaw, or arm. Other symptoms may include shortness of breath, nausea, vomiting, diaphoresis, and low-grade fever.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1194",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 3-month-old boy presents for routine health maintenance. The patient has coarse facial features and stiff joint movements with restricted passive and active range of motion. He also has problems following objects with his eyes and seems not to focus on anything. On physical examination, the corneas are clouded, and the patient fails to meet any 3-month developmental milestones. Genetic testing and histopathology are performed and reveal failure of a cellular structure to phosphorylate mannose residues on glycoproteins. An electron microscopy image of one of this patient’s cells is shown. Which of the following is the most likely diagnosis in this patient?",
+        "gold_answer_text": "Inclusion cell disease",
+        "raw_output": " The most likely diagnosis in this patient is Sanfilippo syndrome type A.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1195",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 25-year-old woman is G5, P0, Ab4. All of her previous pregnancies ended in spontaneous abortion in the first or second trimester. She is now in the 16th week of her fifth pregnancy and has had no prenatal problems. Laboratory findings include maternal blood type of A positive, negative serologic test for syphilis, and immunity to rubella. Which of the following laboratory studies would be most useful for determining a potential cause of recurrent fetal loss in this patient?",
+        "gold_answer_text": "Amniocentesis with chromosomal analysis",
+        "raw_output": " The most useful laboratory studies for determining a potential cause of recurrent fetal loss in this patient would be a karyotype test to rule out chromosomal abnormalities, a test for antiphospholipid syndrome (APS) including anticardiolipin antibody (aCL) and lupus anticoagulant (LA), and a test for thrombophilia including factor V Leiden mutation and prothrombin gene mutation (PGM).",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1196",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 28-year-old female presents to her primary care doctor complaining of new onset blurry vision. She first noticed her vision getting blurry toward the end of the day several days ago. Since then, she reports that her vision has been fine when she wakes up but gets worse throughout the day. She has also noticed that her eyelids have started to droop before she goes to bed. On exam, she has bilateral ptosis that is worse on the right. Administering edrophonium to this patient leads to an immediate improvement in her symptoms. Which of the following is most likely true about this patient’s condition?",
+        "gold_answer_text": "It is associated with a benign proliferation of epithelial cells of the thymus",
+        "raw_output": " The most likely diagnosis for this patient is myasthenia gravis. Myasthenia gravis is an autoimmune disorder that affects the neuromuscular junction, causing muscle weakness and fatigue. The patient's symptoms of blurry vision, drooping eyelids, and improvement with edrophonium are consistent with this diagnosis. Other possible causes of ptosis include Horner's syndrome, which can be caused by a variety of conditions including brain tumors, and blepharoptosis, which is a congenital or acquired condition that causes drooping of the eyelids. However, the patient's symptoms and response to edrophonium are more consistent with myasthenia gravis.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1197",
+        "source_dataset": "medmcqa",
+        "initial_case": "Bilateral uveitis in 10 year old child, proper investigation (s) for his work up would be – a) C.T scan b) Tuberculin testb) X–ray sacroiliac jointc) HIV testd) X–ray chest",
+        "gold_answer_text": "bcde",
+        "raw_output": " {\n\"clarifying\\_questions\": [\n\"Is the patient currently taking any medications?\",\n\"Is the patient allergic to any medications or substances?\",\n\"Has the patient had any recent infections or illnesses?\",\n\"Has the patient had any recent surgeries or procedures?\",\n\"Has the patient had any recent travel or exposure to sick people?\"\n],\n\"summary\": {\n\"patient\\_info\": \"10-year-old child\",\n\"presenting\\_symptoms\": [],\n\"known\\_history\": [],\n\"possible\\_concerns\": [],\n\"missing\\_info\": [],\n\"urgency\": \"medium\"\n},\n\"suggested\\_tests\": [],\n\"doctor\\_approval\\_required\": true\n}",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "Invalid \\escape: line 2 column 12 (char 13)"
+    },
+    {
+        "case_id": "triage_case_1198",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 47-year-old woman presents with complaints of fever, chills, and rigor. On physical exam, she also has left sided costovertebral tenderness. Vitals include a temperature of 39.4°C (103.0°F), blood pressure of 125/84 mm Hg, and pulse of 84/min. She has type 2 diabetes and is currently taking metformin daily. Urine dipstick analysis is positive for leukocytes, nitrites, and blood. The most likely cause for the present condition is?",
+        "gold_answer_text": "Acute papillary necrosis",
+        "raw_output": " {\n\"clarifying_questions\": [\n\"Is the patient currently taking any antibiotics?\",\n\"Has the patient had any recent travel or exposure to sick contacts?\",\n\"Is the patient currently menstruating?\"\n],\n\"summary\": {\n\"patient_info\": \"47-year-old woman\",\n\"presenting_symptoms\": [\"fever\", \"chills\", \"rigor\", \"left sided costovertebral tenderness\"],\n\"known_history\": [\"type 2 diabetes\", \"currently taking metformin daily\"],\n\"possible_concerns\": [\"pyelonephritis\", \"kidney infection\"],\n\"missing_info\": [\"urine culture\", \"blood culture\"],\n\"urgency\": \"emergent\"\n},\n\"suggested_tests\": [\"urine culture\", \"blood culture\"],\n\"doctor_approval_required\": true\n}",
+        "parse_ok": true,
+        "parsed_output": {
+            "clarifying_questions": [
+                "Is the patient currently taking any antibiotics?",
+                "Has the patient had any recent travel or exposure to sick contacts?",
+                "Is the patient currently menstruating?"
+            ],
+            "summary": {
+                "patient_info": "47-year-old woman",
+                "presenting_symptoms": [
+                    "fever",
+                    "chills",
+                    "rigor",
+                    "left sided costovertebral tenderness"
+                ],
+                "known_history": [
+                    "type 2 diabetes",
+                    "currently taking metformin daily"
+                ],
+                "possible_concerns": [
+                    "pyelonephritis",
+                    "kidney infection"
+                ],
+                "missing_info": [
+                    "urine culture",
+                    "blood culture"
+                ],
+                "urgency": "emergent"
+            },
+            "suggested_tests": [
+                "urine culture",
+                "blood culture"
+            ],
+            "doctor_approval_required": true
+        },
+        "parse_error": null
+    },
+    {
+        "case_id": "triage_case_1199",
+        "source_dataset": "medqa_usmle_4opt",
+        "initial_case": "A 12-year-old boy is brought by his father to a pediatrician for evaluation of stiff jaw and swallowing difficulty. He has also developed painful body spasms triggered by loud noise, light, and physical touch. His father says that a few days ago, his son continued to play football, even after falling and bruising his arms and knees. On examination, the boy had a sustained facial smile, stiff arched back, and clamped hands. The toxin responsible for these clinical manifestations that travel retrograde in axons of peripheral motor neurons blocks the release of which of the following?",
+        "gold_answer_text": "GABA (gamma-aminobutyric acid)",
+        "raw_output": " The toxin responsible for these clinical manifestations that travel retrograde in axons of peripheral motor neurons blocks the release of acetylcholine.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    },
+    {
+        "case_id": "triage_case_1200",
+        "source_dataset": "medmcqa",
+        "initial_case": "A 23 year old presented with fever with chills and back pain. He also complained about increased frequency of voiding. USG examination reveals that bladder stones. All of the following are true about bladder stones, EXCEPT:",
+        "gold_answer_text": "Rare in Indian children",
+        "raw_output": " Bladder stones are a common cause of fever with chills and back pain.",
+        "parse_ok": false,
+        "parsed_output": null,
+        "parse_error": "No JSON object found in model output."
+    }
+]

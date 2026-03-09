@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "total_samples": 1200,
+  "train_size": 1000,
+  "val_size": 100,
+  "test_size": 100,
+  "raw_medmcqa": 193155,
+  "raw_medqa": 11451,
+  "raw_total": 204606,
+  "filtered_total": 29728,
+  "train_dataset_counts": {
+    "medmcqa": 654,
+    "medqa_usmle_4opt": 346
+  },
+  "val_dataset_counts": {
+    "medmcqa": 62,
+    "medqa_usmle_4opt": 38
+  },
+  "test_dataset_counts": {
+    "medmcqa": 67,
+    "medqa_usmle_4opt": 33
+  }
+}

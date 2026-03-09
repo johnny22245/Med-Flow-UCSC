@@ -1,0 +1,659 @@
+[
+  {
+    "case_id": "triage_case_1101",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1103",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Coal workers' pneumoconiosis",
+      "Chronic obstructive pulmonary disease (COPD)",
+      "Tuberculosis",
+      "Pneumonia",
+      "Lung cancer"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1104",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1105",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1107",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1108",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1109",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "S. Aureus cellulitis",
+      "Methicillin-resistant S. Aureus"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1110",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1111",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1112",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "emergent",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1114",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1115",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "orbital trauma",
+      "orbital fracture",
+      "orbital hematoma",
+      "orbital abscess",
+      "orbital cellulitis",
+      "orbital foreign body",
+      "orbital neoplasm",
+      "orbital infection",
+      "orbital inflammation",
+      "orbital injury",
+      "orbital trauma",
+      "orbital fracture",
+      "orbital hematoma",
+      "orbital abscess",
+      "orbital cellulitis",
+      "orbital foreign body",
+      "orbital neoplasm",
+      "orbital infection",
+      "orbital inflammation",
+      "orbital injury",
+      "orbital trauma"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1117",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1120",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Pit and fissure caries"
+    ],
+    "pred_urgency": "Low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1121",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1122",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "genital ulcer disease",
+      "sexually transmitted infection",
+      "genital herpes",
+      "syphilis",
+      "gonorrhea",
+      "chlamydia",
+      "genital warts",
+      "genital cancer"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1123",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Muscle disease"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1125",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1126",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1127",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1129",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "heart failure",
+      "pulmonary hypertension",
+      "chronic obstructive pulmonary disease (COPD)",
+      "asthma",
+      "chronic kidney disease (CKD)",
+      "liver disease",
+      "deep vein thrombosis (DVT)",
+      "cancer",
+      "autoimmune disease",
+      "recent travel",
+      "recent surgery",
+      "recent trauma",
+      "recent infection",
+      "recent medication change",
+      "recent alcohol or drug use",
+      "recent exposure to toxins or chemicals",
+      "recent change in weight or appetite",
+      "recent change in sleep patterns",
+      "recent change in mood or behavior",
+      "recent change in vision or hearing",
+      "recent change in bowel or bladder habits",
+      "recent change in menstrual cycle",
+      "recent change in sexual function",
+      "recent change in physical activity level",
+      "recent change in work or school performance",
+      "recent change in social interactions",
+      "recent change in religious or spiritual practices",
+      "recent change in hobbies or interests",
+      "recent change in living situation",
+      "recent change in financial situation",
+      "recent change in insurance status",
+      "recent change in legal status",
+      "recent change in immigration status",
+      "recent change in language proficiency",
+      "recent change in education level",
+      "recent change in occupation",
+      "recent change in marital status",
+      "recent change in parental status",
+      "recent change in sexual orientation",
+      "recent change in gender identity",
+      "recent change in primary care physician",
+      "recent change in specialist physician",
+      "recent change in hospital or healthcare facility",
+      "recent change in pharmacy or medication provider",
+      "recent change in dental or oral health provider",
+      "recent change in vision or eye care provider",
+      "recent change in hearing or ear care provider",
+      "recent change in mental health or substance use disorder treatment provider",
+      "recent change in rehabilitation or physical therapy provider",
+      "recent change in home healthcare or hospice provider"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1130",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Anemia",
+      "Thrombocytopenia",
+      "Reticulocytopenia",
+      "Bone marrow disorder"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1131",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Urinary tract infection",
+      "Kidney infection",
+      "Preeclampsia",
+      "Pyelonephritis",
+      "Sepsis",
+      "Preterm labor"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": [
+      "Urine culture",
+      "Blood culture",
+      "Complete blood count",
+      "C-reactive protein",
+      "Beta-human chorionic gonadotropin",
+      "Blood glucose",
+      "Blood urea nitrogen",
+      "Creatinine",
+      "Electrolytes",
+      "Liver function tests",
+      "Urinalysis",
+      "Urine culture and sensitivity",
+      "Pregnancy ultrasound"
+    ]
+  },
+  {
+    "case_id": "triage_case_1133",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Infection",
+      "Fracture non-union",
+      "Mandibular nerve injury"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1134",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1137",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Infection",
+      "Inflammation",
+      "Injury",
+      "Autoimmune disease",
+      "Malignancy"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1138",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1139",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1140",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1142",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1143",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "emergent",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1144",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Interstitial lung disease",
+      "Malignancy",
+      "Infection"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1145",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1147",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Anemia",
+      "Thrombocytopenia",
+      "Infectious disease",
+      "Malignancy",
+      "Autoimmune disease"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1149",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Anemia",
+      "Neurological deficits",
+      "Vitamin B12 deficiency"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1150",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "gastric cancer"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1152",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1153",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Tetracycline stains",
+      "Proximal caries"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1156",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1157",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "cranial nerve palsy",
+      "myasthenia gravis",
+      "multiple sclerosis",
+      "Guillain-Barré syndrome",
+      "transverse myelitis",
+      "Miller-Fisher syndrome",
+      "Lyme disease",
+      "sarcoidosis",
+      "rheumatoid arthritis",
+      "systemic lupus erythematosus",
+      "Sjögren's syndrome",
+      "myositis",
+      "polymyalgia rheumatica",
+      "dysthyroidism",
+      "hypothyroidism",
+      "hyperthyroidism",
+      "anemia",
+      "vitamin deficiencies",
+      "infectious diseases",
+      "medication side effects",
+      "toxins",
+      "trauma",
+      "neoplasm"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1158",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Autism spectrum disorder",
+      "Attention deficit hyperactivity disorder (ADHD)",
+      "Developmental delay",
+      "Language disorder",
+      "Social communication disorder"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1159",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1161",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Sexually transmitted infection",
+      "Penile cancer"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1162",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1164",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Major Depressive Disorder"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1165",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "Chemotherapy-induced nausea and vomiting",
+      "Chemotherapy-induced constipation",
+      "Chemotherapy-induced headache",
+      "Chemotherapy-induced bowel obstruction",
+      "Chemotherapy-induced dehydration"
+    ],
+    "pred_urgency": "Medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1167",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "non-alcoholic fatty liver disease",
+      "hepatocellular carcinoma",
+      "hemochromatosis",
+      "autoimmune hepatitis",
+      "viral hepatitis"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": [
+      "liver function tests",
+      "iron studies",
+      "viral hepatitis panel",
+      "autoantibody panel",
+      "abdominal ultrasound"
+    ]
+  },
+  {
+    "case_id": "triage_case_1170",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "low",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1171",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  },
+  {
+    "case_id": "triage_case_1172",
+    "initial_case": "",
+    "gold_answer_text": "",
+    "pred_concerns": [
+      "pneumonia",
+      "infection",
+      "fungal infection"
+    ],
+    "pred_urgency": "medium",
+    "gold_urgency": "low",
+    "pred_tests": []
+  }
+]
