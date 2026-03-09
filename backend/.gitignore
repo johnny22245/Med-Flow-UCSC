@@ -3,3 +3,4 @@ biomistral-medical-lora.v4/
 medical_vectordb/
 *.index
 .env
+logfile

@@ -6,3 +6,4 @@ from .diagnosis_record import DiagnosisRecord
 from .treatment_plan import TreatmentPlan
 from .safety_check import SafetyCheck
 from .case_summary import CaseSummary
+from app.models.triage_session import TriageSession

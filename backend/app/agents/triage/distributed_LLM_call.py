@@ -22,7 +22,7 @@ from pydantic import BaseModel, Field, conint, ValidationError
 class DistributedModel():
     # default set to run for zero-shot as per industry and research standard
     # for Ablation study make sure to change (temperature, top_p & random seed) this randomly (discuss to find how to change.)
-    def __init__(self, model_artifacts, temperature = 0.0, top_p = 1, max_new_tokens=1024, gpu_memory_utilization = 0.3):
+    def __init__(self, model_artifacts, temperature = 0.0, top_p = 1, max_new_tokens=1024, gpu_memory_utilization = 0.25):
         # Define sampling parameters
         self.sampling_params = SamplingParams(temperature=temperature, top_p=top_p, max_tokens=max_new_tokens)
         self.parallel_processes = 1

@@ -59,7 +59,45 @@ function makeOrderItem(test, source, group) {
   };
 }
 
-export default function TestOrderingStage({ activePatient, intakeContext, onApproveNext, onBack }) {
+function inferGroupFromName(name = "") {
+  const x = name.toLowerCase();
+
+  if (
+    x.includes("x-ray") ||
+    x.includes("ct") ||
+    x.includes("mri") ||
+    x.includes("ultrasound") ||
+    x.includes("angiography") ||
+    x.includes("scan")
+  ) {
+    return "imaging";
+  }
+
+  return "labs";
+}
+
+function normalizeTriageTests(tests = []) {
+  return tests.map((t, idx) => {
+    const name = t?.name || `Suggested Test ${idx + 1}`;
+    return {
+      code: `triage_${idx}_${name.toLowerCase().replace(/\s+/g, "_")}`,
+      name,
+      group: inferGroupFromName(name),
+      source: "ai",
+      priority: "routine",
+      reason: t?.reason || "",
+      selected: t?.selected ?? true,
+    };
+  });
+}
+
+export default function TestOrderingStage({
+  activePatient,
+  intakeContext,
+  triageContext,
+  onApproveNext,
+  onBack,
+}) {
   const patientId = activePatient?.id || "007";
 
   // derive a dummy “condition” from intakeContext (or default)
@@ -75,6 +113,9 @@ export default function TestOrderingStage({ activePatient, intakeContext, onAppr
   }, [conditionKey]);
 
   const storageKey = useMemo(() => `mf_orders_${patientId}`, [patientId]);
+  const backendSuggestedOrders = useMemo(() => {
+    return normalizeTriageTests(triageContext?.suggestedTests || []);
+  }, [triageContext]);
 
   const [orders, setOrders] = useState([]);
   const [customName, setCustomName] = useState("");
@@ -83,27 +124,33 @@ export default function TestOrderingStage({ activePatient, intakeContext, onAppr
 
   const [confirmed, setConfirmed] = useState(false);
 
-  // init from localStorage OR from dummy AI
-  useEffect(() => {
-    const raw = localStorage.getItem(storageKey);
-    if (raw) {
-      try {
-        const parsed = JSON.parse(raw);
-        setOrders(parsed.orders || []);
-        setConfirmed(!!parsed.confirmed);
-        return;
-      } catch {
-        // fall through
+  // init from localStorage for AI
+    useEffect(() => {
+      const raw = localStorage.getItem(storageKey);
+      if (raw) {
+        try {
+          const parsed = JSON.parse(raw);
+          setOrders(parsed.orders || []);
+          setConfirmed(!!parsed.confirmed);
+          return;
+        } catch {
+          // ignore and rebuild below
+        }
       }
-    }
 
-    const initial = [
-      ...suggested.labs.map((t) => makeOrderItem(t, "ai", "labs")),
-      ...suggested.imaging.map((t) => makeOrderItem(t, "ai", "imaging")),
-    ];
-    setOrders(initial);
-    setConfirmed(false);
-  }, [storageKey, suggested]);
+      if (backendSuggestedOrders.length > 0) {
+        setOrders(backendSuggestedOrders);
+        setConfirmed(false);
+        return;
+      }
+
+      const initial = [
+        ...suggested.labs.map((t) => makeOrderItem(t, "ai", "labs")),
+        ...suggested.imaging.map((t) => makeOrderItem(t, "ai", "imaging")),
+      ];
+      setOrders(initial);
+      setConfirmed(false);
+    }, [storageKey, suggested, backendSuggestedOrders]);
 
   // persist
   useEffect(() => {
@@ -165,7 +212,11 @@ export default function TestOrderingStage({ activePatient, intakeContext, onAppr
         <div>
           <div className="mf-h2">Test Ordering</div>
           <div className="mf-subtext">
-            AI suggested tests for <b>{conditionKey.replace("_", " ")}</b>. Doctor can override before ordering.
+            {backendSuggestedOrders.length > 0 ? (
+              <>AI triage suggested tests from backend. Doctor can override before ordering.</>
+            ) : (
+              <>AI suggested tests for <b>{conditionKey.replace("_", " ")}</b>. Doctor can override before ordering.</>
+            )}
           </div>
         </div>
 

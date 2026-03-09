@@ -2,37 +2,31 @@ import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Reuse your existing design tokens + primitives.
-// If these are only defined in landing.css, importing here makes them available to /app too.
 import "../styles/landing.css";
 import "../styles/appShell.css";
 
-// Adding 3. Patient intake + Profile creation
-import IntakeStage from "../pages/stages/IntakeStage";
+import IntakeStage from "./stages/IntakeStage";
 import "../styles/intakeStage.css";
 
-// Ordering Tests
 import TestOrderingStage from "./stages/TestOrderingStage";
 import "../styles/testOrderingStage.css";
 
-// Adding 5. Investigation stage
 import InvestigationStage from "./stages/InvestigationStage";
 import "../styles/investigationStage.css";
 
-// Phase 6: Diagnosis
 import DiagnosisStage from "./stages/DiagnosisStage";
 import "../styles/diagnosisStage.css";
 
-// Phase 7: Treatment / Prescription Builder
 import TreatmentStage from "./stages/TreatmentStage";
 import "../styles/treatmentStage.css";
 
-// Phase 8: Safety Guardrail
 import SafetyStage from "./stages/SafetyStage";
 import "../styles/safetyStage.css";
 
-// Case Summary
 import CaseSummaryStage from "./stages/CaseSummaryStage";
 import "../styles/caseSummaryStage.css";
+
+import TriageChat from "../components/TriageChat";
 
 const STAGES = [
   { key: "intake", label: "Intake & Triage", hint: "Symptoms → SOAP + suggested tests → doctor approves" },
@@ -47,7 +41,6 @@ const STAGES = [
 export default function AppShell() {
   const navigate = useNavigate();
 
-  // For now: a local “demo patient” state. Later you’ll swap to backend-backed patient context.
   const [activePatient, setActivePatient] = useState({
     id: "P-0007",
     name: "John Doe",
@@ -57,15 +50,29 @@ export default function AppShell() {
     meds: ["Valproic Acid"],
   });
 
-  // State machine stage (future: backend controls + approval events)
   const [stageKey, setStageKey] = useState("intake");
+
+  const [triageState, setTriageState] = useState({
+    visible: false,
+    loading: false,
+    sessionId: null,
+    status: "idle",
+    currentQuestion: null,
+    chatHistory: [],
+    summary: "",
+    urgency: "",
+    suggestedTests: [],
+    missingInfo: [],
+    rawOutput: null,
+    error: "",
+  });
 
   const stageIdx = useMemo(
     () => Math.max(0, STAGES.findIndex((s) => s.key === stageKey)),
     [stageKey]
   );
 
-  const canAdvance = !!activePatient; // later: require approvals per stage
+  const canAdvance = !!activePatient;
 
   function goPrev() {
     const next = Math.max(0, stageIdx - 1);
@@ -79,13 +86,25 @@ export default function AppShell() {
   }
 
   function resetCase() {
-    // demo reset: keep patient but return to intake
     setStageKey("intake");
+    setTriageState({
+      visible: false,
+      loading: false,
+      sessionId: null,
+      status: "idle",
+      currentQuestion: null,
+      chatHistory: [],
+      summary: "",
+      urgency: "",
+      suggestedTests: [],
+      missingInfo: [],
+      rawOutput: null,
+      error: "",
+    });
   }
 
   return (
     <div className="mf-shell">
-      {/* Sidebar */}
       <aside className="mf-sidebar">
         <div className="mf-sidebar-header">
           <div className="mf-brand">
@@ -125,7 +144,7 @@ export default function AppShell() {
               <div className="mf-mini-section">
                 <div className="mf-mini-label">Allergies</div>
                 <div className="mf-chip-row">
-                  {activePatient.allergies.map((a) => (
+                  {(activePatient.allergies || []).map((a) => (
                     <span key={a} className="mf-chip mf-chip-warn">{a}</span>
                   ))}
                 </div>
@@ -134,7 +153,7 @@ export default function AppShell() {
               <div className="mf-mini-section">
                 <div className="mf-mini-label">Current Meds</div>
                 <div className="mf-chip-row">
-                  {activePatient.meds.map((m) => (
+                  {(activePatient.meds || []).map((m) => (
                     <span key={m} className="mf-chip">{m}</span>
                   ))}
                 </div>
@@ -161,21 +180,14 @@ export default function AppShell() {
               Clear Patient
             </button>
           </div>
-          <div className="mf-muted mf-mt8">
-            Later: this section calls backend events (approve/override) per stage.
-          </div>
         </div>
 
         <div className="mf-sidebar-footer">
-          <div className="mf-muted">
-            Privacy mode: local demo (dummy data)
-          </div>
+          <div className="mf-muted">Privacy mode: local demo</div>
         </div>
       </aside>
 
-      {/* Main */}
       <main className="mf-main">
-        {/* Topbar */}
         <header className="mf-topbar">
           <div className="mf-topbar-left">
             <div className="mf-topbar-title">Case Workflow</div>
@@ -188,18 +200,14 @@ export default function AppShell() {
             <span className={`mf-pill ${activePatient ? "mf-pill-ok" : "mf-pill-muted"}`}>
               {activePatient ? "Patient Loaded" : "No Patient"}
             </span>
-            <span className="mf-pill mf-pill-ok">
-              Backend: Connected (dummy)
-            </span>
+            <span className="mf-pill mf-pill-ok">Backend: Connected</span>
           </div>
         </header>
 
-        {/* Stepper */}
         <section className="mf-stepper mf-card">
           <div className="mf-stepper-row">
             {STAGES.map((s, i) => {
-              const status =
-                i < stageIdx ? "done" : i === stageIdx ? "active" : "todo";
+              const status = i < stageIdx ? "done" : i === stageIdx ? "active" : "todo";
               return (
                 <button
                   key={s.key}
@@ -221,32 +229,52 @@ export default function AppShell() {
             <button className="mf-btn-ghost" onClick={goPrev} disabled={stageIdx === 0}>
               Back
             </button>
-            <button className="mf-btn-primary" onClick={goNext} disabled={!canAdvance || stageIdx === STAGES.length - 1}>
+            <button
+              className="mf-btn-primary"
+              onClick={goNext}
+              disabled={!canAdvance || stageIdx === STAGES.length - 1}
+            >
               Next
             </button>
           </div>
         </section>
 
         <section className="mf-workspace">
-        <div className="mf-card mf-workspace-card">
+          <div className="mf-card mf-workspace-card">
             <div className="mf-card-title">Stage Workspace</div>
             <div className="mf-muted mf-mt8">
-            This area will render the stage page: <b> {STAGES[stageIdx].label}</b>
+              This area will render the stage page: <b>{STAGES[stageIdx].label}</b>
             </div>
 
             <div className="mf-mt12">
               {stageKey === "intake" ? (
-                <IntakeStage
-                  activePatient={activePatient}
-                  onPatientCreated={(p) => setActivePatient(p)}
-                  onRequestNext={() => setStageKey("tests")}
-                />
+                <>
+                  <IntakeStage
+                    activePatient={activePatient}
+                    onPatientCreated={(p) => setActivePatient(p)}
+                    onRequestNext={() => setStageKey("tests")}
+                    onTriageStarted={(triage) => setTriageState(triage)}
+                  />
+
+                  <TriageChat
+                    triageState={triageState}
+                    onTriageUpdated={(next) => setTriageState(next)}
+                    onTriageCompleted={(next) => {
+                      setTriageState(next);
+                      setStageKey("tests");
+                    }}
+                    onClose={() =>
+                      setTriageState((prev) => ({ ...prev, visible: false }))
+                    }
+                  />
+                </>
               ) : stageKey === "tests" ? (
                 <TestOrderingStage
                   activePatient={activePatient}
                   intakeContext={{
                     chiefComplaint: activePatient?.chiefComplaint || "",
                   }}
+                  triageContext={triageState}
                   onBack={() => setStageKey("intake")}
                   onApproveNext={() => setStageKey("investigation")}
                 />
@@ -255,11 +283,11 @@ export default function AppShell() {
                   activePatient={activePatient}
                   onApproveNext={() => setStageKey("diagnosis")}
                 />
-                ) : stageKey === "diagnosis" ? (
-                  <DiagnosisStage
-                    activePatient={activePatient}
-                    onApproveNext={() => setStageKey("treatment")}
-                  />
+              ) : stageKey === "diagnosis" ? (
+                <DiagnosisStage
+                  activePatient={activePatient}
+                  onApproveNext={() => setStageKey("treatment")}
+                />
               ) : stageKey === "treatment" ? (
                 <TreatmentStage
                   activePatient={activePatient}
@@ -270,7 +298,7 @@ export default function AppShell() {
                 <SafetyStage
                   activePatient={activePatient}
                   onBack={() => setStageKey("treatment")}
-                  onComplete={() => setStageKey("case_summary")} // or a "Case Summary" later
+                  onComplete={() => setStageKey("case_summary")}
                 />
               ) : stageKey === "case_summary" ? (
                 <CaseSummaryStage
@@ -278,19 +306,10 @@ export default function AppShell() {
                   onBack={() => setStageKey("safety")}
                   onStartNewCase={() => setStageKey("intake")}
                 />
-              ) : (
-                <div className="mf-placeholder">
-                  <div className="mf-placeholder-title">Coming next</div>
-                  <div className="mf-placeholder-text">
-                    We’ll implement <b>{STAGES[stageIdx].label}</b> as the next topic page.
-                  </div>
-                </div>
-              )}
+              ) : null}
             </div>
-
-        </div>
+          </div>
         </section>
-
       </main>
     </div>
   );

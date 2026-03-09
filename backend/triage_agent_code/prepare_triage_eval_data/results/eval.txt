@@ -1,0 +1,39 @@
+Medflow - Triage
+
+Zero-Shot
+
+============================================================
+TRIAGE CORRECTNESS EVAL
+============================================================
+Total cases: 100
+Parse success: 59/100 = 59.0%
+Concern hit rate: 6/59 = 10.17%
+Urgency exact / near / wrong: 15 / 36 / 8
+Urgency relaxed accuracy (exact+near): 86.44%
+============================================================
+
+
+Few-Shot
+
+============================================================
+TRIAGE CORRECTNESS EVAL
+============================================================
+Total cases: 100
+Parse success: 21/100 = 21.0%
+Concern hit rate: 1/21 = 4.76%
+Urgency exact / near / wrong: 4 / 11 / 6
+Urgency relaxed accuracy (exact+near): 71.43%
+============================================================
+
+Agentic Triage
+
+============================================================
+TRIAGE CORRECTNESS EVAL
+============================================================
+Total cases: 100
+Parse success: 74/100 = 74.0%
+Concern hit rate: 0/74 = 0.0%
+Urgency exact / near / wrong: 9 / 60 / 5
+Urgency relaxed accuracy (exact+near): 93.24%
+============================================================
+

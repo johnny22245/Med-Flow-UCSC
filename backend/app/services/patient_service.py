@@ -45,7 +45,7 @@ def upsert_patient(db: Session, req: PatientCreateRequest) -> PatientResponse:
                         db,
                         encounter_id,
                         intake_completed=True,
-                        stage="investigation",
+                        stage="triage",
                     )
                 else:
                     # still mark intake completed even if already beyond intake
@@ -89,7 +89,7 @@ def upsert_patient(db: Session, req: PatientCreateRequest) -> PatientResponse:
                 db,
                 enc.id,
                 intake_completed=True,
-                stage="investigation",
+                stage="triage",
             )
 
     db.commit()

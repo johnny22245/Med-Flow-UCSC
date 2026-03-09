@@ -3,20 +3,24 @@ const API_BASE = import.meta.env.VITE_MEDFLOW_API_BASE;
 async function parseJsonOrThrow(res) {
   const text = await res.text();
   let data = null;
+
   try {
     data = text ? JSON.parse(text) : null;
   } catch {
-    // keep null
+    data = null;
   }
 
   if (!res.ok) {
     const detail = data?.detail || `Request failed (${res.status})`;
     throw new Error(detail);
   }
+
   return data;
 }
 
-// Create/update patient profile + intake payload
+// --------------------
+// Patient APIs
+// --------------------
 export async function createPatientProfile(payload) {
   const res = await fetch(`${API_BASE}/api/patients`, {
     method: "POST",
@@ -27,28 +31,49 @@ export async function createPatientProfile(payload) {
   return parseJsonOrThrow(res);
 }
 
-// Optional helper (not used yet, but ready for next pages)
 export async function getPatient(patientId) {
-  const res = await fetch(`${API_BASE}/api/patients/${encodeURIComponent(patientId)}`);
+  const res = await fetch(
+    `${API_BASE}/api/patients/${encodeURIComponent(patientId)}`
+  );
   return parseJsonOrThrow(res);
 }
 
-// Optional helper (debug/demo)
 export async function listPatients() {
   const res = await fetch(`${API_BASE}/api/patients`);
   return parseJsonOrThrow(res);
 }
 
-// investigation API code
+// --------------------
+// Triage APIs
+// --------------------
+export async function startTriage(patientId) {
+  const res = await fetch(`${API_BASE}/api/triage/start`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ patient_id: patientId }),
+  });
+
+  return parseJsonOrThrow(res);
+}
+
+export async function answerTriage(sessionId, answers) {
+  const res = await fetch(`${API_BASE}/api/triage/${sessionId}/answer`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ answers }),
+  });
+
+  return parseJsonOrThrow(res);
+}
+
+// --------------------
+// Investigation APIs
+// --------------------
 export async function getInvestigationByPatientId(patientId) {
   const res = await fetch(`${API_BASE}/api/investigation/${patientId}`, {
     method: "GET",
-    headers: { "Content-Type": "application/json" }
+    headers: { "Content-Type": "application/json" },
   });
 
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Investigation API failed (${res.status}): ${text}`);
-  }
-  return res.json();
+  return parseJsonOrThrow(res);
 }

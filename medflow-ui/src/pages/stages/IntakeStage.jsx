@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { createPatientProfile } from "../../services/medflowApi";
+import { createPatientProfile, startTriage } from "../../services/medflowApi";
 
 const DEFAULT_VITALS = {
   tempC: "37.0",
@@ -14,7 +14,12 @@ function makePatientId() {
   return `P-${n}`;
 }
 
-export default function IntakeStage({ activePatient, onPatientCreated, onRequestNext }) {
+export default function IntakeStage({
+  activePatient,
+  onPatientCreated,
+  onRequestNext,
+  onTriageStarted,
+}) {
   // Patient profile fields
   const [name, setName] = useState(activePatient?.name ?? "");
   const [age, setAge] = useState(activePatient?.age ?? "");
@@ -44,7 +49,6 @@ export default function IntakeStage({ activePatient, onPatientCreated, onRequest
   async function handleCreate() {
     if (!canCreate) return;
 
-    // Shape matches what we’ll later send to backend
     const payload = {
       id: activePatient?.id ?? makePatientId(),
       name: name.trim(),
@@ -66,18 +70,69 @@ export default function IntakeStage({ activePatient, onPatientCreated, onRequest
       },
     };
 
-    // For now: local dummy API (swap later to FastAPI fetch)
     const created = await createPatientProfile(payload);
 
-    // Update shell sidebar patient card
-    onPatientCreated({
+    const patientForShell = {
       id: created.id,
       name: created.name,
       age: created.age,
       sex: created.sex,
       allergies: created.allergies ?? ["Aspirin"],
       meds: created.meds ?? ["Valproic Acid"],
-    });
+      chiefComplaint: created.intake?.chief_complaint || payload.intake.chief_complaint,
+      intake: created.intake || payload.intake,
+    };
+
+    onPatientCreated(patientForShell);
+
+    if (typeof onTriageStarted === "function") {
+      onTriageStarted({
+        visible: true,
+        loading: true,
+        sessionId: null,
+        status: "starting",
+        currentQuestion: null,
+        chatHistory: [],
+        summary: "",
+        urgency: "",
+        suggestedTests: [],
+        missingInfo: [],
+        rawOutput: null,
+      });
+
+      try {
+        const triage = await startTriage(created.id);
+
+        onTriageStarted({
+          visible: true,
+          loading: false,
+          sessionId: triage.session_id,
+          status: triage.status,
+          currentQuestion: triage.current_question,
+          chatHistory: triage.chat_history || [],
+          summary: triage.summary || "",
+          urgency: triage.urgency || "",
+          suggestedTests: triage.suggested_tests || [],
+          missingInfo: triage.missing_info || [],
+          rawOutput: triage.raw_output || null,
+        });
+      } catch (err) {
+        onTriageStarted({
+          visible: true,
+          loading: false,
+          sessionId: null,
+          status: "error",
+          currentQuestion: null,
+          chatHistory: [],
+          summary: "",
+          urgency: "",
+          suggestedTests: [],
+          missingInfo: [],
+          rawOutput: null,
+          error: err.message || "Failed to start triage",
+        });
+      }
+    }
   }
 
   return (
@@ -204,7 +259,7 @@ export default function IntakeStage({ activePatient, onPatientCreated, onRequest
             </button>
 
             <button className="mf-btn-ghost" onClick={onRequestNext} disabled={!activePatient}>
-              Continue to Investigation
+              Continue to Test Ordering
             </button>
           </div>
         </div>

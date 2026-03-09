@@ -10,6 +10,7 @@ from app.routers.safety import router as safety_router
 from app.routers.summary import router as summary_router
 from app.routers.prescription_pdf import router as prescription_pdf_router
 from app.routers.case import router as case_router
+from app.routers.triage import router as triage_router
 
 app = FastAPI(
     title="Med-Flow API (Dummy)",
@@ -37,6 +38,7 @@ app.include_router(safety_router)
 app.include_router(summary_router)
 app.include_router(prescription_pdf_router)
 app.include_router(case_router)
+app.include_router(triage_router)
 
 # Serve images locally (privacy-preserving, no external URLs)
 app.mount("/static", StaticFiles(directory="data/static"), name="static")
