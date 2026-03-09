@@ -1,0 +1,20 @@
+==================================================
+      FINAL COMPARATIVE EVALUATION METRICS
+==================================================
+
+STRATEGY: Zero-Shot (No RAG)
+Precision: 0.5211 | Recall: 0.7400 | F1 Score: 0.6116
+------------------------------
+
+STRATEGY: Few-Shot (No RAG)
+Precision: 0.5190 | Recall: 0.8200 | F1 Score: 0.6357
+------------------------------
+
+STRATEGY: RAG + Zero-Shot
+Precision: 0.9615 | Recall: 1.0000 | F1 Score: 0.9804
+------------------------------
+
+STRATEGY: RAG + Few-Shot
+Precision: 0.8980 | Recall: 0.8800 | F1 Score: 0.8889
+------------------------------
+

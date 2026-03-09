@@ -1,0 +1,101 @@
+uuid,meds,true_label,zs_pred,fs_pred,rag_zs_pred,rag_fs_pred
+3d8943f8,"['Pentostatin', 'Zinc']",0,0,1,0,0
+f3220577,"['Doxepin', 'Glucosamine']",0,0,0,0,0
+19e67025,"['Dexamethasone', 'Hydromorphone']",1,1,1,1,1
+dca14684,"['Hyaluronidase', 'Aztreonam']",0,1,1,0,0
+4d9ca68d,"['Aspirin', 'Sulfamethoxazole']",1,1,1,1,1
+2495621d,"['olmesartan', 'Prednisone']",1,1,1,1,0
+631a8277,"['Prednisone', 'Diltiazem']",1,1,1,1,1
+720d89b8,"['Influenza Virus Vaccine, Live Attenuated, B-Brisbane-60-2008 strain', 'Zinc']",0,1,0,0,0
+ccae059e,"['clorazepate', 'oxcarbazepine']",0,1,1,0,0
+55f3c379,"['Lidocaine', 'lansoprazole']",1,0,1,1,1
+1e334c31,"['Vitamin B 12', 'Nevirapine']",0,1,0,0,0
+9ad52202,"['Saccharomyces cerevisiae', 'Tilidine']",0,0,0,0,0
+fb63e1f7,"['salmeterol', 'Nitrazepam']",1,1,1,1,1
+8ae8ff66,"['teduglutide', 'cabazitaxel']",0,1,1,0,1
+19164852,"['zolmitriptan', 'Flavoxate']",0,0,0,0,0
+ea2207ce,"['Calamine', 'Bleomycin']",0,1,1,0,0
+999d0d67,"['Temazepam', 'Theophylline']",1,1,1,1,1
+770682e9,"['Carbimazole', 'Guanfacine']",0,1,1,0,0
+d84d7568,"['ibritumomab tiuxetan', 'Methotrexate']",1,1,1,1,1
+99bda0b9,"['Chondroitin Sulfates', 'gabapentin']",1,0,1,1,0
+3586f607,"['Ethanol', 'sorafenib']",0,0,1,0,0
+7cea85f2,"['pegaspargase', 'Carbachol']",0,1,1,0,0
+f921ccef,"['Doxazosin', 'clopidogrel']",1,1,1,1,1
+88790535,"['Carboplatin', 'Alendronate']",1,1,1,1,1
+33bbc199,"['cilostazol', 'Isoflurane']",0,1,1,0,0
+aef67d3c,"['sultopride', 'fludarabine']",0,1,1,0,0
+117c72c8,"['Fluphenazine', 'Lithium Carbonate']",1,1,1,1,1
+557c992e,"['Risedronate', 'Doxazosin']",1,1,1,1,1
+a81b4105,"['Furosemide', 'saxagliptin']",1,0,1,1,1
+85f5007c,"['cefepime', 'dihydroxyaluminum sodium carbonate']",0,1,1,0,0
+9e47e631,"['Warfarin', 'Morphine']",1,1,1,1,1
+3374d777,"['Magnesium Hydroxide', 'Bisacodyl']",1,0,0,1,0
+c4e3b4dc,"['moxifloxacin', 'Delavirdine']",0,1,1,0,0
+44d645a0,"['Losartan', 'moxonidine']",0,1,1,1,1
+c3f4d90c,"['Demeclocycline', 'Imipramine']",0,1,1,0,0
+f377504b,"['Clonidine', 'Escitalopram']",1,0,1,1,1
+3dd5802b,"['oxcarbazepine', 'Uracil']",0,0,0,0,0
+ad4a47b7,"['Mianserin', 'liothyronine']",0,1,1,0,0
+71452c54,"['Ibuprofen', 'Lithium Carbonate']",1,1,1,1,1
+dd0656b3,"['Cromolyn', 'bromfenac']",0,1,1,0,0
+1d3fcca8,"['heparin', 'thyrotropin alfa']",0,1,1,0,0
+61476e62,"['Dicloxacillin', 'Desoximetasone']",0,0,0,0,0
+b0fcaf19,"['acamprosate', 'Streptozocin']",0,1,1,0,0
+ebf4e8e7,"['Thrombin', 'Benzocaine']",0,1,1,0,0
+a4d57695,"['Lisinopril', 'Melphalan']",1,1,1,1,1
+e50e47b8,"['dexchlorpheniramine', 'Octreotide']",0,1,1,0,0
+f4d3249d,"['Cephalexin', 'Buspirone']",1,0,0,1,1
+55f84c03,"['Furosemide', 'Bumetanide']",1,1,1,1,1
+f8093987,"['aripiprazole', 'Insulin Glargine']",1,1,1,1,1
+87c515eb,"['Ketoconazole', 'Acetylcysteine']",0,1,1,0,0
+3dba039a,"['Metolazone', 'sunitinib']",1,1,1,1,1
+bf49f9ea,"['Tolbutamide', 'Citric Acid']",0,0,0,0,0
+9e5334e1,"['Quinine', 'Tryptophan']",0,1,1,0,0
+6830df98,"['Propylthiouracil', 'Nicorandil']",0,1,1,0,0
+bf6b07ea,"['Oxycodone', 'rofecoxib']",1,1,1,1,1
+24720baf,"['Fluvoxamine', 'sultopride']",0,1,1,0,0
+8d84eefd,"['Folic Acid', 'danaparoid']",0,0,0,0,0
+4f5c1302,"['bimatoprost', 'Potassium']",0,0,1,0,0
+19078e7f,"['follitropin beta', 'ciclesonide']",0,0,0,0,0
+c4d6e688,"['lamotrigine', 'Nedocromil']",0,0,0,0,0
+f313cf32,"['rabeprazole', 'Atenolol']",1,1,1,1,1
+a5b45ad9,"['Cyproterone', 'Amantadine']",0,1,1,0,0
+54e47e3c,"['Glipizide', 'gadodiamide']",1,1,1,1,1
+e1e44e5c,"['Phosphorus', 'Estrogens, Esterified (USP)']",0,0,1,0,1
+826cacce,"['Barium', 'Fenoterol']",0,1,1,0,0
+289ace3a,"['Haloperidol', 'insulin detemir']",0,1,1,1,1
+95bdcd79,"['Morphine', 'Fluorouracil']",1,1,1,1,1
+fd9ea48d,"['Lorazepam', 'pamidronate']",1,1,1,1,1
+70111460,"['ferrous sulfate', 'Cytarabine liposome']",0,1,1,0,0
+595f1da2,"['fosaprepitant', 'Clodronic Acid']",0,1,1,0,0
+e0984ddd,"['Prochlorperazine', 'Albuterol']",1,1,0,1,0
+a186fbbb,"['fluticasone', 'Fluconazole']",1,1,1,1,1
+342a8f83,"['eplerenone', 'Vinblastine']",0,1,1,0,0
+f7dd6fc0,"['valacyclovir', 'Acetaminophen']",1,0,0,1,1
+98901fd1,"['Rasburicase', 'Insulin, Glulisine, Human']",0,1,1,0,1
+f6f668a3,"['Cimetidine', 'Granisetron']",1,1,1,1,1
+a8c3450b,"['abacavir', 'Nelfinavir']",1,1,1,1,1
+3057e9bd,"['Phloroglucinol', 'Amphetamine']",0,1,1,0,0
+975abcfe,"['flunisolide', 'magnesium trisilicate']",0,0,0,0,0
+4115a5a4,"['Promethazine', 'Leucovorin']",1,1,1,1,1
+7ee3c8b9,"['Warfarin', 'Hydroxychloroquine']",1,1,1,1,1
+944e2097,"['valacyclovir', 'Guaifenesin']",1,0,0,1,0
+599ca95b,"['pregabalin', 'Levofloxacin']",1,1,1,1,1
+38b53fe4,"['Omeprazole', 'docetaxel']",1,1,1,1,1
+0a724340,"['Clonazepam', 'clopidogrel']",1,0,1,1,1
+6bee912c,"['Hydrochlorothiazide', 'Acyclovir']",1,0,1,1,1
+b9f18d05,"['Ivermectin', 'Thiethylperazine']",0,1,1,0,0
+f0061f73,"['Diazepam', 'Digoxin']",1,0,1,1,1
+8e1f472e,"['Famotidine', 'Promethazine']",1,1,0,1,1
+32ba4f94,"['Methylprednisolone', 'Benztropine']",1,1,1,1,1
+2245aad8,"['Arginine', 'Procyclidine']",0,0,1,0,0
+b16ff977,"['Cyclophosphamide', 'Valproate']",1,1,1,1,1
+a7551d88,"['Omeprazole', 'Naproxen']",1,1,0,1,1
+7bb47be3,"['Clindamycin', 'Naproxen']",1,1,1,1,1
+082bc65c,"['Cysteamine', 'Sodium polystyrene sulfonate']",0,0,1,0,0
+29b31281,"['Tamoxifen', 'quazepam']",0,1,1,0,0
+967cf40c,"['Methylprednisolone', 'levothyroxine']",1,0,0,1,1
+e44ed98b,"['Diltiazem', 'Levofloxacin']",1,1,1,1,1
+d835abe8,"['quetiapine', 'Cyclophosphamide']",1,1,1,1,1
+fc8d9586,"['Ramipril', 'rosuvastatin']",1,0,0,1,0
