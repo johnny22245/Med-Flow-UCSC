@@ -1,0 +1,5 @@
+# AI Models and Vector DBs - No Fanum Tax Allowed
+biomistral-medical-lora.v4/
+medical_vectordb/
+*.index
+.env
