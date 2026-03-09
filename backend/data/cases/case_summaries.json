@@ -1,7 +1,7 @@
 {
   "P-0007": {
     "patientId": "P-0007",
-    "createdAt": "2026-02-27T00:24:47.463535Z",
+    "createdAt": "2026-03-03T23:36:03.321556Z",
     "patient": {
       "id": "P-0007",
       "name": "John Doe",
@@ -32,14 +32,14 @@
       "meds": [
         {
           "drug": "Temozolomide",
-          "dose": "50 mg",
+          "dose": "65 mg",
           "route": "PO",
           "frequency": "Daily",
           "duration": "42 days"
         },
         {
           "drug": "Ondansetron",
-          "dose": "8 mg",
+          "dose": "12 mg",
           "route": "PO",
           "frequency": "q8h PRN",
           "duration": "14 days"
@@ -49,7 +49,7 @@
     },
     "safety": {
       "decision": "override",
-      "overrideNote": "Ok for now, as patient will be on observation for 1 week.",
+      "overrideNote": "Lets monitor them for a week.",
       "selectedSuggestion": ""
     },
     "finalClinicianNote": "",

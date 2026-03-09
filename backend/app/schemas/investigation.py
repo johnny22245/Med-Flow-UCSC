@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Any, Dict
 
 class LabResult(BaseModel):
     name: str
@@ -40,3 +40,6 @@ class InvestigationPayload(BaseModel):
     labs: List[LabPanel]
     imaging: List[ImagingStudy]
     status: str
+class InvestigationRecordResponse(BaseModel):
+    patientId: str
+    payload: Optional[InvestigationPayload] = None

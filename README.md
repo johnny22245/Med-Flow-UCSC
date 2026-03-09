@@ -30,3 +30,16 @@ Create new environment: `conda create -n med-flow_backend python=3.12 -y`
 
 ## Run Backend API services
 Command (make sure in folder `backend`): `uvicorn app.main:app --reload --port 8000`
+
+## DB setup
+Create new environment: `conda create -n medflow_DB python=3.12 -y`
+<br> Activate environment: `conda activate medflow_DB`
+<br> Make sure to be on the root folder which contains: `docker-compose.yml`
+<br> Install dependencies: `pip install -r requirements_DB.txt`
+<br>
+<br> Install docker over mac/linux. Check if the same is present: `docker --version`. If not present, follow the installation steps: 
+<br> 1. `brew install --cask docker` -- Post this use Applications to open and start docker app.
+<br> Sanity commands: A) `docker run hello-world` , B) `docker compose version`
+
+<br> Next steps:
+<br> Run from folder which contains: `docker-compose.yml` -- `docker compose up -d`

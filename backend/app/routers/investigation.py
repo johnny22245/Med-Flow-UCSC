@@ -1,12 +1,25 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+
+from app.db.session import get_db
+from app.services import investigation_service
 from app.schemas.investigation import InvestigationPayload
-from app.services.investigation_service import investigation_service
 
-router = APIRouter(prefix="/api/investigation", tags=["investigation"])
+router = APIRouter(tags=["investigation"])
 
-@router.get("/{patient_id}", response_model=InvestigationPayload)
-def get_investigation(patient_id: str):
-    data = investigation_service.get_by_patient_id(patient_id)
-    if not data:
-        raise HTTPException(status_code=404, detail=f"No investigation data for patient_id={patient_id}")
-    return data
+
+@router.get("/api/investigation/{patientId}")
+def get_investigation(patientId: str, db: Session = Depends(get_db)):
+    return investigation_service.get_investigation(db, patientId)
+
+
+@router.post("/api/investigation/{patientId}")
+def save_investigation(patientId: str, payload: InvestigationPayload, db: Session = Depends(get_db)):
+    # optional: enforce patient_id consistency
+    if payload.patient_id != patientId:
+        raise HTTPException(status_code=400, detail="payload.patient_id must match patientId in path")
+
+    try:
+        return investigation_service.upsert_investigation_payload(db, patientId, payload)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))

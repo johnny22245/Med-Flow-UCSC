@@ -1,69 +1,109 @@
-from __future__ import annotations
+from sqlalchemy.orm import Session
+from sqlalchemy import select
 
-import json
-from pathlib import Path
-from datetime import datetime, timezone
-from typing import Dict, Optional, List
-
+from app.models.patient import Patient
+from app.models.encounter import Encounter
+from app.models.workflow_state import WorkflowState
 from app.schemas.patients import PatientCreateRequest, PatientResponse
 
-FIXTURE_PATH = Path(__file__).resolve().parents[2] / "data" / "fixtures" / "patients.json"
+from app.services.encounter_service import get_active_encounter_id
+from app.services.workflow_utils import get_workflow_state, advance_workflow
+
+def _to_response(p: Patient) -> PatientResponse:
+    return PatientResponse(
+        id=p.id,
+        name=p.name,
+        age=p.age,
+        sex=p.sex,
+        allergies=p.allergies or [],
+        meds=p.meds or [],
+        intake=p.intake,
+        created_at=p.created_at.isoformat() if p.created_at else "",
+        updated_at=p.updated_at.isoformat() if p.updated_at else "",
+    )
 
 
-def now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+def upsert_patient(db: Session, req: PatientCreateRequest) -> PatientResponse:
+    # find existing
+    p = db.get(Patient, req.id)
 
-
-class PatientStore:
-    """
-    Dummy patient store:
-    - loads initial fixture JSON
-    - keeps everything in memory
-    - supports upsert + fetch
-    """
-
-    def __init__(self) -> None:
-        self._store: Dict[str, PatientResponse] = {}
-        self._load_fixtures()
-
-    def _load_fixtures(self) -> None:
-        if not FIXTURE_PATH.exists():
-            return
-        raw = json.loads(FIXTURE_PATH.read_text())
-        for item in raw.get("patients", []):
-            # Ensure timestamps exist
-            item.setdefault("created_at", now_iso())
-            item.setdefault("updated_at", now_iso())
-            p = PatientResponse.model_validate(item)
-            self._store[p.id] = p
-
-    def upsert_patient(self, req: PatientCreateRequest) -> PatientResponse:
-        existing = self._store.get(req.id)
-        created_at = existing.created_at if existing else now_iso()
-
-        allergies = req.allergies if req.allergies is not None else (existing.allergies if existing else ["Aspirin"])
-        meds = req.meds if req.meds is not None else (existing.meds if existing else ["Valproic Acid"])
-
-        p = PatientResponse(
+    if p:
+        # update
+        p.name = req.name
+        p.age = req.age
+        p.sex = req.sex
+        p.intake = req.intake.model_dump()
+        
+        # Mark intake complete if consent is true (do NOT move stage backwards)
+        if req.intake and req.intake.consent is True:
+            encounter_id = get_active_encounter_id(db, p.id)
+            if encounter_id:
+                wf = get_workflow_state(db, encounter_id)
+                # only advance stage if still in intake
+                if wf and (wf.stage == "intake" or wf.stage is None):
+                    advance_workflow(
+                        db,
+                        encounter_id,
+                        intake_completed=True,
+                        stage="investigation",
+                    )
+                else:
+                    # still mark intake completed even if already beyond intake
+                    advance_workflow(
+                        db,
+                        encounter_id,
+                        intake_completed=True,
+                    )
+        
+        # only overwrite if explicitly provided
+        if req.allergies is not None:
+            p.allergies = req.allergies
+        if req.meds is not None:
+            p.meds = req.meds
+        if req.extra is not None:
+            p.extra = req.extra
+    else:
+        p = Patient(
             id=req.id,
             name=req.name,
             age=req.age,
             sex=req.sex,
-            allergies=allergies,
-            meds=meds,
-            intake=req.intake,
-            created_at=created_at,
-            updated_at=now_iso(),
+            intake=req.intake.model_dump(),
+            allergies=req.allergies or [],
+            meds=req.meds or [],
+            extra=req.extra,
         )
-        self._store[p.id] = p
-        return p
+        db.add(p)
+        db.flush()
 
-    def get_patient(self, patient_id: str) -> Optional[PatientResponse]:
-        return self._store.get(patient_id)
+        # create active encounter + workflow state for this patient
+        enc = Encounter(patient_id=p.id, status="active")
+        db.add(enc)
+        db.flush()
 
-    def list_patients(self) -> List[PatientResponse]:
-        # Stable ordering for demos
-        return sorted(self._store.values(), key=lambda x: x.updated_at, reverse=True)
+        wf = WorkflowState(encounter_id=enc.id, stage="intake")
+        db.add(wf)
+        # Mark intake complete if consent is true (safe stage advance)
+        if req.intake and req.intake.consent is True:
+            advance_workflow(
+                db,
+                enc.id,
+                intake_completed=True,
+                stage="investigation",
+            )
+
+    db.commit()
+    db.refresh(p)
+    return _to_response(p)
 
 
-patient_store = PatientStore()
+def get_patient(db: Session, patient_id: str) -> PatientResponse | None:
+    p = db.get(Patient, patient_id)
+    if not p:
+        return None
+    return _to_response(p)
+
+
+def list_patients(db: Session) -> list[PatientResponse]:
+    rows = db.execute(select(Patient).order_by(Patient.created_at.desc())).scalars().all()
+    return [_to_response(p) for p in rows]

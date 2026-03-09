@@ -1,116 +1,47 @@
-# backend/app/routers/treatment.py
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
 
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel, Field
-from typing import List, Dict, Any, Optional
-import json
-import os
+from app.db.session import get_db
+from app.services import treatment_service
+from app.schemas.treatment import TreatmentUpsertRequest, TreatmentDraftRequest
 
-router = APIRouter(prefix="/api/treatment", tags=["treatment"])
-
-# --- Fixture path: backend/data/fixtures/treatment.json ---
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))  # backend/
-FIXTURE_PATH = os.path.join(BASE_DIR, "data", "fixtures", "treatment.json")
-
-# --- In-memory stores (demo) ---
-SUGGESTED_PLANS: Dict[str, Dict[str, Any]] = {}
-DRAFT_ORDERS: Dict[str, Dict[str, Any]] = {}
+router = APIRouter(tags=["treatment"])
 
 
-def load_fixtures() -> None:
-    """Load suggested treatment plans from backend/data/fixtures/treatment.json"""
-    global SUGGESTED_PLANS
-    if not os.path.exists(FIXTURE_PATH):
-        SUGGESTED_PLANS = {}
-        return
-
-    with open(FIXTURE_PATH, "r") as f:
-        raw = json.load(f)
-
-    # Normalize: patient_id -> suggestedPlan
-    SUGGESTED_PLANS = {pid: payload.get("suggestedPlan", {}) for pid, payload in raw.items()}
+@router.get("/api/treatment/{patientId}")
+def get_treatment(patientId: str, db: Session = Depends(get_db)):
+    return treatment_service.get_treatment(db, patientId)
 
 
-@router.on_event("startup")
-def _startup():
-    load_fixtures()
-
-
-# --- Models ---
-class MedItem(BaseModel):
-    drug: str
-    dose: str
-    route: str
-    frequency: str
-    duration: str
-
-
-class SuggestedPlan(BaseModel):
-    title: str
-    meds: List[MedItem] = Field(default_factory=list)
-    notes: List[str] = Field(default_factory=list)
-
-
-class TreatmentOrder(BaseModel):
-    meds: List[MedItem] = Field(default_factory=list)
-    notes: Optional[str] = ""
-
-
-class DraftTreatmentPayload(BaseModel):
-    patientId: str
-    drafted: bool = True
-    order: TreatmentOrder
-
-
-# --- Endpoints ---
-@router.get("/plan/{patient_id}")
-def get_treatment_plan(patient_id: str):
+# NEW: UI-friendly endpoint
+@router.post("/api/treatment/draft")
+def draft_treatment(payload: TreatmentDraftRequest, db: Session = Depends(get_db)):
     """
-    Returns a suggested plan for the patient, unless a draft order already exists.
-    If drafted exists: returns drafted order (drafted=true) so UI can rehydrate on refresh.
+    Accepts the UI payload shape:
+      { patientId, drafted, order: {...} }
+    Converts it into TreatmentUpsertRequest:
+      { plan: {...}, status: "draft", ... }
     """
-    if patient_id in DRAFT_ORDERS:
-        return {
-            "patientId": patient_id,
-            "drafted": True,
-            "order": DRAFT_ORDERS[patient_id],
-        }
+    upsert_payload = TreatmentUpsertRequest(
+        plan={
+            "patientId": payload.patientId,  # optional, can be removed if you don't want duplication
+            "drafted": payload.drafted,
+            "order": payload.order,
+        },
+        status="draft",
+        clinician_approved=False,
+        approval_note=None,
+    )
 
-    plan = SUGGESTED_PLANS.get(patient_id)
-    if not plan:
-        raise HTTPException(status_code=404, detail="No treatment plan fixture found for patient")
-
-    return {
-        "patientId": patient_id,
-        "drafted": False,
-        "suggestedPlan": plan,
-    }
-
-
-@router.post("/draft")
-def draft_treatment_order(payload: DraftTreatmentPayload):
-    """
-    Stores a draft treatment order in-memory (demo).
-    """
-    DRAFT_ORDERS[payload.patientId] = {
-        "meds": [m.model_dump() for m in payload.order.meds],
-        "notes": payload.order.notes or "",
-        "drafted": payload.drafted,
-    }
-
-    return {
-        "ok": True,
-        "patientId": payload.patientId,
-        "drafted": True,
-        "order": DRAFT_ORDERS[payload.patientId],
-    }
+    try:
+        return treatment_service.upsert_treatment(db, payload.patientId, upsert_payload)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
-@router.post("/reset/{patient_id}")
-def reset_treatment_order(patient_id: str):
-    """
-    Demo helper: clears drafted order so the suggested plan shows again.
-    """
-    if patient_id in DRAFT_ORDERS:
-        del DRAFT_ORDERS[patient_id]
-    return {"ok": True, "patientId": patient_id, "draftCleared": True}
+@router.post("/api/treatment/{patientId}")
+def upsert_treatment(patientId: str, payload: TreatmentUpsertRequest, db: Session = Depends(get_db)):
+    try:
+        return treatment_service.upsert_treatment(db, patientId, payload)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
