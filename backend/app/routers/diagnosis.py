@@ -1,9 +1,11 @@
+# backend/app/routers/diagnosis.py
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
 from app.services import diagnosis_service
-from app.schemas.diagnosis import DiagnosisUpsertRequest
+from app.schemas.diagnosis import DiagnosisConfirmRequest
 
 router = APIRouter(tags=["diagnosis"])
 
@@ -14,8 +16,11 @@ def get_diagnosis(patientId: str, db: Session = Depends(get_db)):
 
 
 @router.post("/api/diagnosis/{patientId}")
-def upsert_diagnosis(patientId: str, payload: DiagnosisUpsertRequest, db: Session = Depends(get_db)):
+def confirm_diagnosis(patientId: str, payload: DiagnosisConfirmRequest, db: Session = Depends(get_db)):
+    if payload.patientId != patientId:
+        raise HTTPException(status_code=400, detail="payload.patientId must match patientId in path")
+
     try:
-        return diagnosis_service.upsert_diagnosis(db, patientId, payload)
+        return diagnosis_service.confirm_diagnosis_from_ui(db, patientId, payload)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))

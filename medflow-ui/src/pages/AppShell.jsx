@@ -27,8 +27,10 @@ import CaseSummaryStage from "./stages/CaseSummaryStage";
 import "../styles/caseSummaryStage.css";
 
 import TriageChat from "../components/TriageChat";
+import PatientLookupStage from "./stages/PatientLookupStage";
 
 const STAGES = [
+  { key: "patient_lookup", label: "Patient Selection", hint: "Search existing patient or start a new case" },
   { key: "intake", label: "Intake & Triage", hint: "Symptoms → SOAP + suggested tests → doctor approves" },
   { key: "tests", label: "Test Ordering", hint: "AI suggests labs/imaging → doctor overrides → confirms" },
   { key: "investigation", label: "Investigation", hint: "Labs + imaging → findings → doctor approves" },
@@ -50,7 +52,7 @@ export default function AppShell() {
     meds: ["Valproic Acid"],
   });
 
-  const [stageKey, setStageKey] = useState("intake");
+  const [stageKey, setStageKey] = useState("patient_lookup");
 
   const [triageState, setTriageState] = useState({
     visible: false,
@@ -247,7 +249,14 @@ export default function AppShell() {
             </div>
 
             <div className="mf-mt12">
-              {stageKey === "intake" ? (
+              {stageKey === "patient_lookup" ? (
+                  <PatientLookupStage
+                    onPatientSelected={(p) => {
+                    setActivePatient(p);
+                    setStageKey("intake");
+                  }}
+                />
+              ) : stageKey === "intake" ? (
                 <>
                   <IntakeStage
                     activePatient={activePatient}

@@ -26,3 +26,58 @@
 2026-03-09 19:14:46.145 PDT [2369599] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.022 s, total=1.048 s; sync files=11, longest=0.007 s, average=0.002 s; distance=12 kB, estimate=1954 kB; lsn=0/1C7C930, redo lsn=0/1C7C8D8
 2026-03-09 19:19:45.245 PDT [2369599] LOG:  checkpoint starting: time
 2026-03-09 19:19:46.824 PDT [2369599] LOG:  checkpoint complete: wrote 15 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.506 s, sync=0.054 s, total=1.579 s; sync files=15, longest=0.008 s, average=0.004 s; distance=29 kB, estimate=1762 kB; lsn=0/1C83EF8, redo lsn=0/1C83EA0
+2026-03-09 20:39:52.162 PDT [2454989] ERROR:  column "created_at" does not exist at character 39
+2026-03-09 20:39:52.162 PDT [2454989] HINT:  Perhaps you meant to reference the column "workflow_state.updated_at".
+2026-03-09 20:39:52.162 PDT [2454989] STATEMENT:  SELECT * FROM workflow_state ORDER BY created_at DESC;
+2026-03-09 20:44:47.230 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 20:44:47.351 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.004 s, total=0.122 s; sync files=1, longest=0.004 s, average=0.004 s; distance=1 kB, estimate=1586 kB; lsn=0/1C84370, redo lsn=0/1C84318
+2026-03-09 21:24:47.975 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 21:24:48.098 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.006 s, total=0.123 s; sync files=2, longest=0.003 s, average=0.003 s; distance=2 kB, estimate=1427 kB; lsn=0/1C84DD0, redo lsn=0/1C84D78
+2026-03-09 21:29:47.198 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 21:29:47.324 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.007 s, total=0.126 s; sync files=2, longest=0.004 s, average=0.004 s; distance=4 kB, estimate=1285 kB; lsn=0/1C85EE8, redo lsn=0/1C85E90
+2026-03-09 21:34:47.361 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 21:34:47.487 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.001 s, total=0.127 s; sync files=2, longest=0.001 s, average=0.001 s; distance=6 kB, estimate=1157 kB; lsn=0/1C878F0, redo lsn=0/1C87898
+2026-03-09 22:44:48.570 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 22:44:49.119 PDT [2369599] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.026 s, total=0.550 s; sync files=5, longest=0.008 s, average=0.006 s; distance=17 kB, estimate=1043 kB; lsn=0/1C8BDD8, redo lsn=0/1C8BD80
+2026-03-10 00:14:49.601 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 00:14:50.665 PDT [2369599] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.042 s, total=1.064 s; sync files=11, longest=0.008 s, average=0.004 s; distance=12 kB, estimate=940 kB; lsn=0/1C8F060, redo lsn=0/1C8F008
+2026-03-10 01:04:50.585 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 01:04:51.850 PDT [2369599] LOG:  checkpoint complete: wrote 12 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.205 s, sync=0.046 s, total=1.266 s; sync files=12, longest=0.009 s, average=0.004 s; distance=25 kB, estimate=848 kB; lsn=0/1C95790, redo lsn=0/1C95738
+2026-03-10 01:05:09.945 PDT [2523561] ERROR:  column "created_at" does not exist at character 39
+2026-03-10 01:05:09.945 PDT [2523561] HINT:  Perhaps you meant to reference the column "workflow_state.updated_at".
+2026-03-10 01:05:09.945 PDT [2523561] STATEMENT:  SELECT * FROM workflow_state ORDER BY created_at DESC;
+2026-03-10 01:05:13.349 PDT [2523595] ERROR:  column "created_at" does not exist at character 39
+2026-03-10 01:05:13.349 PDT [2523595] HINT:  Perhaps you meant to reference the column "workflow_state.updated_at".
+2026-03-10 01:05:13.349 PDT [2523595] STATEMENT:  SELECT * FROM workflow_state ORDER BY created_at DESC;
+2026-03-10 01:29:51.299 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 01:29:51.424 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.009 s, total=0.126 s; sync files=2, longest=0.005 s, average=0.005 s; distance=2 kB, estimate=764 kB; lsn=0/1C96300, redo lsn=0/1C962A8
+2026-03-10 01:34:51.524 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 01:34:51.650 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.007 s, total=0.127 s; sync files=2, longest=0.004 s, average=0.004 s; distance=4 kB, estimate=688 kB; lsn=0/1C97530, redo lsn=0/1C974D8
+2026-03-10 03:24:53.510 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 03:24:53.640 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.008 s, total=0.130 s; sync files=2, longest=0.004 s, average=0.004 s; distance=6 kB, estimate=620 kB; lsn=0/1C98E18, redo lsn=0/1C98DC0
+2026-03-10 03:29:53.740 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 03:29:53.889 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.111 s, sync=0.008 s, total=0.149 s; sync files=2, longest=0.005 s, average=0.004 s; distance=12 kB, estimate=559 kB; lsn=0/1C9C150, redo lsn=0/1C9C0F8
+2026-03-10 03:34:53.989 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 03:34:54.121 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.009 s, total=0.132 s; sync files=2, longest=0.005 s, average=0.005 s; distance=4 kB, estimate=503 kB; lsn=0/1C9D3D8, redo lsn=0/1C9D380
+2026-03-10 04:29:54.196 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:29:55.259 PDT [2369599] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.004 s, sync=0.038 s, total=1.063 s; sync files=9, longest=0.011 s, average=0.005 s; distance=24 kB, estimate=455 kB; lsn=0/1CA3638, redo lsn=0/1CA35A8
+2026-03-10 04:34:54.359 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:34:55.738 PDT [2369599] LOG:  checkpoint complete: wrote 13 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.306 s, sync=0.056 s, total=1.380 s; sync files=14, longest=0.008 s, average=0.004 s; distance=21 kB, estimate=412 kB; lsn=0/1CA8C40, redo lsn=0/1CA8BE8
+2026-03-10 04:39:54.839 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:39:55.360 PDT [2369599] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.001 s, total=0.521 s; sync files=5, longest=0.001 s, average=0.001 s; distance=19 kB, estimate=373 kB; lsn=0/1CADAE8, redo lsn=0/1CADA90
+2026-03-10 04:44:54.460 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:44:55.305 PDT [2369599] LOG:  checkpoint complete: wrote 8 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.804 s, sync=0.025 s, total=0.845 s; sync files=7, longest=0.007 s, average=0.004 s; distance=7 kB, estimate=336 kB; lsn=0/1CAF7F8, redo lsn=0/1CAF7A0
+2026-03-10 04:49:54.405 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:49:54.846 PDT [2369599] LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.023 s, total=0.441 s; sync files=5, longest=0.008 s, average=0.005 s; distance=5 kB, estimate=303 kB; lsn=0/1CB0E70, redo lsn=0/1CB0E18
+2026-03-10 04:59:55.046 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 04:59:55.172 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.007 s, total=0.127 s; sync files=2, longest=0.004 s, average=0.004 s; distance=5 kB, estimate=273 kB; lsn=0/1CB22B8, redo lsn=0/1CB2260
+2026-03-10 05:04:55.179 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 05:04:56.854 PDT [2369599] LOG:  checkpoint complete: wrote 16 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.608 s, sync=0.049 s, total=1.676 s; sync files=17, longest=0.009 s, average=0.003 s; distance=30 kB, estimate=249 kB; lsn=0/1CB9D10, redo lsn=0/1CB9CB8
+2026-03-10 05:14:56.055 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 05:14:57.627 PDT [2369599] LOG:  checkpoint complete: wrote 15 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.507 s, sync=0.051 s, total=1.573 s; sync files=16, longest=0.007 s, average=0.004 s; distance=30 kB, estimate=227 kB; lsn=0/1CC1558, redo lsn=0/1CC1500
+2026-03-10 05:19:56.727 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 05:19:57.164 PDT [2369599] LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.403 s, sync=0.021 s, total=0.437 s; sync files=5, longest=0.008 s, average=0.005 s; distance=8 kB, estimate=205 kB; lsn=0/1CC37B0, redo lsn=0/1CC3758
+2026-03-10 05:29:56.303 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 05:29:58.285 PDT [2369599] LOG:  checkpoint complete: wrote 19 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.909 s, sync=0.056 s, total=1.982 s; sync files=18, longest=0.008 s, average=0.004 s; distance=56 kB, estimate=190 kB; lsn=0/1CD1A78, redo lsn=0/1CD19E8
+2026-03-10 05:34:56.293 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 05:34:56.853 PDT [2369599] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.025 s, total=0.560 s; sync files=5, longest=0.008 s, average=0.005 s; distance=18 kB, estimate=173 kB; lsn=0/1CD62F0, redo lsn=0/1CD6298

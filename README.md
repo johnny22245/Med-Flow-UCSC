@@ -37,8 +37,13 @@ Create new environment: `conda create -n med-flow_backend python=3.12 -y`
 <br> Make sure you are inside the `backend` folder.
 <br> Install dependencies: `pip install -r requirements.txt`
 
+### Setup for Llava-Med
+Create new environment: `conda create -n llava_med python=3.10 -y`
+<br> Activate environment: `conda activate llava_med`
+<br> Install Llava-Med, go to folder `backend/LLaVA-Med` and run: `pip install -e .`
+
 ## Run Backend API services
-Command (make sure in folder `backend`): `uvicorn app.main:app --reload --port 24400 --host 0.0.0.0`
+Command (make sure in folder `backend`): `bash start_backend.sh`
 
 ## DB setup
 Create new environment: `conda create -n medflow_DB python=3.12 -y`

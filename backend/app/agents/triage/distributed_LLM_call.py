@@ -5,22 +5,25 @@ This uses the GPUs wisely and allocates available memory to host the models and 
 
 ## DO NOT CHANGE ANY CODE HERE.
 
+
+
+# GPU
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "2" 
+
+
 from vllm import LLM, SamplingParams
 from collections import defaultdict
 import re
 import json
-import os
 import ast
-
+import torch
+torch.multiprocessing.set_start_method('spawn', force=True)
 # decoding strategy
 
 from vllm.sampling_params import GuidedDecodingParams
 from typing import Dict, List, Optional
 from pydantic import BaseModel, Field, conint, ValidationError
-
-# GPU
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2,3,4" 
 
 
 class DistributedModel():

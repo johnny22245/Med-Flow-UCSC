@@ -1,0 +1,7 @@
+{
+  "image_path": "/home/achowd10/MedFlow-244-Project/Med-Flow-UCSC/backend/data/reports/P-0007/John_doe_CT.png",
+  "use_case": "brain",
+  "crop_box": {
+    "xmax": 195, "xmin": 144, "ymax": 145, "ymin": 82
+  }
+}
