@@ -1,0 +1,28 @@
+2026-03-09 17:14:41.896 PDT [2369595] LOG:  starting PostgreSQL 18.3 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 14.3.0-18) 14.3.0, 64-bit
+2026-03-09 17:14:41.896 PDT [2369595] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-03-09 17:14:41.901 PDT [2369595] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2026-03-09 17:14:41.914 PDT [2369601] LOG:  database system was shut down at 2026-03-09 17:14:29 PDT
+2026-03-09 17:14:41.926 PDT [2369595] LOG:  database system is ready to accept connections
+2026-03-09 17:19:42.009 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 17:21:23.504 PDT [2369599] LOG:  checkpoint complete: wrote 1011 buffers (6.2%), wrote 3 SLRU buffers; 1 WAL file(s) added, 0 removed, 0 recycled; write=101.375 s, sync=0.067 s, total=101.495 s; sync files=362, longest=0.008 s, average=0.001 s; distance=5011 kB, estimate=5011 kB; lsn=0/1C48E60, redo lsn=0/1C48DD0
+2026-03-09 17:38:42.528 PDT [2381867] FATAL:  role "medflow" does not exist
+2026-03-09 17:49:42.968 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 17:49:45.712 PDT [2369599] LOG:  checkpoint complete: wrote 27 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=2.710 s, sync=0.017 s, total=2.744 s; sync files=19, longest=0.008 s, average=0.001 s; distance=72 kB, estimate=4517 kB; lsn=0/1C5AFF0, redo lsn=0/1C5AF98
+2026-03-09 17:54:42.813 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 17:54:42.943 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.004 s, total=0.131 s; sync files=1, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=4065 kB; lsn=0/1C5B210, redo lsn=0/1C5B1B8
+2026-03-09 18:04:43.143 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 18:04:44.203 PDT [2369599] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.039 s, total=1.061 s; sync files=11, longest=0.008 s, average=0.004 s; distance=11 kB, estimate=3660 kB; lsn=0/1C5DEC0, redo lsn=0/1C5DE68
+2026-03-09 18:09:43.304 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 18:09:44.860 PDT [2369599] LOG:  checkpoint complete: wrote 15 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.506 s, sync=0.029 s, total=1.557 s; sync files=15, longest=0.008 s, average=0.002 s; distance=21 kB, estimate=3296 kB; lsn=0/1C63600, redo lsn=0/1C63570
+2026-03-09 18:14:43.869 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 18:14:44.210 PDT [2369599] LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.019 s, total=0.342 s; sync files=3, longest=0.010 s, average=0.007 s; distance=10 kB, estimate=2967 kB; lsn=0/1C65E40, redo lsn=0/1C65DE8
+2026-03-09 18:19:43.310 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 18:19:43.651 PDT [2369599] LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.302 s, sync=0.018 s, total=0.341 s; sync files=3, longest=0.008 s, average=0.006 s; distance=17 kB, estimate=2672 kB; lsn=0/1C6A4D8, redo lsn=0/1C6A480
+2026-03-09 18:24:43.749 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 18:24:44.695 PDT [2369599] LOG:  checkpoint complete: wrote 9 buffers (0.1%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.904 s, sync=0.024 s, total=0.946 s; sync files=5, longest=0.007 s, average=0.005 s; distance=59 kB, estimate=2411 kB; lsn=0/1C79158, redo lsn=0/1C79100
+2026-03-09 19:09:44.361 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 19:09:44.997 PDT [2369599] LOG:  checkpoint complete: wrote 6 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.603 s, sync=0.016 s, total=0.637 s; sync files=5, longest=0.004 s, average=0.004 s; distance=1 kB, estimate=2170 kB; lsn=0/1C797C0, redo lsn=0/1C79768
+2026-03-09 19:14:45.098 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 19:14:46.145 PDT [2369599] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.005 s, sync=0.022 s, total=1.048 s; sync files=11, longest=0.007 s, average=0.002 s; distance=12 kB, estimate=1954 kB; lsn=0/1C7C930, redo lsn=0/1C7C8D8
+2026-03-09 19:19:45.245 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-09 19:19:46.824 PDT [2369599] LOG:  checkpoint complete: wrote 15 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.506 s, sync=0.054 s, total=1.579 s; sync files=15, longest=0.008 s, average=0.004 s; distance=29 kB, estimate=1762 kB; lsn=0/1C83EF8, redo lsn=0/1C83EA0

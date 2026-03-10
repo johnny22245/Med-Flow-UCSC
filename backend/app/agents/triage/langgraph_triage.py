@@ -5,9 +5,10 @@ from transformers import AutoTokenizer
 from .distributed_LLM_call import DistributedModel
 from .prompt_template import render_prompt_from_string
 from .parser_utils import safe_parse_triage_output
+import os
 
 
-MODEL_PATH = "/home/achowd10/MedFlow_244_project/models/Bio_mistral_7B_Dare"
+MODEL_PATH = os.getenv("MODEL_PATH")
 
 
 class TriageState(TypedDict):

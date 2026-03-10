@@ -16,6 +16,15 @@ Create new environment: `conda create -n med-flow python=3.12 -y`
 <br> Activate environment: `conda activate med-flow`
 <br> Install dependencies: `pip install -r requirements.txt`
 
+### School GPU NPM setup
+<br> Run this commands:
+<br> `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+<br> `source ~/.bashrc`
+<br> `nvm install --lts`
+<br> Check if properly installed: `npm -v`
+<br> Go to folder: `medflow-ui` and run: `npm install`
+
+
 <br> Run front end on local servers (go to folder `medflow-ui`): `npm run dev`
 
 # Backend setup
@@ -56,4 +65,5 @@ Start the server on a custom port (5433) so it doesn't clash
 
 Create your database
 `createdb -p 5433 medflow_db`
+<br> Goto `backend` folder and then run: `alembic upgrade head`
 

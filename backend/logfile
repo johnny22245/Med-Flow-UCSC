@@ -21,3 +21,5 @@
 2026-03-09 05:07:24.533 PDT [2577876] LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.003 s, sync=0.004 s, total=1.008 s; sync files=11, longest=0.001 s, average=0.001 s; distance=12 kB, estimate=2402 kB; lsn=0/1CA96A8, redo lsn=0/1CA9650
 2026-03-09 05:12:23.624 PDT [2577876] LOG:  checkpoint starting: time
 2026-03-09 05:12:24.332 PDT [2577876] LOG:  checkpoint complete: wrote 7 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.702 s, sync=0.004 s, total=0.709 s; sync files=7, longest=0.001 s, average=0.001 s; distance=18 kB, estimate=2163 kB; lsn=0/1CAE170, redo lsn=0/1CAE0E0
+2026-03-09 17:35:47.361 PDT [2380806] FATAL:  lock file "postmaster.pid" already exists
+2026-03-09 17:35:47.361 PDT [2380806] HINT:  Is another postmaster (PID 2369595) running in data directory "/home/achowd10/medflow_db_data"?

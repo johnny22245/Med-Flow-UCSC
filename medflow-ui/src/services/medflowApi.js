@@ -77,3 +77,22 @@ export async function getInvestigationByPatientId(patientId) {
 
   return parseJsonOrThrow(res);
 }
+
+// COnfirm Test order APIs
+export async function saveConfirmedInvestigationOrders(patientId, payload) {
+  const res = await fetch(
+    `${API_BASE}/api/investigation/${encodeURIComponent(patientId)}/orders`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }
+  );
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || "Failed to save confirmed investigation orders");
+  }
+
+  return res.json();
+}

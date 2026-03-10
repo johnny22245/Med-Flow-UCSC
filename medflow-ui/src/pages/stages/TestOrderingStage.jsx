@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
+import { saveConfirmedInvestigationOrders } from "../../services/medflowApi";
 import "../../styles/testOrderingStage.css";
 
 const DUMMY_AI_SUGGESTIONS = {
-  // simple “condition → tests” mapping (dummy)
   headache: {
     labs: [
       { code: "cbc", name: "CBC", why: "Rule out infection/inflammation" },
@@ -27,33 +27,13 @@ const DUMMY_AI_SUGGESTIONS = {
   },
 };
 
-const DEFAULT_CATALOG = {
-  labs: [
-    { code: "cbc", name: "CBC" },
-    { code: "bmp", name: "BMP" },
-    { code: "cmp", name: "CMP" },
-    { code: "crp", name: "CRP" },
-    { code: "esr", name: "ESR" },
-    { code: "troponin", name: "Troponin" },
-    { code: "a1c", name: "HbA1c" },
-    { code: "lipid", name: "Lipid Panel" },
-  ],
-  imaging: [
-    { code: "ct_head", name: "CT Head (non-contrast)" },
-    { code: "mri_brain", name: "MRI Brain w/ contrast" },
-    { code: "cxr", name: "Chest X-ray" },
-    { code: "cta_chest", name: "CT Angiography Chest" },
-    { code: "us_abd", name: "Ultrasound Abdomen" },
-  ],
-};
-
 function makeOrderItem(test, source, group) {
   return {
     code: test.code,
     name: test.name,
-    group, // labs | imaging
-    source, // ai | manual
-    priority: "routine", // routine | urgent
+    group,
+    source,
+    priority: "routine",
     reason: test.why || "",
     selected: true,
   };
@@ -80,7 +60,7 @@ function normalizeTriageTests(tests = []) {
   return tests.map((t, idx) => {
     const name = t?.name || `Suggested Test ${idx + 1}`;
     return {
-      code: `triage_${idx}_${name.toLowerCase().replace(/\s+/g, "_")}`,
+      code: `triage_${idx}_${name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}`,
       name,
       group: inferGroupFromName(name),
       source: "ai",
@@ -100,7 +80,6 @@ export default function TestOrderingStage({
 }) {
   const patientId = activePatient?.id || "007";
 
-  // derive a dummy “condition” from intakeContext (or default)
   const conditionKey = useMemo(() => {
     const cc = (intakeContext?.chiefComplaint || "").toLowerCase();
     if (cc.includes("chest")) return "chest_pain";
@@ -113,6 +92,7 @@ export default function TestOrderingStage({
   }, [conditionKey]);
 
   const storageKey = useMemo(() => `mf_orders_${patientId}`, [patientId]);
+
   const backendSuggestedOrders = useMemo(() => {
     return normalizeTriageTests(triageContext?.suggestedTests || []);
   }, [triageContext]);
@@ -121,38 +101,44 @@ export default function TestOrderingStage({
   const [customName, setCustomName] = useState("");
   const [customGroup, setCustomGroup] = useState("labs");
   const [customReason, setCustomReason] = useState("");
-
   const [confirmed, setConfirmed] = useState(false);
 
-  // init from localStorage for AI
-    useEffect(() => {
-      const raw = localStorage.getItem(storageKey);
-      if (raw) {
-        try {
-          const parsed = JSON.parse(raw);
-          setOrders(parsed.orders || []);
-          setConfirmed(!!parsed.confirmed);
-          return;
-        } catch {
-          // ignore and rebuild below
-        }
-      }
+  // new state for backend save
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState("");
 
-      if (backendSuggestedOrders.length > 0) {
-        setOrders(backendSuggestedOrders);
-        setConfirmed(false);
-        return;
-      }
-
-      const initial = [
-        ...suggested.labs.map((t) => makeOrderItem(t, "ai", "labs")),
-        ...suggested.imaging.map((t) => makeOrderItem(t, "ai", "imaging")),
-      ];
-      setOrders(initial);
+  useEffect(() => {
+    // Always prefer fresh backend triage suggestions
+    if (backendSuggestedOrders.length > 0) {
+      setOrders(backendSuggestedOrders);
       setConfirmed(false);
-    }, [storageKey, suggested, backendSuggestedOrders]);
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({ orders: backendSuggestedOrders, confirmed: false })
+      );
+      return;
+    }
 
-  // persist
+    const raw = localStorage.getItem(storageKey);
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        setOrders(parsed.orders || []);
+        setConfirmed(!!parsed.confirmed);
+        return;
+      } catch {
+        // ignore and rebuild below
+      }
+    }
+
+    const initial = [
+      ...suggested.labs.map((t) => makeOrderItem(t, "ai", "labs")),
+      ...suggested.imaging.map((t) => makeOrderItem(t, "ai", "imaging")),
+    ];
+    setOrders(initial);
+    setConfirmed(false);
+  }, [storageKey, suggested, backendSuggestedOrders]);
+
   useEffect(() => {
     localStorage.setItem(storageKey, JSON.stringify({ orders, confirmed }));
   }, [orders, confirmed, storageKey]);
@@ -166,12 +152,16 @@ export default function TestOrderingStage({
 
   function setPriority(code, priority) {
     if (confirmed) return;
-    setOrders((prev) => prev.map((o) => (o.code === code ? { ...o, priority } : o)));
+    setOrders((prev) =>
+      prev.map((o) => (o.code === code ? { ...o, priority } : o))
+    );
   }
 
   function setReason(code, reason) {
     if (confirmed) return;
-    setOrders((prev) => prev.map((o) => (o.code === code ? { ...o, reason } : o)));
+    setOrders((prev) =>
+      prev.map((o) => (o.code === code ? { ...o, reason } : o))
+    );
   }
 
   function addCustom() {
@@ -181,7 +171,15 @@ export default function TestOrderingStage({
 
     const code = `custom_${Date.now()}`;
     setOrders((prev) => [
-      { code, name, group: customGroup, source: "manual", priority: "routine", reason: customReason.trim(), selected: true },
+      {
+        code,
+        name,
+        group: customGroup,
+        source: "manual",
+        priority: "routine",
+        reason: customReason.trim(),
+        selected: true,
+      },
       ...prev,
     ]);
 
@@ -189,17 +187,54 @@ export default function TestOrderingStage({
     setCustomReason("");
   }
 
-  const selectedCount = useMemo(() => orders.filter((o) => o.selected).length, [orders]);
+  const selectedCount = useMemo(
+    () => orders.filter((o) => o.selected).length,
+    [orders]
+  );
 
-  function confirmOrders() {
-    setConfirmed(true);
-    if (typeof onApproveNext === "function") {
-      onApproveNext({
-        stage: "tests",
+  async function confirmOrders() {
+    if (confirmed || selectedCount === 0) return;
+
+    setSaving(true);
+    setSaveError("");
+
+    const selectedOrders = orders.filter((o) => o.selected);
+
+    try {
+      const payload = {
         patient_id: patientId,
+        suggested_tests: orders,
+        ordered_tests: selectedOrders,
+        notes: null,
+        confirmed: true,
         confirmed_at: new Date().toISOString(),
-        orders: orders.filter((o) => o.selected),
-      });
+      };
+
+      await saveConfirmedInvestigationOrders(patientId, payload);
+
+      setConfirmed(true);
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({
+          orders,
+          confirmed: true,
+        })
+      );
+
+      if (typeof onApproveNext === "function") {
+        onApproveNext({
+          stage: "tests",
+          patient_id: patientId,
+          confirmed_at: payload.confirmed_at,
+          orders: selectedOrders,
+        });
+      }
+    } catch (err) {
+      setSaveError(err?.message || "Failed to save confirmed orders.");
+      setConfirmed(false);
+    } finally {
+      setSaving(false);
     }
   }
 
@@ -215,7 +250,9 @@ export default function TestOrderingStage({
             {backendSuggestedOrders.length > 0 ? (
               <>AI triage suggested tests from backend. Doctor can override before ordering.</>
             ) : (
-              <>AI suggested tests for <b>{conditionKey.replace("_", " ")}</b>. Doctor can override before ordering.</>
+              <>
+                AI suggested tests for <b>{conditionKey.replace("_", " ")}</b>. Doctor can override before ordering.
+              </>
             )}
           </div>
         </div>
@@ -250,7 +287,12 @@ export default function TestOrderingStage({
                 <div className="mf-list-head">Labs</div>
                 {labs.map((o) => (
                   <div key={o.code} className={`mf-order-row ${o.selected ? "is-on" : ""}`}>
-                    <button className="mf-check" onClick={() => toggle(o.code)} type="button" aria-label="toggle">
+                    <button
+                      className="mf-check"
+                      onClick={() => toggle(o.code)}
+                      type="button"
+                      aria-label="toggle"
+                    >
                       <span className={`mf-check-dot ${o.selected ? "on" : ""}`} />
                     </button>
 
@@ -299,7 +341,12 @@ export default function TestOrderingStage({
                 <div className="mf-list-head">Imaging</div>
                 {imaging.map((o) => (
                   <div key={o.code} className={`mf-order-row ${o.selected ? "is-on" : ""}`}>
-                    <button className="mf-check" onClick={() => toggle(o.code)} type="button" aria-label="toggle">
+                    <button
+                      className="mf-check"
+                      onClick={() => toggle(o.code)}
+                      type="button"
+                      aria-label="toggle"
+                    >
                       <span className={`mf-check-dot ${o.selected ? "on" : ""}`} />
                     </button>
 
@@ -403,9 +450,20 @@ export default function TestOrderingStage({
             </div>
 
             <div className="mf-actions">
-              <button className="mf-btn mf-btn-primary" onClick={confirmOrders} disabled={confirmed || selectedCount === 0}>
-                {confirmed ? "Orders Confirmed" : "Confirm Orders"}
+              <button
+                className="mf-btn mf-btn-primary"
+                onClick={confirmOrders}
+                disabled={confirmed || selectedCount === 0 || saving}
+                type="button"
+              >
+                {saving ? "Saving..." : confirmed ? "Orders Confirmed" : "Confirm Orders"}
               </button>
+
+              {saveError && (
+                <div className="mf-error-text">
+                  {saveError}
+                </div>
+              )}
 
               <div className="mf-row">
                 <button className="mf-btn-ghost" onClick={onBack} type="button">
@@ -423,7 +481,9 @@ export default function TestOrderingStage({
               </div>
 
               <div className="mf-muted mf-mt8">
-                Dummy AI only. Later: backend agent generates these suggestions based on intake + risk context.
+                {backendSuggestedOrders.length > 0
+                  ? "Backend triage suggestions loaded."
+                  : "Dummy AI only. Later: backend agent generates these suggestions based on intake + risk context."}
               </div>
             </div>
           </div>
