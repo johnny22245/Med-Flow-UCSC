@@ -72,3 +72,7 @@ Create your database
 `createdb -p 5433 medflow_db`
 <br> Goto `backend` folder and then run: `alembic upgrade head`
 
+## Other notes:
+Kindly use local model paths and set them in this file: `backend/.env`
+
+For any-other model model dependecies check this drive folder (view via UC Santa Cruz email): `https://drive.google.com/drive/folders/18XrMrYmM1G4KvlbNdc2ws4RS_Q0jH_lJ?usp=share_link`

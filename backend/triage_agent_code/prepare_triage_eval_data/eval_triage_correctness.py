@@ -4,7 +4,7 @@ from collections import Counter
 
 #pred_path = "./results/bio_mistral_7B_zero_shot_parsed.json"
 #pred_path = "./results/bio_mistral_7B_few_shot_parsed.json"
-pred_path = "./results/bio_mistral_7B_agentic_1round.json"
+pred_path = "./results/llama_8B_few_shot_parsed.json"
 
 
 def normalize_text(text):
@@ -239,10 +239,6 @@ def main():
             f"Urgency relaxed accuracy (exact+near): "
             f"{round(100 * (urgency_exact + urgency_near) / parse_ok, 2)}%"
         )
-
-    if test_eval_count > 0:
-        print(f"Avg expected-test precision: {round(test_precision_sum / test_eval_count, 3)}")
-        print(f"Avg expected-test recall: {round(test_recall_sum / test_eval_count, 3)}")
 
     print("=" * 60)
 

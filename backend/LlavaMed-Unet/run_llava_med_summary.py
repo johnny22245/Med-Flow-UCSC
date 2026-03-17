@@ -3,7 +3,7 @@ import json
 
 # GPU
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "3" 
+os.environ["CUDA_VISIBLE_DEVICES"] = "4" 
 
 import torch
 from PIL import Image

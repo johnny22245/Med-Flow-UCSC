@@ -9,7 +9,7 @@ This uses the GPUs wisely and allocates available memory to host the models and 
 
 # GPU
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2" 
+os.environ["CUDA_VISIBLE_DEVICES"] = "1" 
 
 
 from vllm import LLM, SamplingParams

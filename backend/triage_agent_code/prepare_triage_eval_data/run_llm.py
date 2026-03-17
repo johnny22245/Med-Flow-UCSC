@@ -21,7 +21,7 @@ from transformers import AutoTokenizer
 # -------------------------
 # paths
 # -------------------------
-input_path = "/home/achowd10/MedFlow_244_project/prepare_triage_eval_data/data/test.jsonl"
+input_path = "/home/achowd10/MedFlow-244-Project/Med-Flow-UCSC/backend/triage_agent_code/prepare_triage_eval_data/data/test.jsonl"
 results_dir = "./results"
 os.makedirs(results_dir, exist_ok=True)
 
@@ -29,8 +29,10 @@ os.makedirs(results_dir, exist_ok=True)
 # models
 # -------------------------
 model_path_dict = {
-    "bio_mistral_7B": "/home/achowd10/MedFlow_244_project/models/Bio_mistral_7B_Dare",
+    #"bio_mistral_7B": "/home/achowd10/MedFlow_244_project/models/Bio_mistral_7B_Dare",
     # "mistral_7B": "/home/achowd10/MedFlow_244_project/models/Mistral_7B_inst",
+    "qwen_7b": "/home/nlp-shared/akash_models/Qwen2.5_7B",
+    "llama_8B": "/home/nlp-shared/akash_models/Llama3.1_8B"
 }
 
 few_shot_flag = exp_var.lower() == "few_shot"

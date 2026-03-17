@@ -81,3 +81,30 @@
 2026-03-10 05:29:58.285 PDT [2369599] LOG:  checkpoint complete: wrote 19 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.909 s, sync=0.056 s, total=1.982 s; sync files=18, longest=0.008 s, average=0.004 s; distance=56 kB, estimate=190 kB; lsn=0/1CD1A78, redo lsn=0/1CD19E8
 2026-03-10 05:34:56.293 PDT [2369599] LOG:  checkpoint starting: time
 2026-03-10 05:34:56.853 PDT [2369599] LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.025 s, total=0.560 s; sync files=5, longest=0.008 s, average=0.005 s; distance=18 kB, estimate=173 kB; lsn=0/1CD62F0, redo lsn=0/1CD6298
+2026-03-10 07:04:58.264 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 07:04:59.593 PDT [2369599] LOG:  checkpoint complete: wrote 13 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.305 s, sync=0.008 s, total=1.329 s; sync files=14, longest=0.003 s, average=0.001 s; distance=22 kB, estimate=158 kB; lsn=0/1CDBDF8, redo lsn=0/1CDBDA0
+2026-03-10 07:09:58.694 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 07:09:58.826 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.012 s, total=0.133 s; sync files=2, longest=0.008 s, average=0.006 s; distance=6 kB, estimate=143 kB; lsn=0/1CDD7D0, redo lsn=0/1CDD778
+2026-03-10 07:19:59.027 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-10 07:19:59.155 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.102 s, sync=0.007 s, total=0.129 s; sync files=2, longest=0.004 s, average=0.004 s; distance=8 kB, estimate=129 kB; lsn=0/1CDF980, redo lsn=0/1CDF928
+2026-03-12 15:31:03.033 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-12 15:31:04.388 PDT [2369599] LOG:  checkpoint complete: wrote 13 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.314 s, sync=0.021 s, total=1.356 s; sync files=14, longest=0.009 s, average=0.002 s; distance=29 kB, estimate=119 kB; lsn=0/1CE70C8, redo lsn=0/1CE7070
+2026-03-12 15:36:03.488 PDT [2369599] LOG:  checkpoint starting: time
+2026-03-12 15:36:03.616 PDT [2369599] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.007 s, total=0.129 s; sync files=2, longest=0.005 s, average=0.004 s; distance=9 kB, estimate=108 kB; lsn=0/1CE9770, redo lsn=0/1CE9718
+2026-03-12 15:38:20.772 PDT [3357827] FATAL:  lock file "postmaster.pid" already exists
+2026-03-12 15:38:20.772 PDT [3357827] HINT:  Is another postmaster (PID 2369595) running in data directory "/home/achowd10/medflow_db_data"?
+2026-03-12 15:43:16.148 PDT [3358660] FATAL:  role "postgres" does not exist
+2026-03-12 15:43:39.478 PDT [3358748] FATAL:  lock file "postmaster.pid" already exists
+2026-03-12 15:43:39.478 PDT [3358748] HINT:  Is another postmaster (PID 2369595) running in data directory "/home/achowd10/medflow_db_data"?
+2026-03-12 15:43:53.672 PDT [3358828] FATAL:  lock file "postmaster.pid" already exists
+2026-03-12 15:43:53.672 PDT [3358828] HINT:  Is another postmaster (PID 2369595) running in data directory "/home/achowd10/medflow_db_data"?
+2026-03-12 15:47:18.012 PDT [3359500] ERROR:  relation "table_name" does not exist at character 15
+2026-03-12 15:47:18.012 PDT [3359500] STATEMENT:  SELECT *
+	FROM table_name
+	ORDER BY created_at DESC
+	LIMIT 10;
+2026-03-12 15:47:23.786 PDT [3359500] ERROR:  relation "table_name" does not exist at character 15
+2026-03-12 15:47:23.786 PDT [3359500] STATEMENT:  SELECT *
+	FROM table_name
+	ORDER BY created_at DESC
+	LIMIT 10;
