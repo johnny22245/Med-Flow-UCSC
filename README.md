@@ -11,7 +11,7 @@ Med-Flow is a local, multi-agentic AI for safe clinical support. Using a hub-and
 This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**. 
 
 ### 🛑 Commercial Use Restriction
-Commercial use of this software is strictly prohibited without a separate agreement. If you wish to use Med-Flow for commercial purposes, including but not limited to paid clinical services or integration into proprietary software, please contact the authors at [Insert Email] to discuss licensing terms.
+Commercial use of this software is strictly prohibited without a separate agreement. If you wish to use Med-Flow for commercial purposes, including but not limited to paid clinical services or integration into proprietary software, please contact the authors at above mails to discuss licensing terms.
 
 ## Documentation
 
